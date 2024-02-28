@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*, :root{
+  margin: 0px;
+  padding: 0px;
+
+  box-sizing: border-box;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  /*border: 1px solid red;*/
+}
+
+
+
+.first-part {
+  background: linear-gradient(160deg, rgba(36, 201, 133, 1) 0%, rgba(24, 211, 137, 1) 27%, rgba(33, 186, 126, 1) 57%, rgba(31, 182, 123, 1) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30vh;
+  box-shadow: 0px 0px 60px 5px rgb(89, 89, 89);
+  position: relative;
+  z-index: 10;
+}
+
+
+.rocket{
+  height: 86px;
+}
+.navbar {
+  padding-top: 2.3vh;
+  display: inline;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+}
+ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  justify-content: center;
+  font-family: 'Inter', 'sans serif';
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 600;
+  flex-wrap: wrap;
+  gap: 8%;
+  margin: auto;
+  width: 70%;
+}
+ul li{
+  cursor: pointer;
+}
+.minijogos-first-button {
+  background-color: white;
+  color: #192F44;
+  font-family: 'Inter', 'sans serif';
+  font-size: 1.1rem;
+  font-weight: 700;
+  height: 46px;
+  width: 172px;
+  border-radius: 50px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+.first-article-container{
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  margin: auto;
+  margin-top: 15vh;
+}
+
+.center-text h1{
+  font-size: 4.5rem;
+}
+.top-text h3{
+  font-size: 1rem;
+}
+
+
+.first-part-container {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.top-text {
+  width: 110px;
+  background-color: rgba(255, 255, 255, 0.351);
+  padding: 8px 50px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.top-text h3 {
+  font-family: 'Inter', 'sans serif';
+  color: white;
+  font-weight: 500;
+}
+
+
+.center-text{
+  text-align: justify;
+}
+.center-text h1{
+  font-family: 'Gentium Book Plus', 'Arial' ;
+  color: white;
+  font-weight: 300;
+}
+
+
+.center-text-second{
+  text-align: justify;
+  margin-right: -10px;
+  margin-top: 20px;
+}
+.center-text-second h2{
+  font-family: 'Inter', 'sans-serif';
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 400;
+}
+
+
+
+.first-part-buttons{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.first-button{
+  font-family: 'Inter', 'sans-serif';
+  color: #192F44;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: white;
+  width: 363px;
+  height: 60px;
+  border-radius: 50px;
+  border: none;
+}
+.first-button:hover{
+  cursor: pointer;
+}
+.second-button{
+  font-family: 'Inter', 'sans-serif';
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #192F44;
+  width: 363px;
+  height: 60px;
+  border-radius: 50px;
+  border: none;
+  margin-right: -10px;
+}
+.second-button:hover{
+  cursor: pointer;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+strong{
+  font-weight: 900;
+}
+.second-part{
+  background-color: #fcfcfc;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+}
+.second-part-container{
+  width: 46%;
+  margin: auto;
+  margin-top: 140px;
+  margin-bottom: 130px;
+  display: flex;
+  justify-content: center;
+}
+.second-part-center-text h1{
+  font-family: 'Gentium Book Plus', 'sans-serif';
+  font-style: italic;
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+
+.second-part-center-text p{
+  font-family: 'Manrope', 'sans-serif';
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.image-one-container{
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+  border-radius: 15px;
+}
+.image-one{
+  height: 500px;
+}
+#subtitle-one{
+  font-family: 'Gentium Book Plus', 'sans-serif';
+  font-style: italic;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-top: 2vh;
+}
+#subtitle-two{
+  margin-top: 2vh;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+.third-part{
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+}
+.third-part-container{
+  width: 46%;
+  margin: auto;
+  margin-top: 140px;
+  margin-bottom: 130px;
+  display: flex;
+  justify-content: center;
+}
+.third-part-center-text h1{
+  font-family: 'Gentium Book Plus', 'sans-serif';
+  font-style: italic;
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+
+.third-part-center-text p{
+  font-family: 'Manrope', 'sans-serif';
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.image-two-container{
+  background-color: #fcfcfc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+  border-radius: 15px;
+}
+.image-two{
+  height: 500px;
+}
+#subtitle-three{
+  margin-top: 2vh;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+.fourth-part{
+  background-color: #fcfcfc;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+}
+.fourth-part-container{
+  width: 46%;
+  margin: auto;
+  margin-top: 140px;
+  margin-bottom: 130px;
+  display: flex;
+  justify-content: center;
+}
+.fourth-part-center-text h1{
+  font-family: 'Gentium Book Plus', 'sans-serif';
+  font-style: italic;
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+
+.fourth-part-center-text p{
+  font-family: 'Manrope', 'sans-serif';
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.image-three-container{
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+  border-radius: 15px;
+}
+.image-three{
+  height: 500px;
+}
+#subtitle-four{
+  margin-top: 2vh;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+.fifth-part{
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+}
+.fifth-part-container{
+  width: 43%;
+  margin: auto;
+  margin-top: 140px;
+  margin-bottom: 130px;
+  display: flex;
+  justify-content: center;
+}
+.fifth-part-center-text h1{
+  font-family: 'Gentium Book Plus', 'sans-serif';
+  font-style: italic;
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+
+.fifth-part-center-text p{
+  font-family: 'Manrope', 'sans-serif';
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.image-four-container{
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+  border-radius: 15px;
+}
+.image-four{
+  height: 500px;
+}
+#subtitle-five{
+  margin-top: 3vh;
+}
+
+.image-five-container{
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+  border-radius: 15px;
+}
+.image-five{
+  height: 500px;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+.sixth-part{
+  background-color: #fcfcfc;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+}
+.sixth-part-container{
+  width: 46%;
+  margin: auto;
+  margin-top: 140px;
+  margin-bottom: 130px;
+  display: flex;
+  justify-content: center;
+}
+.sixth-part-center-text h1{
+  font-family: 'Gentium Book Plus', 'sans-serif';
+  font-style: italic;
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+
+.sixth-part-center-text p{
+  font-family: 'Manrope', 'sans-serif';
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.image-six-container{
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+  border-radius: 15px;
+}
+.image-six{
+  height: 500px;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+.footer-part{
+  background-color: #192F44;
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  box-shadow: 0px 0px 60px 5px rgb(89, 89, 89);
+}
+.footer-part-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.footer-logo-img{
+  height: 75px;
+}
+
+.app-icons{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.politics h3{
+  font-family: 'Inter', 'sans-serif';
+  color: white;
+  font-weight: 300;
+  font-size: 1rem;
+}

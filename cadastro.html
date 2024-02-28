@@ -1,0 +1,55 @@
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Login</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/cadastro.css'>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="form_container_top">
+                <div class="form_container_top_first">
+                    <p class="nome_text">Nome</p>
+                    <input type="text" class="nome_input" placeholder="Insira seu nome" name="nome" onfocus="clearPlaceholder()" onblur="restorePlaceholder()" />
+                </div>
+                <div class="form_container_top_second">
+                    <p class="email_text">E-mail</p>
+                    <input type="email" class="email_input" placeholder="Insira seu e-mail" name="email" onfocus="clearPlaceholder2()" onblur="restorePlaceholder2()" />
+                </div>
+            </div>
+            <div class="form_container_mid">
+                <div class="form_container_mid_first">
+                    <p class="nascimento_text">Data de nascimento</p>
+                    <div class="form_container_mid_adjust">
+                        <input type="date" class="nascimento_input" placeholder="DD" name="nascimento" />
+                    </div>
+                </div>
+            </div>
+            <div class="form_container_below">
+                <div class="form_container_below_first">
+                    <p class="senha_text">Senha</p>
+                    <input type="password" class="senha_input" placeholder="Insira sua senha" name="senha" onfocus="clearPlaceholder3()" onblur="restorePlaceholder3()" />
+                </div>
+                <div class="form_container_below_second">
+                    <p class="conf_senha_text">Confirmar senha</p>
+                    <input type="password" class="conf_senha_input" placeholder="Confirme sua senha" name="confsenha" onfocus="clearPlaceholder4()" onblur="restorePlaceholder4()" />
+                </div>
+            </div>
+            <div class="buttons_container">
+                <div class="buttons_container_first">
+                    <button class="voltar_text"><a href="main.html">Voltar</a></button>
+                </div>
+                <div class="buttons_container_second">
+                    <button class="login_button">Fazer login</button>
+                    <button class="avancar_button">Avançar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script src='javascript/cadastro.js'></script>
+
+</html>

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@media screen and (max-width: 600px) {
+  .first-part {
+    background: linear-gradient(160deg, rgba(36, 201, 133, 1) 0%, rgba(24, 211, 137, 1) 27%, rgba(33, 186, 126, 1) 57%, rgba(31, 182, 123, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30vh;
+    box-shadow: 0px 0px 60px 5px rgb(89, 89, 89);
+    position: relative;
+    z-index: 10;
+  }
+  .rocket{
+    height: 65px;
+    position: static;
+  }
+  .navbar {
+    padding-top: 2.3vh;
+    display: inline-block;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+    font-family: 'Inter', 'sans serif';
+    font-size: 0.9rem;
+    color: white;
+    font-weight: 600;
+    flex-wrap: wrap;
+    gap: 8%;
+    margin: auto;
+    width: 90%;
+  }
+  ul li{
+    cursor: pointer;
+  }
+  ul li:first-child{
+    display: block;
+  }
+  .minijogos-first-button {
+    background-color: white;
+    color: #192F44;
+    font-family: 'Inter', 'sans serif';
+    font-size: 0.9rem;
+    font-weight: 700;
+    height: 36px;
+    width: 150px;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    flex: 1 0 5rem;
+    margin-top: 2vh;
+  }
+
+
+  .first-article-container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: auto;
+    margin-top: 15vh;
+  }
+
+  .center-text h1{
+    font-size: 1rem;
+  }
+  .top-text h3{
+    font-size: 0.8rem
+  }
+}

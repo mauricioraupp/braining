@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Poppins:wght@300&display=swap');
+
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../imagens/brincarsozinho.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(0.3vw);
+}
+
+
+
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: #13A052;
+    padding: 7vh 4vw;
+    border-radius: 3vw;
+    box-shadow: 1vw 1vw 5vw rgba(0, 0, 0, 1);
+    width: 72vw;
+}
+.form_container_top{
+    display: flex;
+    justify-content: space-between;
+}
+.form_container_mid{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+}
+.form_container_mid_adjust{
+    justify-content: center;
+    display: flex;
+}
+.form_container_below{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.nome_text{
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 3.3vw;
+    font-weight: bolder;
+}
+.nome_input{
+    border: none;
+    border-radius: 1.3vw;
+    height: 6vh;
+    width: 30vw;
+    padding-bottom: 2.4vh;
+    outline: none;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    margin-top: 3vh;
+    font-size: 1.6vw;
+    padding-top: 2.5vh;
+    padding-left: 2.3vw;
+}
+.nome_input::placeholder{
+    font-weight: 400;
+    font-family: 'Montserrat';
+    font-size: 1.6vw;
+    position: absolute;
+    top: 1.1vh
+}
+
+
+
+.email_text{
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 3.3vw;
+    font-weight: bolder;
+}
+.email_input{
+    border: none;
+    border-radius: 1.3vw;
+    height: 6vh;
+    width: 30vw;
+    padding-bottom: 2.4vh;
+    outline: none;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    margin-top: 3vh;
+    font-size: 1.6vw;
+    padding-top: 2.5vh;
+    padding-left: 2.3vw;
+}
+.email_input::placeholder{
+    font-weight: 400;
+    font-family: 'Montserrat';
+    font-size: 1.6vw;
+    position: absolute;
+    top: 1.1vh
+}
+
+
+
+.nascimento_text{
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 3.3vw;
+    font-weight: bolder;
+}
+.nascimento_input{
+    border: none;
+    border-radius: 1.3vw;
+    height: 6vh;
+    width: 17vw;
+    padding-bottom: 2.4vh;
+    outline: none;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    margin-top: 3vh;
+    font-size: 1.6vw;
+    padding-top: 2.5vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+.nascimento_input::placeholder{
+    font-weight: 400;
+    font-family: 'Montserrat';
+    font-size: 1.6vw;
+    position: absolute;
+    top: 1.1vh
+}
+
+
+
+.senha_text{
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 3.3vw;
+    font-weight: bolder;
+    margin-top: 6vh;
+}
+.senha_input{
+    border: none;
+    border-radius: 1.3vw;
+    height: 6vh;
+    width: 30vw;
+    padding-bottom: 2.4vh;
+    outline: none;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    margin-top: 2vh;
+    font-size: 1.6vw;
+    padding-top: 2.5vh;
+    padding-left: 2.3vw;
+}
+.senha_input::placeholder{
+    font-weight: 400;
+    font-family: 'Montserrat';
+    font-size: 1.6vw;
+    position: absolute;
+    top: 1.3vh
+}
+
+
+
+.conf_senha_text{
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 3.3vw;
+    font-weight: bolder;
+    margin-top: 6vh;
+}
+.conf_senha_input{
+    border: none;
+    border-radius: 1.3vw;
+    height: 6vh;
+    width: 30vw;
+    padding-bottom: 2.4vh;
+    outline: none;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    margin-top: 2vh;
+    font-size: 1.6vw;
+    padding-top: 2.5vh;
+    padding-left: 2.3vw;
+}
+.conf_senha_input::placeholder{
+    font-weight: 400;
+    font-family: 'Montserrat';
+    font-size: 1.6vw;
+    position: absolute;
+    top: 1.3vh
+}
+
+
+
+
+.buttons_container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10vh;
+    margin-left: 4vw;
+    margin-right: 4vw;
+}
+.buttons_container_first{
+    display: flex;
+}
+.buttons_container_second{
+    display: flex;
+}
+.login_button{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.3vw;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    margin-right: 2vw;
+}
+.avancar_button{
+    background-color: white;
+    border: none;
+    color: #388F50;
+    padding: 1.9vh 2vw;
+    border-radius: 2vw;
+    font-size: 1.3vw;
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+.voltar_text{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.3vw;
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
