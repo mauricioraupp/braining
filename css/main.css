@@ -57,6 +57,7 @@ ul {
 ul li{
   cursor: pointer;
 }
+
 .minijogos-first-button {
   background-color: white;
   color: #192F44;
@@ -210,7 +211,7 @@ strong{
   border-radius: 15px;
 }
 .image-one{
-  height: 500px;
+  width: 500px;
 }
 #subtitle-one{
   font-family: 'Gentium Book Plus', 'sans-serif';
@@ -411,13 +412,32 @@ strong{
   height: 500px;
 }
 
+.sixth-button-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 3vh;
+}
+.sixth-part-button{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 58px;
+  border-radius: 50px;
+  background-color: #192F44;
+  color: #fcfcfc;
+  font-family: 'Inter', 'sans-serif';
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
 /*-------------------------------------------------------------------------------------------------------------------*/
 
 .footer-part{
   background-color: #192F44;
   display: flex;
   justify-content: center;
-  height: 400px;
   box-shadow: 0px 0px 60px 5px rgb(89, 89, 89);
 }
 .footer-part-container{
@@ -430,7 +450,7 @@ strong{
 }
 
 .footer-logo-img{
-  height: 75px;
+  height: 65px;
 }
 
 .app-icons{
@@ -444,4 +464,5 @@ strong{
   color: white;
   font-weight: 300;
   font-size: 1rem;
+  margin-bottom: 30px;
 }
