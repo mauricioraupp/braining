@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-@media screen and (max-width: 710px) {
+@media screen and (max-width: 768px) {
   .first-part {
     background: linear-gradient(160deg, rgba(36, 201, 133, 1) 0%, rgba(24, 211, 137, 1) 27%, rgba(33, 186, 126, 1) 57%, rgba(31, 182, 123, 1) 100%);
     display: flex;
@@ -121,7 +121,7 @@
   
   .center-text-second{
     text-align: justify;
-    margin-right: -10px;
+    margin-right: 0;
     margin-top: 20px;
   }
   .center-text-second h2{
@@ -162,7 +162,7 @@
     height: 60px;
     border-radius: 50px;
     border: none;
-    margin-right: -10px;
+    margin-right: 10px;
   }
   .second-button:hover{
     cursor: pointer;
@@ -190,13 +190,13 @@
   .second-part-center-text h1{
     font-family: 'Gentium Book Plus', 'sans-serif';
     font-style: italic;
-    font-size: 2.6rem;
+    font-size: 2.1rem;
     font-weight: 500;
   }
   
   .second-part-center-text p{
     font-family: 'Manrope', 'sans-serif';
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 500;
   }
   
@@ -209,12 +209,12 @@
     border-radius: 15px;
   }
   .image-one{
-    width: 500px;
+    width: 300px;
   }
   #subtitle-one{
     font-family: 'Gentium Book Plus', 'sans-serif';
     font-style: italic;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 500;
     margin-top: 2vh;
   }
@@ -241,13 +241,13 @@
   .third-part-center-text h1{
     font-family: 'Gentium Book Plus', 'sans-serif';
     font-style: italic;
-    font-size: 2.6rem;
+    font-size: 2.1rem;
     font-weight: 500;
   }
   
   .third-part-center-text p{
     font-family: 'Manrope', 'sans-serif';
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 500;
   }
   
@@ -260,7 +260,7 @@
     border-radius: 15px;
   }
   .image-two{
-    height: 500px;
+    height: 300px;
   }
   #subtitle-three{
     margin-top: 2vh;
@@ -286,13 +286,13 @@
   .fourth-part-center-text h1{
     font-family: 'Gentium Book Plus', 'sans-serif';
     font-style: italic;
-    font-size: 2.6rem;
+    font-size: 2.1rem;
     font-weight: 500;
   }
   
   .fourth-part-center-text p{
     font-family: 'Manrope', 'sans-serif';
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 500;
   }
   
@@ -305,7 +305,7 @@
     border-radius: 15px;
   }
   .image-three{
-    height: 500px;
+    height: 300px;
   }
   #subtitle-four{
     margin-top: 2vh;
@@ -331,13 +331,13 @@
   .fifth-part-center-text h1{
     font-family: 'Gentium Book Plus', 'sans-serif';
     font-style: italic;
-    font-size: 2.6rem;
+    font-size: 2.1rem;
     font-weight: 500;
   }
   
   .fifth-part-center-text p{
     font-family: 'Manrope', 'sans-serif';
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 500;
   }
   
@@ -350,7 +350,7 @@
     border-radius: 15px;
   }
   .image-four{
-    height: 500px;
+    height: 300px;
   }
   #subtitle-five{
     margin-top: 3vh;
@@ -365,7 +365,7 @@
     border-radius: 15px;
   }
   .image-five{
-    height: 500px;
+    height: 300px;
   }
   
   /*-------------------------------------------------------------------------------------------------------------------*/
@@ -388,13 +388,13 @@
   .sixth-part-center-text h1{
     font-family: 'Gentium Book Plus', 'sans-serif';
     font-style: italic;
-    font-size: 2.6rem;
+    font-size: 2.1rem;
     font-weight: 500;
   }
   
   .sixth-part-center-text p{
     font-family: 'Manrope', 'sans-serif';
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 500;
   }
   
@@ -407,7 +407,7 @@
     border-radius: 15px;
   }
   .image-six{
-    height: 500px;
+    height: 300px;
   }
   
   .sixth-button-container{
