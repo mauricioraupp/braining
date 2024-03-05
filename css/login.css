@@ -1,146 +1,101 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-
-
-
-
-*{
-    padding: 0;
-    margin: 0;
-}
+*, :root{
+    margin: 0px;
+    padding: 0px;
+  
+    box-sizing: border-box;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    /*border: 1px solid red;*/
+  }
 body{
     display: flex;
+    justify-content: start;
     align-items: center;
-    justify-content: flex-start;
-    background-image: url("../imagens/brincarsozinho.jpg");
-    background-size: cover;
-    background-position: center;
+    margin-left: 5vw;
+    position: center center;
+    background-image: url(../imagens/login-back.png);
     background-repeat: no-repeat;
-    backdrop-filter: blur(0.3vw);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 98.9vh;
+    width: 95vw;
 }
+  
 
-
-
-
-
-.container{
+  /*---------------------------------------------------------------------------*/
+  
+  .container{
+    background: linear-gradient(160deg, rgba(36, 201, 133, 1) 0%, rgba(24, 211, 137, 1) 27%, rgba(33, 186, 126, 1) 57%, rgba(31, 182, 123, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3vh;
+    width: 40vw;
+    border-radius: 15px;
+  }
+  #rocket{
+   width: 170px;
+  }
+  .center-content{
     display: flex;
     flex-direction: column;
-    background-color: #13A052;
-    padding: 8vh 4vw;
-    margin-left: 5vw;
-    border-radius: 3vw;
-    box-shadow: 1vw 1vw 5vw rgba(0, 0, 0, 1);
-}
-.login_text{
-    color: white;
-    font-family: 'Montserrat';
-    font-size: 3.3vw;
-    font-weight: bolder;
-}
-.login_input{
-    border: none;
-    border-radius: 1.3vw;
-    height: 6vh;
-    width: 30vw;
-    padding-bottom: 2.4vh;
-    outline: none;
-    font-family: 'Montserrat';
-    font-weight: 500;
-    margin-top: 3vh;
-    font-size: 1.6vw;
-    padding-top: 2.5vh;
-    padding-left: 2.3vw;
-}
-.login_input::placeholder{
-    font-weight: 400;
-    font-family: 'Montserrat';
-    font-size: 1.6vw;
-    position: absolute;
-    top: 1.1vh
-}
-.senha_text{
-    color: white;
-    font-family: 'Montserrat';
-    font-size: 3.3vw;
-    font-weight: bolder;
-    margin-top: 6vh;
-}
-.senha_input{
-    border: none;
-    border-radius: 1.3vw;
-    height: 6vh;
-    width: 30vw;
-    padding-bottom: 2.4vh;
-    outline: none;
-    font-family: 'Montserrat';
-    font-weight: 500;
-    margin-top: 2vh;
-    font-size: 1.6vw;
-    padding-top: 2.5vh;
-    padding-left: 2.3vw;
-}
-.senha_input::placeholder{
-    font-weight: 400;
-    font-family: 'Montserrat';
-    font-size: 1.6vw;
-    position: absolute;
-    top: 1.3vh
-}
-.esq_senha{
-    font-weight: 200;
-    padding-left: 0.3vw;
-    text-decoration: underline;
-    font-family: 'Montserrat';
-    font-size: 1.2vw;
-    color: white;
-    margin-top: 1vh;
-}
+
+    gap: 6vh;
+    width: 75%;
+    h1{
+        color: white;
+        font-family: 'Inter', sans-serif;
+        font-size: 2rem;
+        font-weight: 600;
+        align-self: center;
+    }
+    h2{
+        color: white;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin-left: 0.3vw;
+        margin-bottom: 0.2vh;
+    }
+    input{
+        background-color: white;
+        color: #474747;
+        border: 1px solid #999999;
+        border-radius: 4px;
+        padding: 0.8vh 0.8vw;
+        width: 100%;
+
+        font-family: 'Manrope', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+    button{
+        background-color: white;
+        color: #20B87D;
+        border: none;
+        border-radius: 50px;
+        padding: 1.3vh;
+        width: 100%;
+
+        font-family: 'Manrope', sans-serif;
+        font-size: 1.3rem;
+        font-weight: 800;
+        margin-top: 2vh;
+    }
+  }
 
 
 
 
 
-.buttons_container{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10vh;
-    margin-left: 0.8vw;
-    margin-right: 0.8vw;
-}
-.criar_button{
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.3vw;
-    font-family: 'Montserrat';
-    font-weight: 700;
-}
-.avancar_button{
-    background-color: white;
-    border: none;
-    color: #388F50;
-    padding: 1.9vh 2vw;
-    border-radius: 2vw;
-    font-size: 1.3vw;
-    font-family: 'Montserrat';
-    font-weight: 700;
-}
-.voltar_container{
-    margin-top: 8vh;
-    margin-left: 0.8vw;
-    margin-right: 0.8vw;
-}
-.voltar_text{
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.3vw;
-    font-family: 'Montserrat';
-    font-weight: 700;
-}
-a{
-    text-decoration: none;
-    color: white;
-}
+  .bottom-content{
+    
+  }
