@@ -3,5 +3,124 @@
 
 
 @media screen and (max-width: 768px){
+body{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: center center;
+    background-image: url(../imagens/login-back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 98.9vh;
+    width: 95vw;
+}
+  
 
+  /*---------------------------------------------------------------------------*/
+  
+  .container{
+    background: linear-gradient(160deg, rgba(36, 201, 133, 1) 0%, rgba(24, 211, 137, 1) 27%, rgba(33, 186, 126, 1) 57%, rgba(31, 182, 123, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3vh;
+    width: 90vw;
+    border-radius: 15px;
+    padding: 5vh 0.5vw;
+    box-shadow: 0px 0px 30px 5px rgb(50, 50, 50);
+  }
+  #rocket{
+   width: 120px;
+  }
+  .center-content{
+    display: flex;
+    flex-direction: column;
+
+    gap: 4vh;
+    width: 75%;
+    h1{
+        color: white;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.4rem;
+        font-weight: 600;
+        align-self: center;
+    }
+    h2{
+        color: white;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-left: 0.3vw;
+        margin-bottom: 0.2vh;
+    }
+    input{
+        background-color: white;
+        color: #474747;
+        border: 1px solid #999999;
+        border-radius: 4px;
+        padding: 0.8vh 2vw;
+        width: 100%;
+
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 400;
+        outline: none;
+    }
+    button{
+        background-color: white;
+        color: #20B87D;
+        border: none;
+        border-radius: 50px;
+        padding: 1vh;
+        width: 100%;
+
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 800;
+        margin-top: 2vh;
+        cursor: pointer;
+    }
+  }
+
+
+
+
+
+  .bottom-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .inf-3{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1vh;
+    }
+    h3{
+      color: white;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 300;
+    }
+    a{
+      text-decoration: none;
+      color: white;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    p{
+      text-decoration: none;
+      color: white;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-top: 8vh;
+      cursor: pointer;
+    }
+  }
 }

@@ -4,8 +4,8 @@ function scrollToDiv(div) {
     }
   }
 
-var mediaQuery = window.matchMedia("(max-width: 710px)");
-const novoUl = document.querySelector(".novoUl")
+var mediaQuery = window.matchMedia("(max-width: 768px)");
+const novoUl = document.querySelector(".novoUl");
 const ignore = novoUl.children[4];
 
 if (mediaQuery.matches){
