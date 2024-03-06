@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@media screen and (max-width: 768px){
+  body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: center center;
+      background-image: url(../imagens/recuperacao-back.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      height: 100vh;
+      width: 100vw;
+  }
+    
+    /*---------------------------------------------------------------------------*/
+    
+  .container{
+    background: linear-gradient(160deg, rgba(36, 201, 133, 1) 0%, rgba(24, 211, 137, 1) 27%, rgba(33, 186, 126, 1) 57%, rgba(31, 182, 123, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3.5vh;
+    width: 90vw;
+    border-radius: 15px;
+    padding: 5vh 0.5vw;
+    padding-bottom: 50%;
+    box-shadow: 0px 0px 30px 5px rgb(50, 50, 50);
+  }
+  #rocket{
+  width: 120px;
+  }
+  .center-content{
+    display: flex;
+    flex-direction: column;
+
+    gap: 3vh;
+    width: 75%;
+    h1{
+      color: white;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      align-self: center;
+    }
+    h2{
+      color: white;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 400;
+      text-align: center;
+      width: 90%;
+      margin: auto;
+    }
+    h3{
+      color: white;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-left: 0.3vw;
+      margin-bottom: 0.2vh;
+    }
+    .inf-1{
+      margin-top: 1vh;
+    }
+    input{
+      background-color: white;
+      color: #474747;
+      border: 1px solid #999999;
+      border-radius: 4px;
+      padding: 0.8vh 2vw;
+      width: 100%;
+
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 400;
+      outline: none;
+    }
+    button{
+      background-color: white;
+      color: #20B87D;
+      border: none;
+      border-radius: 50px;
+      padding: 1vh;
+      width: 100%;
+
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 800;
+      margin-top: 1vh;
+      cursor: pointer;
+    }
+  }
+}

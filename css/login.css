@@ -18,14 +18,13 @@ body{
     display: flex;
     justify-content: start;
     align-items: center;
-    margin-left: 5vw;
     position: center center;
     background-image: url(../imagens/login-back.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
-    width: 95vw;
+    width: 100vw;
 }
   
 
@@ -35,6 +34,7 @@ body{
     background: linear-gradient(160deg, rgba(36, 201, 133, 1) 0%, rgba(24, 211, 137, 1) 27%, rgba(33, 186, 126, 1) 57%, rgba(31, 182, 123, 1) 100%);
     display: flex;
     justify-content: center;
+    margin-left: 5vw;
     align-items: center;
     flex-direction: column;
     gap: 3.5vh;
