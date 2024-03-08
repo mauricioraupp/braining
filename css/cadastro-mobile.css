@@ -110,6 +110,53 @@
 
     }
 
+    .selector-container{
+      display: flex;
+      gap: 5px;
+    }
+    #selector-day{
+      background-color: white;
+      color: #474747;
+      border: 1px solid #999999;
+      border-radius: 4px;
+    
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+      outline: none;
+      width: 25%;
+      height: 43.8px;
+      text-align: center;
+    }
+    
+    #selector-month{
+      background-color: white;
+      color: #474747;
+      border: 1px solid #999999;
+      border-radius: 4px;
+      padding: 0.8vh 0.8vw;
+    
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+      outline: none;
+      width: 33%;
+      text-align: center;
+    }
+    #selector-year{
+      background-color: white;
+      color: #474747;
+      border: 1px solid #999999;
+      border-radius: 4px;
+      padding: 0.8vh 0.8vw;
+    
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+      outline: none;
+      width: 35%;
+      text-align: center;
+    }
 
     /*---------------------------------------------------------------------------*/
 
