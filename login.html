@@ -13,18 +13,18 @@
 <body>
   <section class="container">
     <img id="rocket" src="imagens/whiterockettext.png">
-    <article class="center-content">
+    <form class="center-content">
       <h1>Bem vindo de volta!</h1>
-      <div class="inf-1">
-        <h2>Email</h2>
-        <input placeholder="Insira seu email">
-      </div>
-      <div class="inf-2">
-        <h2>Senha</h2>
-        <input placeholder="Insira sua senha">
-      </div>
+      <fieldset class="inf-1">
+        <label for="email-input">Email</label>
+        <input placeholder="Insira seu email" id="email-input" type="email" required>
+      </fieldset>
+      <fieldset class="inf-2">
+        <label for="password-input">Senha</label>
+        <input placeholder="Insira sua senha" id="password-input" type="password" minlength="8" required>
+      </fieldset>
       <button id="button-avancar">Avançar</button>
-    </article>
+    </form>
     <article class="bottom-content">
       <div class="inf-3">
         <h3>Não tem uma conta? <a href="#">Criar conta</a></h3>

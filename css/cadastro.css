@@ -30,7 +30,9 @@ body{
 
 /*---------------------------------------------------------------------------*/
 
-
+fieldset{
+  border:none;
+}
 .container{
     background: linear-gradient(160deg, rgba(36, 201, 133, 1) 0%, rgba(24, 211, 137, 1) 27%, rgba(33, 186, 126, 1) 57%, rgba(31, 182, 123, 1) 100%);
     display: flex;
@@ -58,7 +60,7 @@ body{
  
     gap: 5vh;
     width: 90%;
-    h2{
+    label{
         color: white;
         font-family: 'Inter', sans-serif;
         font-size: 1.4rem;
@@ -80,6 +82,12 @@ body{
         width: 100%;
         height: 43.8px;
     }
+    input:focus{
+      outline: 1px solid black;
+    }
+    /*input:invalid{
+      outline: 1px solid red;
+    }*/
     .inf-top-container{
         display: flex;
         justify-content: center;
@@ -115,6 +123,13 @@ body{
          margin-top: 2.2vh;
          cursor: pointer;
      }
+     button:hover{
+      background-color: rgb(215, 215, 215);
+      color: rgb(2, 154, 95);
+    }
+    button:focus{
+      outline: 2px solid black;
+    }
 }
 .inf-1, .inf-2, .inf-3, .inf-4, .inf-5, .inf-6{
   display: flex;
@@ -139,6 +154,15 @@ body{
   width: 25%;
   height: 43.8px;
   text-align: center;
+}
+#selector-day:focus{
+  outline: 1px solid black;
+}
+#selector-month:focus{
+  outline: 1px solid black;
+}
+#selector-year:focus{
+  outline: 1px solid black;
 }
 
 #selector-month{

@@ -29,7 +29,9 @@ body{
   
 
   /*---------------------------------------------------------------------------*/
-  
+  fieldset{
+    border: none;
+  }
   .container{
     background: linear-gradient(160deg, rgba(36, 201, 133, 1) 0%, rgba(24, 211, 137, 1) 27%, rgba(33, 186, 126, 1) 57%, rgba(31, 182, 123, 1) 100%);
     display: flex;
@@ -53,46 +55,58 @@ body{
     gap: 6vh;
     width: 75%;
     h1{
-        color: white;
-        font-family: 'Inter', sans-serif;
-        font-size: 2rem;
-        font-weight: 600;
-        align-self: center;
+      color: white;
+      font-family: 'Inter', sans-serif;
+      font-size: 2rem;
+      font-weight: 600;
+      align-self: center;
     }
-    h2{
-        color: white;
-        font-family: 'Inter', sans-serif;
-        font-size: 1.4rem;
-        font-weight: 500;
-        margin-left: 0.3vw;
-        margin-bottom: 0.2vh;
+    label{
+      color: white;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-left: 0.3vw;
+      margin-bottom: 0.2vh;
     }
     input{
-        background-color: white;
-        color: #474747;
-        border: 1px solid #999999;
-        border-radius: 4px;
-        padding: 0.8vh 0.8vw;
-        width: 100%;
+      background-color: white;
+      color: #474747;
+      border: 1px solid #999999;
+      border-radius: 4px;
+      padding: 0.8vh 0.8vw;
+      width: 100%;
 
-        font-family: 'Manrope', sans-serif;
-        font-size: 1.2rem;
-        font-weight: 400;
-        outline: none;
+      font-family: 'Manrope', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 400;
     }
+    input:focus{
+      outline: 1px solid black;
+    }
+    /*input:invalid{
+      outline: 1px solid red;
+    }*/
     button{
-        background-color: white;
-        color: #20B87D;
-        border: none;
-        border-radius: 50px;
-        padding: 1.3vh;
-        width: 100%;
+      background-color: white;
+      color: rgb(32, 184, 125);
+      border: none;
+      border-radius: 50px;
+      padding: 1.3vh;
+      width: 100%;
 
-        font-family: 'Manrope', sans-serif;
-        font-size: 1.3rem;
-        font-weight: 800;
-        margin-top: 2.2vh;
-        cursor: pointer;
+      font-family: 'Manrope', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-top: 2.2vh;
+      cursor: pointer;
+    }
+    button:hover{
+      background-color: rgb(215, 215, 215);
+      color: rgb(2, 154, 95);
+    }
+    button:focus{
+      outline: 2px solid black;
     }
   }
 
