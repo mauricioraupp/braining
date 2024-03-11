@@ -102,8 +102,8 @@ body{
       cursor: pointer;
     }
     button:hover{
-      background-color: rgb(215, 215, 215);
-      color: rgb(2, 154, 95);
+      background-color: rgb(230, 230, 230);
+      color: rgb(17, 169, 110);
     }
     button:focus{
       outline: 2px solid black;
@@ -139,6 +139,13 @@ body{
       font-weight: 700;
       cursor: pointer;
     }
+    a:hover{
+      color: rgb(230, 230, 230);
+    }
+    a:focus{
+      outline: 2px solid black;
+      border-radius: 2px;
+    }
     p{
       text-decoration: none;
       color: white;
@@ -147,5 +154,8 @@ body{
       font-weight: 600;
       margin-top: 8vh;
       cursor: pointer;
+    }
+    p:hover{
+      color: rgb(230, 230, 230);
     }
   }

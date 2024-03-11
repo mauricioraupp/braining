@@ -41,3 +41,19 @@ for (let i = 2024; i >= 1930; i--) {
     
     selectorYear.appendChild(option3);
 }
+
+
+
+const password = document.querySelector("#input-password");
+const confirmPassword = document.querySelector("#input-password-confirm");
+
+function validatePassword(){
+    if(password.value != confirmPassword.value) {
+      confirmPassword.setCustomValidity("As senhas não coincidem");
+    } else {
+      confirmPassword.setCustomValidity('');
+    }
+  }
+  
+  password.onchange = validatePassword;
+  confirmPassword.onkeyup = validatePassword;
