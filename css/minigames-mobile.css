@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&display=swap');
+
+@media screen and (max-width: 768px) {
+  header nav ul img{
+    height: 65px;
+    margin-bottom: 10px;
+    margin-top: -1.5vh;
+  }
+  .list-one{
+    position: absolute;
+    top:10px
+  }
+  header nav{
+    padding-top: 1vh;
+    display: inline-block;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+  }
+  header nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: white;
+    font-weight: 600;
+    flex-wrap: wrap;
+    gap: 8%;
+    margin: auto;
+    width: 90%;
+    margin-top: 60px;
+
+    li{
+      display: flex;
+      margin-top: 3vh;
+      cursor: pointer;
+    }
+  }
+  header nav ul button{
+    background-color: white;
+    color: #192F44;
+    font-family: 'Inter', 'sans serif';
+    font-size: 0.9rem;
+    font-weight: 700;
+    height: 36px;
+    width: 150px;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    flex: 1 0 5rem;
+    margin-top: 2vh;
+  }
+}

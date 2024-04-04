@@ -12,9 +12,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
-
+a{
+  text-decoration: none;
+  color: white;
+}
 
 
 .first-part {
@@ -24,17 +27,15 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 30vh;
-  box-shadow: 0px 0px 60px 5px rgb(89, 89, 89);
-  position: relative;
-  z-index: 10;
 }
+
 
 
 .rocket{
   height: 86px;
 }
 .navbar {
-  padding-top: 2.3vh;
+  padding-top: 1vh;
   display: inline;
   justify-content: center;
   width: 100%;
@@ -208,7 +209,7 @@ strong{
   justify-content: center;
   align-items: center;
   margin-top: 2vh;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 .image-one{
   width: 500px;
@@ -259,7 +260,7 @@ strong{
   justify-content: center;
   align-items: center;
   margin-top: 2vh;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 .image-two{
   height: 500px;
@@ -304,7 +305,7 @@ strong{
   justify-content: center;
   align-items: center;
   margin-top: 2vh;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 .image-three{
   height: 500px;
@@ -349,7 +350,7 @@ strong{
   justify-content: center;
   align-items: center;
   margin-top: 2vh;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 .image-four{
   height: 500px;
@@ -364,7 +365,7 @@ strong{
   justify-content: center;
   align-items: center;
   margin-top: 2vh;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 .image-five{
   height: 500px;
@@ -406,7 +407,7 @@ strong{
   justify-content: center;
   align-items: center;
   margin-top: 2vh;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 .image-six{
   height: 500px;
@@ -438,7 +439,6 @@ strong{
   background-color: #192F44;
   display: flex;
   justify-content: center;
-  box-shadow: 0px 0px 60px 5px rgb(89, 89, 89);
 }
 .footer-part-container{
   display: flex;
