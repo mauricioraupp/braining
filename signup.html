@@ -6,8 +6,8 @@
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <title>Braining</title>
   <link rel="icon" href="imagens/greenrocketnew.png">
-  <link rel='stylesheet' type='text/css' media='screen' href='css/cadastro.css'>
-  <link rel="stylesheet" type='text/css' media='screen' href="css/cadastro-mobile.css">
+  <link rel='stylesheet' type='text/css' media='screen' href='css/signup.css'>
+  <link rel="stylesheet" type='text/css' media='screen' href="css/signup-mobile.css">
 </head>
 <body>
   <section class="container">
@@ -26,17 +26,7 @@
       <div class="inf-mid-container">
         <fieldset class="inf-3">
           <label for="selector-day" id="apagar">Data de nascimento</label>
-          <div class="selector-container">
-            <select id="selector-day">
-              <option value="" disabled selected hidden>DD</option>
-            </select>
-            <select id="selector-month">
-              <option value="" disabled selected hidden>MM</option>
-            </select>
-            <select id="selector-year">
-              <option value="" disabled selected hidden>AAAA</option>
-            </select>
-          </div>
+          <input id="input-date" type="date" required>
         </fieldset>
         <fieldset class="inf-4">
           <label for="input-email">Email</label>

@@ -2,23 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @media screen and (max-width: 768px){
-  body{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: center center;
-      background-image: url(../imagens/cadastro-back.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
-      height: 100vh;
-      width: 100vw;
-  }
-
-
-  /*---------------------------------------------------------------------------*/
-
-
   .container{
       background: linear-gradient(160deg, rgba(36, 201, 133, 1) 0%, rgba(24, 211, 137, 1) 27%, rgba(33, 186, 126, 1) 57%, rgba(31, 182, 123, 1) 100%);
       display: flex;
