@@ -1,13 +1,13 @@
 function scrollToDiv(div) {
-    if (div) {
-      div.scrollIntoView({ behavior: 'smooth' });
-    }
+  if (div) {
+    div.scrollIntoView({ behavior: 'smooth' });
   }
+}
 
 var mediaQuery = window.matchMedia("(max-width: 768px)");
 const novoUl = document.querySelector(".novoUl");
 const ignore = novoUl.children[4];
 
 if (mediaQuery.matches){
-  ignore.remove();
+ignore.remove();
 }

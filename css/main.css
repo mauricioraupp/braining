@@ -4,6 +4,7 @@
 *, :root{
   margin: 0px;
   padding: 0px;
+
   box-sizing: border-box;
 
   font-synthesis: none;
@@ -11,11 +12,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  border: 1px solid red;
 }
 
-/*------------------------------- FIRST SECTION ------------------------------*/
 
-.first-part{
+
+.first-part {
   background: linear-gradient(160deg, rgba(36, 201, 133, 1) 0%, rgba(24, 211, 137, 1) 27%, rgba(33, 186, 126, 1) 57%, rgba(31, 182, 123, 1) 100%);
   display: flex;
   flex-direction: column;
@@ -27,44 +29,41 @@
   z-index: 10;
 }
 
-/*---------------------------------- HEADER ----------------------------------*/
 
-.first-part nav{
-  padding-top: 2.3vh;
-  width: 100%;
+.rocket{
+  height: 86px;
 }
-
-.first-part nav ul{
-  display: flex;
-  flex-wrap: wrap;
+.navbar {
+  padding-top: 2.3vh;
+  display: inline;
   justify-content: center;
+  width: 100%;
+  margin: auto;
+}
+ul {
+  display: flex;
   align-items: center;
-  
+  list-style: none;
+  justify-content: center;
+  font-family: 'Inter', 'sans serif';
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 600;
+  flex-wrap: wrap;
   gap: 8%;
   margin: auto;
   width: 70%;
-
-  font-family: 'Inter',sans-serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: white;
-  list-style: none;
 }
-
-.first-part nav ul img{
-  height: 86px;
-}
-
-.first-part nav ul li{
+ul li{
   cursor: pointer;
 }
 
-.first-part nav ul button{
+.minijogos-first-button {
   background-color: white;
-  font-family: 'Inter', sans-serif;
+  color: #192F44;
+  font-family: 'Inter', 'sans serif';
   font-size: 1.1rem;
   font-weight: 700;
-  color: #192F44;
   height: 46px;
   width: 172px;
   border-radius: 50px;
@@ -73,79 +72,93 @@
   cursor: pointer;
 }
 
-/*--------------------------- FIRST SECTION ARTICLE --------------------------*/
 
-.first-part main{
+.first-article-container{
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   width: 90%;
+  margin: auto;
   margin-top: 15vh;
 }
 
-.first-part main article{
+.center-text h1{
+  font-size: 4.5rem;
+}
+.top-text h3{
+  font-size: 1rem;
+}
+
+
+.first-part-container {
   display: flex;
   flex-direction: column;
   width: 45%;
 }
 
-.first-part main article h3{
-  display: flex;
-  justify-content: center;
+.top-text {
   width: 110px;
   background-color: rgba(255, 255, 255, 0.351);
   padding: 8px 50px;
   border-radius: 50px;
+  display: flex;
+  justify-content: center;
   margin-bottom: 30px;
-
+}
+.top-text h3 {
   font-family: 'Inter', 'sans serif';
-  font-size: 1rem;
-  font-weight: 500;
   color: white;
+  font-weight: 500;
 }
 
-.first-part main article h1{
-  font-family: 'Gentium Book Plus', Helvetica;
-  font-size: 4.5rem;
-  font-weight: 300;
-  color: white;
+
+.center-text{
   text-align: left;
 }
-
-.first-part main article h2{
-  font-family: 'Inter', 'sans-serif';
-  font-size: 1.1rem;
-  font-weight: 400;
+.center-text h1{
+  font-family: 'Gentium Book Plus', 'Arial' ;
   color: white;
+  font-weight: 300;
+}
 
+
+.center-text-second{
   text-align: justify;
   margin-right: -10px;
   margin-top: 20px;
 }
+.center-text-second h2{
+  font-family: 'Inter', 'sans-serif';
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 400;
+}
 
-.first-part main div{
+
+
+.first-part-buttons{
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
 }
-.first-part main div #button-first{
-  font-family: 'Inter', sans-serif;
+.first-button{
+  font-family: 'Inter', 'sans-serif';
+  color: #192F44;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #192F44;
   background-color: white;
   width: 363px;
   height: 60px;
   border-radius: 50px;
   border: none;
 }
-.first-part main div #button-first:hover{
+.first-button:hover{
   cursor: pointer;
 }
-.first-part main div #button-second{
+.second-button{
   font-family: 'Inter', 'sans-serif';
+  color: white;
   font-size: 1.1rem;
   font-weight: 600;
-  color: white;
   background-color: #192F44;
   width: 363px;
   height: 60px;
@@ -153,12 +166,11 @@
   border: none;
   margin-right: -10px;
 }
-.first-part main div #button-second{
+.second-button:hover{
   cursor: pointer;
 }
 
-/*----------------------------- SECOND SECTION -------------------------------*/
-
+/*-------------------------------------------------------------------------------------------------------------------*/
 strong{
   font-weight: 900;
 }
