@@ -3,21 +3,6 @@
 
 
 @media screen and (max-width: 768px){
-body{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    position: center center;
-    background-image: url(../images/login-back.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
-    width: 100vw;
-}
-  
-
-  /*---------------------------------------------------------------------------*/
   
   .container{
     background: linear-gradient(160deg, rgba(36, 201, 133, 1) 0%, rgba(24, 211, 137, 1) 27%, rgba(33, 186, 126, 1) 57%, rgba(31, 182, 123, 1) 100%);
