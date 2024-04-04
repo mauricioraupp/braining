@@ -13,25 +13,21 @@
   -webkit-text-size-adjust: 100%;
   /*border: 1px solid red;*/
 }
+
+body{
+  background: linear-gradient(160deg, rgba(36, 201, 133, 1) 0%, rgba(24, 211, 137, 1) 27%, rgba(33, 186, 126, 1) 57%, rgba(31, 182, 123, 1) 100%);
+  height: 100vh
+}
+
 a{
   text-decoration: none;
   color: white;
 }
 
+/*--------------------------------- HEADER -----------------------------------*/
 
-
-body{
-  background: linear-gradient(160deg, rgba(36, 201, 133, 1) 0%, rgba(24, 211, 137, 1) 27%, rgba(33, 186, 126, 1) 57%, rgba(31, 182, 123, 1) 100%);
-  height: 100vh;
-}
-
-
-
-header{
-
-}
 header nav ul img{
-  height: 86px;
+  height: 70px;
 }
 header nav{
   padding-top: 1vh;
@@ -44,23 +40,28 @@ header nav ul{
   align-items: center;
   list-style: none;
   justify-content: center;
-  font-family: 'Inter', 'sans serif';
-  font-size: 1.1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
   color: white;
   font-weight: 600;
   flex-wrap: wrap;
   gap: 8%;
   margin: auto;
   width: 70%;
+
+  li{
+    cursor: pointer;
+  }
 }
-header nav ul li{
-  cursor: pointer;
+header nav ul li:hover{
+  text-decoration: underline;
+  color: rgb(235, 235, 235);
 }
-header nav ul button {
+header nav ul button{
   background-color: white;
   color: #192F44;
   font-family: 'Inter', 'sans serif';
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
   height: 46px;
   width: 172px;
@@ -68,4 +69,156 @@ header nav ul button {
   border: none;
   text-align: center;
   cursor: pointer;
+}
+header nav ul button:hover{
+  background-color: rgb(230, 230, 230);
+  color: #0f1c28;
+}
+header nav ul button:focus{
+  outline: 2px solid black;
+}
+
+/*------------------------------- SECTION ------------------------------------*/
+
+.minigames-container{
+  display: grid;
+  grid-template-columns: 10% 25% 30% 25% 10%;
+  grid-template-rows: 50% 50%;
+  place-items: center;
+  height: 80%;
+  padding-top: 5vh;
+
+  #art-1{
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  #art-2{
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  #art-3{
+    grid-column: 4/5;
+    grid-row: 1/2;
+  }
+  #art-4{
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  #art-5{
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+  #art-6{
+    grid-column: 4/5;
+    grid-row: 2/3;
+  }
+}
+
+.minigames-container article{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+}
+
+.minigames-container article div{
+  background-color: white;
+  border-radius: 10px;
+  width: 12rem;
+  height: 12rem;
+
+  cursor: pointer;
+}
+
+.minigames-container article p{
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: white;
+
+  cursor: pointer;
+}
+
+/*-------------------------------- POP UP ------------------------------------*/
+
+.memory-game-popup{
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  transition: .5s;
+  opacity: 0;
+  z-index: -1;
+}
+.memory-game-popup section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+  width: 36rem;
+  gap: 30px;
+  border-radius: 10px;
+  background-color: #17D389;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 20px 10px;
+
+  font-family: 'Inter', sans-serif;
+  color: white;
+
+  h1{
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  h2{
+    margin-top: -25px;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  button{
+    background-color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    width: 180px;
+  
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #192F44;
+  
+    cursor: pointer;
+  }
+  button:hover{
+    background-color:rgb(230, 230, 230);
+    color: #0f1c28;
+  }
+}
+
+.memory-game-popup section div{
+  display: flex;
+  gap: 20px;
+
+  a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5px;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #192F44;
+  }
+  a:hover{
+    background-color:rgb(230, 230, 230);
+    color: #0f1c28;
+  }
 }

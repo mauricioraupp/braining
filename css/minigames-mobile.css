@@ -10,25 +10,8 @@
     position: absolute;
     top:10px
   }
-  header nav{
-    padding-top: 1vh;
-    display: inline-block;
-    justify-content: center;
-    width: 100%;
-    margin: auto;
-  }
   header nav ul{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    justify-content: center;
-    font-family: 'Inter', sans-serif;
     font-size: 0.9rem;
-    color: white;
-    font-weight: 600;
-    flex-wrap: wrap;
-    gap: 8%;
-    margin: auto;
     width: 90%;
     margin-top: 60px;
 
@@ -39,18 +22,84 @@
     }
   }
   header nav ul button{
-    background-color: white;
-    color: #192F44;
-    font-family: 'Inter', 'sans serif';
     font-size: 0.9rem;
-    font-weight: 700;
+    font-weight: 600;
     height: 36px;
     width: 150px;
-    border-radius: 50px;
-    border: none;
-    text-align: center;
-    cursor: pointer;
     flex: 1 0 5rem;
     margin-top: 2vh;
+  }
+
+/*------------------------------- SECTION ------------------------------------*/
+
+  .minigames-container{
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33.333% 33.333% 33.333%;
+
+    #art-1{
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+    #art-2{
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+    #art-3{
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+    #art-4{
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+    #art-5{
+      grid-column: 1/2;
+      grid-row: 3/4;
+    }
+    #art-6{
+      grid-column: 2/3;
+      grid-row: 3/4;
+    }
+  }
+
+  .minigames-container article{
+    gap: 2vh;
+
+    div{
+      width: 8rem;
+      height: 8rem;
+    }
+
+    p{
+      font-size: 1.1rem;
+    }
+  }
+
+/*----------------------------- MEMORY GAME POPUP ----------------------------*/
+
+  .memory-game-popup section{
+    height: 38rem;
+    width: 15rem;
+  
+    h1{
+      font-size: 1.6rem;
+    }
+    h2{
+      font-size: 0.8rem;
+    }
+    button{
+      font-size: 0.8rem;
+    }
+  }
+  
+  .memory-game-popup section div{
+    flex-direction: column;
+    gap: 15px;
+  
+    a{
+      width: 4rem;
+      height: 4rem;
+      font-size: 2rem;
+    }
   }
 }

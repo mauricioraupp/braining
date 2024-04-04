@@ -2,14 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @media screen and (max-width: 768px) {
-  .first-part {
-    background: linear-gradient(160deg, rgba(36, 201, 133, 1) 0%, rgba(24, 211, 137, 1) 27%, rgba(33, 186, 126, 1) 57%, rgba(31, 182, 123, 1) 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 30vh;
-  }
   .rocket{
     height: 65px;
     margin-bottom: 10px;
@@ -19,64 +11,28 @@
     position: absolute;
     top:10px
   }
-  .navbar {
-    padding-top: 1vh;
-    display: inline-block;
-    justify-content: center;
-    width: 100%;
-    margin: auto;
-  }
   nav ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    justify-content: center;
-    font-family: 'Inter', 'sans serif';
     font-size: 0.9rem;
-    color: white;
-    font-weight: 600;
     flex-wrap: wrap;
-    gap: 8%;
-    margin: auto;
     width: 90%;
     margin-top: 60px;
   }
   nav ul li{
     cursor: pointer;
-  }
-  li{
     display: flex;
     margin-top: 3vh;
   }
-  
-  .ignore{
-    margin-right: 0px;
-  }
-  .ignore2{
-    margin-left: 0px;
-  }
 
   .minijogos-first-button {
-    background-color: white;
-    color: #192F44;
-    font-family: 'Inter', 'sans serif';
     font-size: 0.9rem;
-    font-weight: 700;
+    font-weight: 600;
     height: 36px;
     width: 150px;
-    border-radius: 50px;
-    border: none;
-    text-align: center;
-    cursor: pointer;
     flex: 1 0 5rem;
   }
 
   .first-article-container{
-    display: flex;
-    justify-content: center;
     width: 100%;
-    margin: auto;
-    margin-top: 15vh;
   }
 
   .center-text h1{
@@ -86,362 +42,94 @@
     font-size: 0.8rem
   }
   .first-part-container {
-    display: flex;
-    flex-direction: column;
     width: 90%;
   }
   
-  .top-text {
-    width: 110px;
-    background-color: rgba(255, 255, 255, 0.351);
-    padding: 8px 50px;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-  }
-  .top-text h3 {
-    font-family: 'Inter', 'sans serif';
-    color: white;
-    font-weight: 500;
-  }
-  
-  
-  .center-text{
-    text-align: left;
-  }
-  .center-text h1{
-    font-family: 'Gentium Book Plus', 'Arial' ;
-    color: white;
-    font-weight: 300;
-  }
-  
-  
-  .center-text-second{
-    text-align: justify;
-    margin-top: 20px;
-  }
   .center-text-second h2{
-    font-family: 'Inter', 'sans-serif';
     font-size: 0.8rem;
-    color: white;
-    font-weight: 400;
-  }
-  
-  
-  
-  .first-part-buttons{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
   }
   .first-button{
-    font-family: 'Inter', 'sans-serif';
-    color: #192F44;
     font-size: 0.9rem;
-    font-weight: 600;
-    background-color: white;
-    width: 363px;
-    height: 50px;
-    border-radius: 50px;
-    border: none;
-  }
-  .first-button:hover{
-    cursor: pointer;
   }
   .second-button{
-    font-family: 'Inter', 'sans-serif';
-    color: white;
     font-size: 0.9rem;
-    font-weight: 600;
-    background-color: #192F44;
-    width: 363px;
-    height: 60px;
-    border-radius: 50px;
-    border: none;
-    margin-right: 10px;
-  }
-  .second-button:hover{
-    cursor: pointer;
   }
   
   /*-------------------------------------------------------------------------------------------------------------------*/
-  strong{
-    font-weight: 900;
-  }
-  .second-part{
-    background-color: #fcfcfc;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    width: 100%;
-  }
-  .second-part-container{
-    width: 46%;
-    margin: auto;
-    margin-top: 140px;
-    margin-bottom: 130px;
-    display: flex;
-    justify-content: center;
-  }
-  .second-part-center-text h1{
-    font-family: 'Gentium Book Plus', 'sans-serif';
-    font-style: italic;
-    font-size: 2.1rem;
-    font-weight: 500;
-  }
   
   .second-part-center-text p{
-    font-family: 'Manrope', 'sans-serif';
     font-size: 0.8rem;
-    font-weight: 500;
   }
   
-  .image-one-container{
-    background-color: #f6f6f6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2vh;
-    border-radius: 5px;
-  }
   .image-one{
     width: 300px;
   }
   #subtitle-one{
-    font-family: 'Gentium Book Plus', 'sans-serif';
-    font-style: italic;
     font-size: 1.1rem;
-    font-weight: 500;
-    margin-top: 2vh;
-  }
-  #subtitle-two{
-    margin-top: 2vh;
   }
   /*-------------------------------------------------------------------------------------------------------------------*/
-  
-  .third-part{
-    background-color: #f6f6f6;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    width: 100%;
-  }
-  .third-part-container{
-    width: 46%;
-    margin: auto;
-    margin-top: 140px;
-    margin-bottom: 130px;
-    display: flex;
-    justify-content: center;
-  }
+
   .third-part-center-text h1{
-    font-family: 'Gentium Book Plus', 'sans-serif';
-    font-style: italic;
     font-size: 2.1rem;
-    font-weight: 500;
   }
   
   .third-part-center-text p{
-    font-family: 'Manrope', 'sans-serif';
     font-size: 0.8rem;
-    font-weight: 500;
-  }
-  
-  .image-two-container{
-    background-color: #fcfcfc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2vh;
-    border-radius: 5px;
   }
   .image-two{
     height: 300px;
   }
-  #subtitle-three{
-    margin-top: 2vh;
-  }
   
   /*-------------------------------------------------------------------------------------------------------------------*/
   
-  .fourth-part{
-    background-color: #fcfcfc;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    width: 100%;
-  }
-  .fourth-part-container{
-    width: 46%;
-    margin: auto;
-    margin-top: 140px;
-    margin-bottom: 130px;
-    display: flex;
-    justify-content: center;
-  }
   .fourth-part-center-text h1{
-    font-family: 'Gentium Book Plus', 'sans-serif';
-    font-style: italic;
     font-size: 2.1rem;
-    font-weight: 500;
   }
   
   .fourth-part-center-text p{
-    font-family: 'Manrope', 'sans-serif';
     font-size: 0.8rem;
-    font-weight: 500;
   }
   
-  .image-three-container{
-    background-color: #f6f6f6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2vh;
-    border-radius: 5px;
-  }
   .image-three{
     height: 300px;
-  }
-  #subtitle-four{
-    margin-top: 2vh;
   }
   
   /*-------------------------------------------------------------------------------------------------------------------*/
   
-  .fifth-part{
-    background-color: #f6f6f6;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    width: 100%;
-  }
-  .fifth-part-container{
-    width: 43%;
-    margin: auto;
-    margin-top: 140px;
-    margin-bottom: 130px;
-    display: flex;
-    justify-content: center;
-  }
   .fifth-part-center-text h1{
-    font-family: 'Gentium Book Plus', 'sans-serif';
-    font-style: italic;
     font-size: 2.1rem;
-    font-weight: 500;
   }
   
   .fifth-part-center-text p{
-    font-family: 'Manrope', 'sans-serif';
     font-size: 0.8rem;
-    font-weight: 500;
   }
   
-  .image-four-container{
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2vh;
-    border-radius: 5px;
-  }
   .image-four{
     height: 300px;
   }
-  #subtitle-five{
-    margin-top: 3vh;
-  }
-  
-  .image-five-container{
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2vh;
-    border-radius: 5px;
-  }
+
   .image-five{
     height: 300px;
   }
   
   /*-------------------------------------------------------------------------------------------------------------------*/
   
-  .sixth-part{
-    background-color: #fcfcfc;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    width: 100%;
-  }
-  .sixth-part-container{
-    width: 46%;
-    margin: auto;
-    margin-top: 140px;
-    margin-bottom: 130px;
-    display: flex;
-    justify-content: center;
-  }
   .sixth-part-center-text h1{
-    font-family: 'Gentium Book Plus', 'sans-serif';
-    font-style: italic;
     font-size: 2.1rem;
-    font-weight: 500;
   }
   
   .sixth-part-center-text p{
-    font-family: 'Manrope', 'sans-serif';
     font-size: 0.8rem;
-    font-weight: 500;
   }
   
-  .image-six-container{
-    background-color: #f6f6f6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2vh;
-    border-radius: 5px;
-  }
   .image-six{
     height: 300px;
   }
-  
-  .sixth-button-container{
-    display: flex;
-    justify-content: center;
-    margin-top: 3vh;
-  }
   .sixth-part-button{
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    height: 58px;
-    border-radius: 50px;
-    background-color: #192F44;
-    color: #fcfcfc;
-    font-family: 'Inter', 'sans-serif';
     font-size: 0.9rem;
-    font-weight: 500;
-    cursor: pointer;
   }
   
   /*-------------------------------------------------------------------------------------------------------------------*/
-  
-  .footer-part{
-    background-color: #192F44;
-    display: flex;
-    justify-content: center;
-  }
-  .footer-part-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 50px;
-    margin-top: 30px;
-  }
   
   .footer-logo-img{
     height: 55px;
@@ -469,10 +157,6 @@
   }
   
   .politics h3{
-    font-family: 'Inter', 'sans-serif';
-    color: white;
-    font-weight: 300;
     font-size: 0.8rem;
-    margin-bottom: 30px;
   }
 }
