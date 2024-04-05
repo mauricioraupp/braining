@@ -34,12 +34,14 @@ function showNotify() {
   notify.style.top = '10%';
   notify.style.left = '50%';
   notify.style.transform = 'translate(-50%, -50%)';
+  notify.style.transition = '0.5s'
   notify.style.zIndex = '2';
 
   document.body.appendChild(notify);
 
   setTimeout(function() {
-      document.body.removeChild(notify);
+      notify.style.opacity = '0';
+      notify.style.userSelect = 'none';
   }, 3000);
 };
 

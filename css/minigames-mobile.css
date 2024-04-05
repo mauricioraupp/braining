@@ -1,5 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&display=swap');
 
+@media screen and (max-width: 1280px) {
+  header nav ul {
+    font-size: 1rem;
+    flex-wrap: nowrap;
+    width: 90%;
+    gap:5%;
+  }
+  header nav ul li{
+    margin-top: 3vh;
+  }
+
+  header nav ul button{
+    font-size: 1rem;
+    font-weight: 600;
+    height: 36px;
+    width: 150px;
+    flex: 1 0 5rem;
+    margin-top: 3vh;
+  }
+
+  .minigames-container article div{
+    width: 8rem;
+    height: 8rem;
+  }
+  
+  .minigames-container article p{
+    font-size: 1.1rem;
+  }
+}
+
+
 @media screen and (max-width: 768px) {
   header nav ul img{
     height: 65px;
@@ -14,6 +45,7 @@
     font-size: 0.9rem;
     width: 90%;
     margin-top: 60px;
+    flex-wrap: wrap;
 
     li{
       display: flex;
@@ -66,12 +98,12 @@
     gap: 2vh;
 
     div{
-      width: 8rem;
-      height: 8rem;
+      width: 7rem;
+      height: 7rem;
     }
 
     p{
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
   }
 

@@ -48,9 +48,9 @@ ul {
   color: white;
   font-weight: 600;
   flex-wrap: wrap;
-  gap: 8%;
+  gap: 5%;
   margin: auto;
-  width: 70%;
+  width: 80%;
 }
 ul li{
   cursor: pointer;

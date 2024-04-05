@@ -45,9 +45,9 @@ header nav ul{
   color: white;
   font-weight: 600;
   flex-wrap: wrap;
-  gap: 8%;
+  gap: 5%;
   margin: auto;
-  width: 70%;
+  width: 80%;
 
   li{
     cursor: pointer;
@@ -124,8 +124,8 @@ header nav ul button:focus{
 .minigames-container article div{
   background-color: white;
   border-radius: 10px;
-  width: 12rem;
-  height: 12rem;
+  width: 10rem;
+  height: 10rem;
 
   cursor: pointer;
 }
@@ -133,8 +133,9 @@ header nav ul button:focus{
 .minigames-container article p{
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: white;
+  text-align: center;
 
   cursor: pointer;
 }
