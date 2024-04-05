@@ -1,9 +1,3 @@
-function scrollToDiv(div) {
-  if (div) {
-    div.scrollIntoView({ behavior: 'smooth' });
-  }
-}
-
 const buttonFirst = document.querySelector('.first-button');
 const buttonNav = document.querySelector('.minijogos-first-button');
 
