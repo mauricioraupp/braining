@@ -8,10 +8,10 @@ const buttonFirst = document.querySelector('.first-button');
 const buttonNav = document.querySelector('.minijogos-first-button');
 
 buttonFirst.addEventListener('click', function() {
-  window.location.href = '../html/minigames.html';
+  window.location.href = 'html/minigames.html';
 });
 buttonNav.addEventListener('click', function() {
-  window.location.href = '../html/minigames.html';
+  window.location.href = 'html/minigames.html';
 });
 
 var mediaQuery = window.matchMedia("(max-width: 768px)");
