@@ -136,7 +136,7 @@ const buttonBack = document.querySelector('#button-back');
 const buttonAgain = document.querySelector('#button-again');
 
 buttonBack.addEventListener('click', function() {
-  window.location.href = '../../html/minigames.html';
+  window.location.href = '../../pages/minigames.html';
 });
 
 buttonAgain.addEventListener('click', function() {
