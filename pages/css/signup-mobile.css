@@ -11,7 +11,7 @@
       gap: 3.5vh;
       width: 90vw;
       border-radius: 15px;
-      padding: 5vh 1.5vw;
+      padding: 3vh 1.5vw;
       box-shadow: 0px 0px 30px 5px rgb(50, 50, 50);
   }
 
@@ -27,8 +27,8 @@
       justify-content: center;
       flex-wrap: wrap;
   
-      gap: 5vh;
-      width: 90%;
+      gap: 2vh;
+      width: 70%;
       label{
           color: white;
           font-family: 'Inter', sans-serif;
@@ -50,27 +50,6 @@
           outline: none;
           width: 100%;
       }
-      .inf-top-container{
-          display: flex;
-          justify-content: center;
-          flex-direction: row;
-          gap: 3vw;
-          width: 100%;
-      }
-      .inf-mid-container{
-          display: flex;
-          justify-content: center;
-          flex-direction: row;
-          gap: 3vw;
-          width: 100%;
-      }
-      .inf-bottom-container{
-          display: flex;
-          justify-content: center;
-          flex-direction: row;
-          gap: 3vw;
-          width: 100%;
-      }
       button{
           background-color: white;
           color: #20B87D;
@@ -86,7 +65,7 @@
           cursor: pointer;
       }
     }
-    .inf-1, .inf-2, .inf-3, .inf-4, .inf-5, .inf-6{
+    .inf-1, .inf-2, .inf-3, .inf-4, .inf-5{
       display: flex;
       flex-direction: column;
       width: 100%;

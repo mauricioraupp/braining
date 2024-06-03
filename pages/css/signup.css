@@ -19,7 +19,7 @@ body{
     justify-content: center;
     align-items: center;
     position: center center;
-    background-image: url(../images/cadastro-back.png);
+    background-image: url(../assets/cadastro-back.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -40,9 +40,9 @@ fieldset{
     align-items: center;
     flex-direction: column;
     gap: 3.5vh;
-    width: 1300px;
+    width: 700px;
     border-radius: 15px;
-    padding: 5vh 1.5vw;
+    padding: 3vh 1.5vw;
     box-shadow: 0px 0px 30px 5px rgb(50, 50, 50);
 }
 
@@ -58,8 +58,8 @@ fieldset{
     justify-content: center;
     flex-wrap: wrap;
  
-    gap: 5vh;
-    width: 90%;
+    gap: 2vh;
+    width: 75%;
     label{
         color: white;
         font-family: 'Inter', sans-serif;
@@ -88,27 +88,6 @@ fieldset{
     /*input:invalid{
       outline: 1px solid red;
     }*/
-    .inf-top-container{
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        gap: 3vw;
-        width: 100%;
-     }
-     .inf-mid-container{
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        gap: 3vw;
-        width: 100%;
-     }
-     .inf-bottom-container{
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        gap: 3vw;
-        width: 100%;
-     }
      button{
          background-color: white;
          color: #20B87D;
@@ -131,7 +110,7 @@ fieldset{
       outline: 2px solid black;
     }
 }
-.inf-1, .inf-2, .inf-3, .inf-4, .inf-5, .inf-6{
+.inf-1, .inf-2, .inf-3, .inf-4, .inf-5{
   display: flex;
   flex-direction: column;
   width: 100%;

@@ -2,11 +2,11 @@ CREATE DATABASE braining_db;
 USE braining_db;
 
 CREATE TABLE user_account(
+	id INT AUTO_INCREMENT PRIMARY KEY,
 	name VARCHAR(255),
-    nickname VARCHAR(255) UNIQUE,
-    birthday DATETIME,
+    date DATETIME,
     email VARCHAR(255) NOT NULL UNIQUE,
-    senha VARCHAR(255) NOT NULL
+    password VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE user_settings(
