@@ -21,7 +21,8 @@ confirmPassword.onkeyup = validatePassword;
 
 let button = document.getElementById("button-avancar");
 
-button.onclick = async function() {
+button.onclick = async function(event) {
+  event.preventDefault()
   validatePassword();
 
   if (password.value !== confirmPassword.value) {
@@ -45,8 +46,9 @@ button.onclick = async function() {
   let content = await response.json();
 
   if (content.success) {
-    alert("Sucesso");
+    alert(content.message);
+    window.location.href = './login.html'
   } else {
-    alert("Não");
+    alert(content.message);
   }
 }

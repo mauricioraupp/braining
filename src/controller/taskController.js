@@ -18,7 +18,7 @@ async function storeTask(request, response) {
         .status(201)
         .json({
           success: true,
-          message: 'Sucesso',
+          message: 'Conta criada com sucesso!',
           data: results
         })
     } else {
@@ -26,7 +26,7 @@ async function storeTask(request, response) {
       .status(400)
       .json({
         success: false,
-        message: 'Deu problema',
+        message: 'Dados inválidos',
         data: err
       })
     }

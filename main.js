@@ -8,11 +8,10 @@ buttonNav.addEventListener('click', function() {
   window.location.href = 'html/minigames.html';
 });
 
+let prevScrollpos = window.pageYOffset;
 
-
-var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
+  let currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.querySelector(".navbar").style.top = "0";
   } else {
@@ -20,3 +19,4 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 }
+
