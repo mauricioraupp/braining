@@ -1,23 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&display=swap');
 
 @media screen and (max-width: 1280px) {
-  header nav ul {
-    font-size: 1rem;
-    flex-wrap: nowrap;
-    width: 90%;
-    gap:5%;
-  }
-  header nav ul li{
-    margin-top: 3vh;
-  }
+  nav ul div {
+    gap: 40px;
 
-  header nav ul button{
-    font-size: 1rem;
-    font-weight: 600;
-    height: 36px;
-    width: 150px;
-    flex: 1 0 5rem;
-    margin-top: 3vh;
+    button {
+      font-size: 1rem;
+      font-weight: 600;
+      height: 40px;
+      width: 150px;
+    }
   }
 
   .minigames-container article div{
@@ -32,34 +24,25 @@
 
 
 @media screen and (max-width: 768px) {
-  header nav ul img{
-    height: 65px;
-    margin-bottom: 10px;
-    margin-top: -1.5vh;
-  }
-  .list-one{
-    position: absolute;
-    top:10px
-  }
-  header nav ul{
-    font-size: 0.9rem;
-    width: 90%;
-    margin-top: 60px;
-    flex-wrap: wrap;
-
-    li{
-      display: flex;
-      margin-top: 3vh;
-      cursor: pointer;
+  nav ul div {
+    gap: 1rem;
+    img{
+      height: 60px;
     }
   }
-  header nav ul button{
+  nav ul {
+    font-size: 0.9rem;
+    width: 90%;
+  }
+  nav ul li{
+    cursor: pointer;
+    display: flex;
+  }
+
+  nav ul div button {
     font-size: 0.9rem;
     font-weight: 600;
-    height: 36px;
     width: 150px;
-    flex: 1 0 5rem;
-    margin-top: 2vh;
   }
 
 /*------------------------------- SECTION ------------------------------------*/

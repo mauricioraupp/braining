@@ -24,6 +24,7 @@
 
 .mobile-menu{
   position: fixed;
+
   height: 100vh;
   width: 100vw;
   background-color: rgb(0,0,0,0.7);
@@ -64,7 +65,7 @@
 
   ul{
     background-color: rgb(0, 0, 0, 0.4);
-    width: 350px;
+    width: 0px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -72,6 +73,8 @@
     gap: 1rem;
     list-style: none;
     backdrop-filter: blur(5px);
+    overflow: hidden;
+    transition: 1s;
 
     a{
       font-family: 'Inter', 'sans serif';
@@ -174,7 +177,7 @@ nav ul {
   justify-content: center;
   /*margin-left: 10vw;*/
   width: 90%;
-  margin-top: 15vw;
+  margin-top: 11vw;
 
   article{
     display: flex;
@@ -197,6 +200,7 @@ nav ul {
     }
     .center-text{
       font-size: 4.5rem;
+      line-height: 5.5rem;
       font-family: 'Gentium Book Plus', 'Arial' ;
       color: white;
       font-weight: 300;
@@ -213,7 +217,7 @@ nav ul {
 .first-part-buttons{
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 1rem;
 }
 .first-button, .second-button{
   font-family: 'Inter', sans-serif;

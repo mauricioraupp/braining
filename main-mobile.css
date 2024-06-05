@@ -19,6 +19,18 @@
       width: 150px;
     }
   }
+  .first-article{
+    width: 100%;
+    margin-top: 38vh;
+  }
+  .center-text{
+    font-size: 3.5rem !important;
+    line-height: 4rem !important;
+  }
+  .center-text-second{
+    font-size: 1.2rem !important;
+    font-weight: 300 !important;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -53,6 +65,7 @@
   }
   .center-text{
     font-size: 2.25rem !important;
+    line-height: 3rem !important; 
   }
   .top-text{
     font-size: 0.9rem !important;

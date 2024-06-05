@@ -2,10 +2,10 @@ const buttonFirst = document.querySelector('.first-button');
 const buttonNav = document.querySelector('nav ul div button');
 
 buttonFirst.addEventListener('click', function() {
-  window.location.href = 'html/minigames.html';
+  window.location.href = 'pages/minigames.html';
 });
 buttonNav.addEventListener('click', function() {
-  window.location.href = 'html/minigames.html';
+  window.location.href = 'pages/minigames.html';
 });
 
 
@@ -27,7 +27,8 @@ const navObjects = {
   mobileNav: document.querySelector(".mobile-nav"),
   mobileMenu: document.querySelector(".mobile-menu"),
   openMenu: document.querySelector("#open-menu"),
-  closeMenu: document.querySelector("#close-menu")
+  closeMenu: document.querySelector("#close-menu"),
+  ulMenu: document.querySelector(".mobile-menu ul")
 }
 
 const mediaQuery = window.matchMedia("(max-width: 768px)");
@@ -39,8 +40,15 @@ if (mediaQuery.matches) {
 
 navObjects.openMenu.addEventListener('click', function() {
   navObjects.mobileMenu.classList.remove("hide")
+  navObjects.ulMenu.style.transition = '1s';
+  setTimeout(() => {
+    navObjects.ulMenu.style.width = '320px';
+  }, 100)
+
 })
 
 navObjects.closeMenu.addEventListener('click', function() {
   navObjects.mobileMenu.classList.add("hide")
+  navObjects.ulMenu.style.transition = '0s';
+  navObjects.ulMenu.style.width = '';
 })
