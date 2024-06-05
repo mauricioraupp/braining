@@ -17,7 +17,86 @@
 .first-part {
   background: linear-gradient(160deg, rgba(36, 201, 133, 1) 0%, rgba(24, 211, 137, 1) 27%, rgba(33, 186, 126, 1) 57%, rgba(31, 182, 123, 1) 100%);
   display: flex;
-  padding-bottom: 30vh;
+  height: 100vh;
+}
+
+/*--------------------------/ MOBILE MENU /------------------------------*/
+
+.mobile-menu{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(0,0,0,0.7);
+
+  .user{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 15px;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.7);
+    width: 100%;
+
+    #user-img{
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .user-wrapper{
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      #user-name, #user-id{
+        font-family: 'Inter', 'sans serif';
+        font-size: 1.4rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: white;
+      }
+      #user-id{
+        font-size: 1.1rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  ul{
+    background-color: rgb(0, 0, 0, 0.4);
+    width: 350px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    backdrop-filter: blur(5px);
+
+    a{
+      font-family: 'Inter', 'sans serif';
+      font-size: 1.4rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: white;
+      border-bottom: 1px solid white;
+      padding-bottom: 1rem;
+      width: 90%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  #close-menu{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    filter: drop-shadow(0 0 10px black);
+  }
+}
+
+.hide{
+  display: none !important;
 }
 
 /*----------------------------/ HEADER /---------------------------------*/
@@ -95,7 +174,7 @@ nav ul {
   justify-content: center;
   /*margin-left: 10vw;*/
   width: 90%;
-  margin-top: 29vh;
+  margin-top: 15vw;
 
   article{
     display: flex;

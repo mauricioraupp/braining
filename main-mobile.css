@@ -2,176 +2,161 @@
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @media screen and (max-width: 1280px) {
-
+  .first-article {
+    width: 100%;
+    margin-top: 25vw;
+    article{
+      width: 70%;
+    }
+  }
   nav ul div {
     gap: 40px;
 
     button {
       font-size: 1rem;
       font-weight: 600;
-      height: 36px;
+      height: 40px;
       width: 150px;
     }
   }
 }
 
 @media screen and (max-width: 768px) {
-  .rocket{
-    height: 65px;
-    margin-bottom: 10px;
-    margin-top: -1.5vh;
+  .first-part{
+    padding-bottom: 35vh;
   }
-  .list-one{
-    position: absolute;
-    top:10px
+  
+  nav ul div {
+    gap: 1rem;
+    img{
+      height: 60px;
+    }
   }
   nav ul {
     font-size: 0.9rem;
-    flex-wrap: wrap;
     width: 90%;
-    margin-top: 60px;
-    gap: 5%;
   }
   nav ul li{
     cursor: pointer;
     display: flex;
-    margin-top: 3vh;
   }
 
-  .minijogos-first-button {
+  nav ul div button {
     font-size: 0.9rem;
     font-weight: 600;
-    height: 36px;
     width: 150px;
-    flex: 1 0 5rem;
   }
 
-  .first-article-container{
+  .first-article{
     width: 100%;
+    margin-top: 38vh;
+  }
+  .center-text{
+    font-size: 2.25rem !important;
+  }
+  .top-text{
+    font-size: 0.9rem !important;
+  }
+  .first-article article {
+    width: 80%;
+  }
+  
+  .center-text-second{
+    font-size: 0.9rem !important;
+    font-weight: 300 !important;
+  }
+  .first-button, .second-button{
+    font-size: 0.9rem !important;
+    height: 40px !important;
+  }
+  
+
+  
+  .landing-containers article div {
+    p{
+      font-size: 0.8rem;
+    }
+    h1{
+      font-size: 2.1rem;
+    }
   }
 
-  .center-text h1{
-    font-size: 2.25rem;
+  .landing-containers article{
+    width: 80%;
   }
-  .top-text h3{
-    font-size: 0.8rem
-  }
-  .first-part-container {
-    width: 90%;
-  }
-  
-  .center-text-second h2{
-    font-size: 0.8rem;
-  }
-  .first-button{
-    font-size: 0.9rem;
-  }
-  .second-button{
-    font-size: 0.9rem;
-  }
-  
-  /*-------------------------------------------------------------------------------------------------------------------*/
-  
-  .second-part-center-text p{
-    font-size: 0.8rem;
-  }
-  
-  .image-one{
-    width: 300px;
+  .landing-images{
+    width: 350px;
   }
   #subtitle-one{
     font-size: 1.1rem;
   }
-  /*-------------------------------------------------------------------------------------------------------------------*/
 
-  .third-part-center-text h1{
-    font-size: 2.1rem;
-  }
-  
-  .third-part-center-text p{
-    font-size: 0.8rem;
-  }
-  .image-two{
-    height: 300px;
-  }
-  
-  /*-------------------------------------------------------------------------------------------------------------------*/
-  
-  .fourth-part-center-text h1{
-    font-size: 2.1rem;
-  }
-  
-  .fourth-part-center-text p{
-    font-size: 0.8rem;
-  }
-  
-  .image-three{
-    height: 300px;
-  }
-  
-  /*-------------------------------------------------------------------------------------------------------------------*/
-  
-  .fifth-part-center-text h1{
-    font-size: 2.1rem;
-  }
-  
-  .fifth-part-center-text p{
-    font-size: 0.8rem;
-  }
-  
-  .image-four{
-    height: 300px;
-  }
-
-  .image-five{
-    height: 300px;
-  }
-  
-  /*-------------------------------------------------------------------------------------------------------------------*/
-  
-  .sixth-part-center-text h1{
-    font-size: 2.1rem;
-  }
-  
-  .sixth-part-center-text p{
-    font-size: 0.8rem;
-  }
-  
-  .image-six{
-    height: 300px;
-  }
-  .sixth-part-button{
+  .sixth-button-container button{
     font-size: 0.9rem;
   }
   
-  /*-------------------------------------------------------------------------------------------------------------------*/
-  
-  .footer-logo-img{
-    height: 55px;
-  }
-  
-  .app-icons{
+
+
+
+  footer{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    gap: 20px;
-    color: white;
-    marker: none;
-    margin-top: -30px;
+    gap: 1rem;
+    padding: 4rem 0;
   }
-  .bibi-linkedin{
-    height: 20px;
-    width: 20px;
-  }
-  .bibi-google{
-    height: 20px;
-    width: 20px;
-  }
-  .bibi-github{
-    height: 20px;
-    width: 20px;
-  }
+  footer article{
+    display: flex;
+    padding-bottom: 1rem;
+    gap: 2rem;
   
-  .politics h3{
-    font-size: 0.8rem;
+    img{
+      width: 2rem;
+      cursor: pointer;
+    }
+  }
+  footer div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 90%;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ffffff;
+  
+    a{
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #ffffff;
+      text-decoration: none;
+    }
+  }
+  footer a, span{
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 100;
+    color: #ffffff;
+  }
+  footer a{
+    padding-top: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 450px){
+  footer div{
+    gap: 1rem;
+    a{
+      font-size: 0.8rem;
+    }
+  }
+
+  .sixth-button-container{
+    button{
+      font-size: 0.9rem;
+    }
   }
 }
