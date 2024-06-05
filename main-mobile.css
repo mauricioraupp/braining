@@ -2,24 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @media screen and (max-width: 1280px) {
-  nav ul {
-    font-size: 1rem;
-    flex-wrap: nowrap;
-    width: 90%;
-    gap:5%;
-  }
-  nav ul li{
-    cursor: pointer;
-    display: flex;
-    margin-top: 3vh;
-  }
 
-  .minijogos-first-button {
-    font-size: 1rem;
-    font-weight: 600;
-    height: 36px;
-    width: 150px;
-    flex: 1 0 5rem;
+  nav ul div {
+    gap: 40px;
+
+    button {
+      font-size: 1rem;
+      font-weight: 600;
+      height: 36px;
+      width: 150px;
+    }
   }
 }
 
