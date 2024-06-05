@@ -176,8 +176,8 @@ nav ul {
   display: flex;
   justify-content: center;
   /*margin-left: 10vw;*/
-  width: 90%;
-  margin-top: 11vw;
+  position: relative;
+  top: 30%;
 
   article{
     display: flex;

@@ -4,7 +4,6 @@
 @media screen and (max-width: 1280px) {
   .first-article {
     width: 100%;
-    margin-top: 25vw;
     article{
       width: 70%;
     }
@@ -18,10 +17,6 @@
       height: 40px;
       width: 150px;
     }
-  }
-  .first-article{
-    width: 100%;
-    margin-top: 38vh;
   }
   .center-text{
     font-size: 3.5rem !important;
@@ -61,7 +56,7 @@
 
   .first-article{
     width: 100%;
-    margin-top: 38vh;
+    top: 50%;
   }
   .center-text{
     font-size: 2.25rem !important;
