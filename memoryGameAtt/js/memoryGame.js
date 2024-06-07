@@ -97,9 +97,14 @@ function scoreCounter(){
     setTimeout(() => {
       scoreAppear();
       showNotify();
+      checkLevelCompleted(levelMaxPoints);
     }, 1000);
   }
 };
+
+function checkLevelCompleted(levelPoints){
+  
+}
 
 function scoreAppear(){
   backScreen.style.opacity = "1";

@@ -14,23 +14,41 @@ CREATE TABLE user_settings(
     volume INT
 );
 
+create table user_level (
+	id int not null auto_increment,
+    id_usuario int not null,
+    level int not null,
+    updated_at timestamp default current_timestamp,
+	FOREIGN KEY (id_usuario) REFERENCES user_account(id)
+);
+
+update user_level where 
+case level = 1 then level =2
+case level = 2 then level =3
+
 CREATE TABLE game_one_level(
-	first_level BOOLEAN,
-    second_level BOOLEAN,
-    third_level BOOLEAN,
-    fourth_level BOOLEAN
+    account_id INT PRIMARY KEY,
+	first_level BOOLEAN default false,
+    second_level BOOLEAN default false,
+    third_level BOOLEAN default false,
+    fourth_level BOOLEAN default false,
+    FOREIGN KEY (account_id) REFERENCES user_account(id)
 );
 
 CREATE TABLE game_two_level(
-	first_level BOOLEAN,
-    second_level BOOLEAN,
-    third_level BOOLEAN,
-    fourth_level BOOLEAN
+    account_id INT PRIMARY KEY,
+	first_level BOOLEAN default false,
+    second_level BOOLEAN default false,
+    third_level BOOLEAN default false,
+    fourth_level BOOLEAN default false,
+    FOREIGN KEY (account_id) REFERENCES user_account(id)
 );
 
 CREATE TABLE game_three_level(
-	first_level BOOLEAN,
-    second_level BOOLEAN,
-    third_level BOOLEAN,
-    fourth_level BOOLEAN
+    account_id INT PRIMARY KEY,
+	first_level BOOLEAN default false,
+    second_level BOOLEAN default false,
+    third_level BOOLEAN default false,
+    fourth_level BOOLEAN default false,
+    FOREIGN KEY (account_id) REFERENCES user_account(id)
 );
