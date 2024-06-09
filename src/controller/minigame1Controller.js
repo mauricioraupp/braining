@@ -7,7 +7,7 @@ async function minigame1Task(request, response) {
     request.body.email,
   );
   
-  const query = "SELECT name,date,email,password from user_account WHERE email = ?;";
+  const query = "SELECT level FROM user user_minigame1 WHERE";
 
   connection.query(query, params, (err, results) => {
     if(results.length > 0) {      

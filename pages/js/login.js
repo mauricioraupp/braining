@@ -1,25 +1,33 @@
-let button = document.querySelector("#button-avancar");
+import { setAccount } from './account.js';
 
-button.onclick = async function(event) {
-  event.preventDefault()
+document.addEventListener('DOMContentLoaded', () => {
+  const button = document.querySelector("#button-avancar");
 
-  let email = document.querySelector("#email-input").value;
-  let password = document.querySelector("#password-input").value;
+  button.onclick = async function(event) {
+    event.preventDefault();
 
-  let data = {email, password};
+    let email = document.querySelector("#email-input").value;
+    let password = document.querySelector("#password-input").value;
 
-  const response = await fetch('http://localhost:3003/api/store/loginTask', {
-    method: "POST",
-    headers: {"Content-type": "application/json;charset=UTF-8"},
-    body: JSON.stringify(data)
-  });
-  
-  let content = await response.json();
-  
-  if (content.success) {
-    window.location.href = '../index.html'
-    alert(content.message)
-  } else {
-    alert(content.message); 
-  }  
-}
+    let data = { email, password };
+
+    const response = await fetch('http://localhost:3003/api/store/loginTask', {
+      method: "POST",
+      headers: { "Content-type": "application/json;charset=UTF-8" },
+      body: JSON.stringify(data)
+    });
+
+    let content = await response.json();
+
+    if (content.success) {
+      setAccount(content.data);
+      localStorage.setItem('@account_logged', JSON.stringify(content.data));
+      localStorage.setItem('@minigame1_info', "");
+      console.log(content.data);
+      alert(content.message);
+      window.location.href = './user_account.html';
+    } else {
+      alert(content.message);
+    }
+  };
+});

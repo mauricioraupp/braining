@@ -97,13 +97,24 @@ function scoreCounter(){
     setTimeout(() => {
       scoreAppear();
       showNotify();
-      checkLevelCompleted(levelMaxPoints);
+      checkCurrentLevel(levelMaxPoints);
     }, 1000);
   }
 };
 
-function checkLevelCompleted(levelPoints){
-  
+export function checkCurrentLevel(levelPoints){
+  let currentLevel = 1
+  if(levelPoints == 4){
+    currentLevel = 1
+  } else if (levelPoints == 5){
+    currentLevel = 2
+  } else if (levelPoints == 6){
+    currentLevel = 3
+  } else if (levelPoints == 7){
+    currentLevel = 4
+  } else {
+    throw(err)
+  }
 }
 
 function scoreAppear(){

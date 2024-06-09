@@ -4,9 +4,10 @@ USE braining_db;
 CREATE TABLE user_account(
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	name VARCHAR(255),
-    date DATETIME,
+    date DATE,
     email VARCHAR(255) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE user_settings(
@@ -14,41 +15,17 @@ CREATE TABLE user_settings(
     volume INT
 );
 
-create table user_level (
-	id int not null auto_increment,
-    id_usuario int not null,
-    level int not null,
-    updated_at timestamp default current_timestamp,
-	FOREIGN KEY (id_usuario) REFERENCES user_account(id)
+CREATE TABLE user_minigame1 (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    level INT NOT NULL DEFAULT 1,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 );
 
 update user_level where 
-case level = 1 then level =2
-case level = 2 then level =3
-
-CREATE TABLE game_one_level(
-    account_id INT PRIMARY KEY,
-	first_level BOOLEAN default false,
-    second_level BOOLEAN default false,
-    third_level BOOLEAN default false,
-    fourth_level BOOLEAN default false,
-    FOREIGN KEY (account_id) REFERENCES user_account(id)
-);
-
-CREATE TABLE game_two_level(
-    account_id INT PRIMARY KEY,
-	first_level BOOLEAN default false,
-    second_level BOOLEAN default false,
-    third_level BOOLEAN default false,
-    fourth_level BOOLEAN default false,
-    FOREIGN KEY (account_id) REFERENCES user_account(id)
-);
-
-CREATE TABLE game_three_level(
-    account_id INT PRIMARY KEY,
-	first_level BOOLEAN default false,
-    second_level BOOLEAN default false,
-    third_level BOOLEAN default false,
-    fourth_level BOOLEAN default false,
-    FOREIGN KEY (account_id) REFERENCES user_account(id)
-);
+CASE
+    WHEN level = 1 THEN level = 2
+    WHEN level = 2 THEN level = 3
+    WHEN level = 3 THEN level = 4
+    WHEN level = 4 THEN level = 5
+END;

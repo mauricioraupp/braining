@@ -58,14 +58,14 @@ body{
     h1{
       color: white;
       font-family: 'Inter', sans-serif;
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 600;
       align-self: center;
     }
     label{
       color: white;
       font-family: 'Inter', sans-serif;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       font-weight: 500;
       margin-left: 0.3vw;
       margin-bottom: 0.2vh;
@@ -79,15 +79,12 @@ body{
       width: 100%;
 
       font-family: 'Manrope', sans-serif;
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-weight: 400;
     }
     input:focus{
       outline: 1px solid black;
     }
-    /*input:invalid{
-      outline: 1px solid red;
-    }*/
     button{
       background-color: white;
       color: rgb(32, 184, 125);
@@ -97,7 +94,7 @@ body{
       width: 100%;
 
       font-family: 'Manrope', sans-serif;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       font-weight: 800;
       margin-top: 2.2vh;
       cursor: pointer;
@@ -129,14 +126,14 @@ body{
     h3{
       color: white;
       font-family: 'Inter', sans-serif;
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 300;
     }
     a{
       text-decoration: none;
       color: white;
       font-family: 'Inter', sans-serif;
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 700;
       cursor: pointer;
     }
@@ -151,7 +148,7 @@ body{
       text-decoration: none;
       color: white;
       font-family: 'Inter', sans-serif;
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 600;
       margin-top: 8vh;
       cursor: pointer;

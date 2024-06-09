@@ -1,45 +1,58 @@
 const connection = require('../config/db');
 const dotenv = require('dotenv').config();
 
+let account = null;
+
 async function loginTask(request, response) {
   
-  const params = Array(
+  const params = [
     request.body.email,
-  );
+  ];
   
-  const query = "SELECT name,date,email,password from user_account WHERE email = ?;";
+  const query = "SELECT id, name, date, email, password FROM user_account WHERE email = ?;";
 
   connection.query(query, params, (err, results) => {
-    if(results.length > 0) {      
-      let resultPassword = results[0].password;
+    if (err) {
+      response
+        .status(500)
+        .json({
+          success: false,
+          message: 'Erro no servidor',
+          data: err
+        });
+      return;
+    }
+
+    if (results.length > 0) {
+      account = results[0];
+      let resultPassword = account.password;
       let formPassword = request.body.password;
 
       if (resultPassword === formPassword) {
         response
-          .status(201)
+          .status(200)
           .json({
             success: true,
             message: 'Login feito com sucesso',
-            data: results
-          })
+            data: account
+          });
       } else {
         response
           .status(400)
           .json({
             success: false,
-            message: 'Senha inválida'            
-          })
+            message: 'Senha inválida'
+          });
       }      
     } else {
       response
-      .status(400)
-      .json({
-        success: false,
-        message: 'Email inválido',
-        data: err
-      })
+        .status(400)
+        .json({
+          success: false,
+          message: 'Email inválido'
+        });
     }
-  })
+  });
 }
 
 module.exports = {

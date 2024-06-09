@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Braining</title>
+  <link rel="stylesheet" href="css/user_account.css">
+  <link rel="stylesheet" href="css/user_account-mobile.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+  <div class="first-part">
+    <nav>
+      <ul class="desktop-nav">
+        <div>
+          <a href="#"><img src="../assets/whiterockettext.png" alt="Logo do site"></a>
+          <a href="#"><li>Home</li></a>
+          <a href="#"><li>Sobre</li></a>
+          <a href="#"><li>Contato</li></a>
+        </div>
+        <div>
+          <a href="./login.html"><li>Login</li></a>
+          <button>Minijogos</button>
+        </div>
+      </ul>
+      <ul class="mobile-nav hide">
+        <img id="open-menu" src="../assets/align-justify.svg">
+        <div>
+          <a href="#"><li>Sobre</li></a>
+          <a href="#"><li>Login</li></a>
+        </div>
+      </ul>
+    </nav>
+
+    <div class="mobile-menu hide">
+      <ul>
+        <article class="user">
+          <img id="user-img" src="../assets/perfil.png">
+          <div class="user-wrapper">
+            <p id="user-name">Lorem Ipsum</p>
+            <p id="user-id">ID: 23</p>
+          </div>
+          <a class="hide" href="pages/login.html"><li>Login</li></a>
+        </article>
+        <a href="#"><li>Conta</li></a>
+        <a href="#"><li>Home</li></a>
+        <a href="#"><li>Minijogos</li></a>
+        <a href="#"><li>Sobre</li></a>
+        <a href="#"><li>Contato</li></a>
+      </ul>
+      <img id="close-menu" src="../assets/x.svg">
+    </div>
+
+    <main>
+
+      <div class="left-column">
+        <img src="../assets/perfil.png">
+        <p>Alterar imagem</p>
+      </div>
+
+      <form class="center-content">
+        <fieldset class="inf-1">
+          <label for="input-name">Nome</label>
+          <input id="input-name" name="input-name" type="text" required placeholder="Seu nome">
+        </fieldset>
+        <fieldset class="inf-2">
+          <label for="input-date">Data de nascimento</label>
+          <input id="input-date" name="input-date" type="date" required>
+        </fieldset>
+        <fieldset class="inf-3">
+          <label for="input-email">Email</label>
+          <input id="input-email" name="input-email" type="email" required placeholder="Seu email">
+        </fieldset>
+        <fieldset class="inf-4">
+          <label for="input-password">Senha</label>
+          <input id="input-password" name="input-password" type="text" required placeholder="Sua senha">
+        </fieldset>
+        <div class="bottom-wrapper">
+          <p id="user-idd">ID: 123</p>
+          <button id="button-sair">Desconectar</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <footer>
+    <article>
+      <a href="#"><img src="../assets/instagram.svg" alt="Logo do instagram"></a>
+      <a href="#"><img src="../assets/github.svg" alt="Logo do github"></a>
+      <a href="#"><img src="../assets/linkedin.svg" alt="Logo do linkedin"></a>
+      <a href="#"><img src="../assets/mail.svg" alt="Logo do email"></a>
+    </article>
+    <div>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+      <a href="#">FAQs</a>
+      <a href="#">Carreira</a>
+      <a href="#">Blog</a>
+    </div>
+    <a href="#">Termos de Serviço | Políticas de Privacidade</a>
+    <span>© 2024 Todos os direitos reservados</span>
+  </footer>
+
+</body>
+<script src="./js/user_account.js" type="module"></script>
+<script src="js/nav.js"></script>
+</html>
