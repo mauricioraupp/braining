@@ -8,6 +8,7 @@ async function loginTask(request, response) {
   const params = [
     request.body.email,
   ];
+  console.log(params)
   
   const query = "SELECT id, name, date, email, password FROM user_account WHERE email = ?;";
 

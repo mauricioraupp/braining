@@ -20,7 +20,11 @@ CREATE TABLE user_minigame1 (
     user_id INT NOT NULL,
     level INT NOT NULL DEFAULT 1,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	FOREIGN KEY (user_id) REFERENCES user_account(id)
 );
+
+select * from user_account;
+select * from user_minigame1;
 
 update user_level where 
 CASE

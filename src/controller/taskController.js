@@ -7,7 +7,8 @@ async function storeTask(request, response) {
     request.body.name,
     request.body.date,
     request.body.email,
-    request.body.password
+    request.body.password,
+    request.body.storedAccountValue
   );
 
   const query = 'INSERT INTO user_account(name, date, email, password) VALUES(?, ?, ?, ?)';
