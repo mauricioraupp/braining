@@ -1,14 +1,14 @@
 const connection = require('../config/db');
 const dotenv = require('dotenv').config();
 
-async function minigame1Task(request, response) {
+async function minigame1Update(request, response) {
 
   const params = Array(
-    request.body.currentLevel,
+    request.body.unlockedLevel,
     request.body.userEmail
   );
   
-  const query = "UPDATE user_minigame1 SET level = ? WHERE user_email = '?';";
+  const query = "UPDATE user_minigame1 SET level = ? WHERE user_email = ?;";
 
   connection.query(query, params, (err, results) => {
     if(results) {      
@@ -16,7 +16,7 @@ async function minigame1Task(request, response) {
         .status(201)
         .json({
           success: true,
-          message: 'Nivel checkado com sucesso',
+          message: `Nível ${request.body.unlockedLevel} desbloqueado`,
           data: results
         })    
     } else {
@@ -24,7 +24,7 @@ async function minigame1Task(request, response) {
       .status(400)
       .json({
         success: false,
-        message: 'Nivel não registrado',
+        message: 'Nenhum nível desbloquado',
         data: err
       })
     }
@@ -32,5 +32,5 @@ async function minigame1Task(request, response) {
 }
 
 module.exports = {
-  minigame1Task
+  minigame1Update
 }

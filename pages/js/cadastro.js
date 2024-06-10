@@ -35,7 +35,6 @@ button.onclick = async function(event) {
   let email = document.getElementById("input-email").value;
   let passwordValue = document.getElementById("input-password").value;
 
-  // Pegue o valor do LocalStorage
   let storedAccount = localStorage.getItem('@account_logged');
   if (storedAccount) {
     storedAccount = JSON.parse(storedAccount);
@@ -59,7 +58,6 @@ button.onclick = async function(event) {
     });
 
     let content = await response.json();
-    console.log(content);
 
     if (content.success) {
       alert(content.message);
@@ -68,7 +66,6 @@ button.onclick = async function(event) {
       alert(content.message);
     }
   } catch (error) {
-    console.error('Error:', error);
-    alert('Falha ao conectar com o servidor. Por favor, tente novamente mais tarde.');
+    alert('Falha ao conectar com o servidor.');
   }
 };

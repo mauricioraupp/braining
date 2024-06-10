@@ -1,3 +1,7 @@
+const account = JSON.parse(storedAccount);
+document.querySelector("#user-name").textContent = account.name
+document.querySelector("#user-id").textContent = `ID: ${account.id}`
+
 let prevScrollpos = window.pageYOffset;
 
 window.onscroll = function() {
@@ -32,7 +36,6 @@ navObjects.openMenu.addEventListener('click', function() {
   setTimeout(() => {
     navObjects.ulMenu.style.width = '320px';
   }, 100)
-
 })
 
 navObjects.closeMenu.addEventListener('click', function() {
@@ -40,3 +43,8 @@ navObjects.closeMenu.addEventListener('click', function() {
   navObjects.ulMenu.style.transition = '0s';
   navObjects.ulMenu.style.width = '';
 })
+
+// if(storedAccount){
+//   document.querySelector(".login-text").textContent = "Perfil"
+//   document.querySelector(".login-href").setAttribute("href, pages/user_account.html")
+// }

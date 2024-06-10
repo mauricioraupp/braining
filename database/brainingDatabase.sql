@@ -25,11 +25,3 @@ CREATE TABLE user_minigame1 (
 
 select * from user_account;
 select * from user_minigame1;
-
-update user_level where 
-CASE
-    WHEN level = 1 THEN level = 2
-    WHEN level = 2 THEN level = 3
-    WHEN level = 3 THEN level = 4
-    WHEN level = 4 THEN level = 5
-END;
