@@ -163,9 +163,30 @@ a{
     font-size: 3rem;
     font-weight: 700;
     color: #192F44;
+    position: relative;
   }
   a:hover{
     background-color:rgb(230, 230, 230);
     color: #0f1c28;
   }
+}
+.padlock-img1,.padlock-img2,.padlock-img3,.padlock-img4,.padlock-img5{
+  display: none;
+}
+.padlock{
+  position: absolute;
+  bottom: -20px;
+  display: block;
+  
+  background-image: url(../../assets/padlock-icon.svg);
+  background-size: cover;
+  width: 30px;
+}
+.disabled{
+  background-color: rgb(194, 194, 194) !important;
+  cursor: auto;
+}
+.disabled:hover{
+  background-color: rgb(194, 194, 194) !important;
+  color: #192F44 !important;
 }

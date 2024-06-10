@@ -48,8 +48,7 @@ button.onclick = async function(event) {
     name,
     date,
     email,
-    password: passwordValue,
-    storedAccountValue: storedAccount.id // Supondo que você precisa do ID
+    password: passwordValue
   };
 
   try {
@@ -60,11 +59,11 @@ button.onclick = async function(event) {
     });
 
     let content = await response.json();
-    console.log(content); // Adicionado para depuração
+    console.log(content);
 
     if (content.success) {
       alert(content.message);
-      // window.location.href = './login.html'
+      window.location.href = './login.html'
     } else {
       alert(content.message);
     }

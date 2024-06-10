@@ -8,7 +8,9 @@ async function storeTask(request, response) {
     request.body.date,
     request.body.email,
     request.body.password,
-    request.body.storedAccountValue
+  );
+  const params2 = Array(
+    request.body.email,
   );
 
   const query = 'INSERT INTO user_account(name, date, email, password) VALUES(?, ?, ?, ?)';
@@ -24,13 +26,18 @@ async function storeTask(request, response) {
         })
     } else {
       response
-      .status(400)
-      .json({
-        success: false,
-        message: 'Dados inválidos',
-        data: err
+        .status(400)
+        .json({
+          success: false,
+          message: 'Dados inválidos',
+          data: err
       })
     }
+  })
+
+  const query2 = 'INSERT INTO user_minigame1(user_email, level) VALUES(?, 1)';
+
+  connection.query(query2, params2, (err, results2) => {
   })
 }
 

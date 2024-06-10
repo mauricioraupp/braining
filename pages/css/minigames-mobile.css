@@ -117,4 +117,14 @@
       font-size: 2rem;
     }
   }
+
+  .padlock{
+    position: absolute;
+    bottom: -12px;
+    display: block;
+    
+    background-image: url(../../assets/padlock-icon.svg);
+    background-size: cover;
+    width: 24px;
+  }
 }

@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (content.success) {
       setAccount(content.data);
       localStorage.setItem('@account_logged', JSON.stringify(content.data));
-      localStorage.setItem('@minigame1_info', "");
       alert(content.message);
       window.location.href = './user_account.html';
     } else {

@@ -3,10 +3,12 @@ const router = Router();
 
 const { storeTask } = require('../controller/taskController');
 const { loginTask } = require('../controller/loginController');
-const { minigame1Task } = require('../controller/minigame1Controller')
+const { minigame1Task } = require('../controller/minigame1Select');
+const { minigame1Update } = require('../controller/minigame1Update');
 
 router.post('/store/task', storeTask);
 router.post('/store/logintask', loginTask);
-// router.post('/store/minigame1task', minigame1Task);
+router.post('/store/minigame1task', minigame1Task);
+router.post('/store/minigame1update', minigame1Update);
 
 module.exports = router;

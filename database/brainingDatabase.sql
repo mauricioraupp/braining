@@ -17,10 +17,10 @@ CREATE TABLE user_settings(
 
 CREATE TABLE user_minigame1 (
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
+    user_email VARCHAR(255) NOT NULL UNIQUE,
     level INT NOT NULL DEFAULT 1,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	FOREIGN KEY (user_id) REFERENCES user_account(id)
+	FOREIGN KEY (user_email) REFERENCES user_account(email)
 );
 
 select * from user_account;
