@@ -90,6 +90,8 @@ function checkCurrentLevel(levelPoints){
     unlockedLevel = 4
   } else if (levelPoints == 7){
     unlockedLevel = 5
+  } else if (levelPoints == 8){
+    unlockedLevel = 5
   } else {
     throw(err)
   }
@@ -153,13 +155,13 @@ async function requisition() {
   console.log(content)
 }
 
-// const buttonBack = document.querySelector('#button-back');
-// const buttonAgain = document.querySelector('#button-again');
+const buttonBack = document.querySelector('#button-back');
+const buttonAgain = document.querySelector('#button-again');
 
-// buttonBack.addEventListener('click', function() {
-//   window.location.href = '../../pages/minigames.html';
-// });
+buttonBack.addEventListener('click', function() {
+  window.location.href = '../../pages/minigames.html';
+});
 
-// buttonAgain.addEventListener('click', function() {
-//   location.reload();
-// });
+buttonAgain.addEventListener('click', function() {
+  location.reload();
+});

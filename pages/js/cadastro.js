@@ -35,14 +35,6 @@ button.onclick = async function(event) {
   let email = document.getElementById("input-email").value;
   let passwordValue = document.getElementById("input-password").value;
 
-  let storedAccount = localStorage.getItem('@account_logged');
-  if (storedAccount) {
-    storedAccount = JSON.parse(storedAccount);
-  } else {
-    alert('Nenhuma conta encontrada no LocalStorage.');
-    return;
-  }
-
   let data = {
     name,
     date,

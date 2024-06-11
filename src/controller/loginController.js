@@ -10,7 +10,7 @@ async function loginTask(request, response) {
   ];
   console.log(params)
   
-  const query = "SELECT id, name, date, email, password FROM user_account WHERE email = ?;";
+  const query = "SELECT name, date, email, password FROM user_account WHERE email = ?;";
 
   connection.query(query, params, (err, results) => {
     if (err) {
