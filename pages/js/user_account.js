@@ -13,9 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const account = JSON.parse(storedAccount);
     document.querySelector("#input-name").value = account.name;
     document.querySelector("#input-email").value = account.email;
-    // document.querySelector("#input-date").value = account.date;
-    document.querySelector("#input-password").value = account.password;
-    document.querySelector("#user-idd").textContent = `ID: ${account.id}`
+    document.querySelector("#input-date").value = account.date;
   } else {
     console.error('Nenhuma conta está logada.');
   }

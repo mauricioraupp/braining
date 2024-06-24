@@ -20,8 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let content = await response.json();
 
     if (content.success) {
-      setAccount(content.data);
-      localStorage.setItem('@account_logged', JSON.stringify(content.data));
+      let account = content.data;
+      account.date = account.date.split('T')[0]; 
+      setAccount(account);
+      localStorage.setItem('@account_logged', JSON.stringify(account));
       alert(content.message);
       window.location.href = './user_account.html';
     } else {

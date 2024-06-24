@@ -1,6 +1,9 @@
-const account = JSON.parse(storedAccount);
-document.querySelector("#user-name").textContent = account.name
-document.querySelector("#user-id").textContent = `ID: ${account.id}`
+const storedAccount = localStorage.getItem('@account_logged');
+if (storedAccount) {
+  const account = JSON.parse(storedAccount);
+  document.querySelector("#user-name").textContent = account.name
+  document.querySelector("#user-id").textContent = `ID: ${account.id}`
+}
 
 let prevScrollpos = window.pageYOffset;
 

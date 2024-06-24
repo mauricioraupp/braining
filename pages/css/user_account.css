@@ -90,21 +90,6 @@ form{
     outline: 1px solid black;
     color: black;
   }
-  .bottom-wrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-top: 2vh;
-
-    p{
-      margin-left: 10%;
-      color: white;
-      font-family: 'Inter', sans-serif;
-      font-size: 2rem;
-      font-weight: 600;
-    }
-  }
    button{
     background-color: white;
     color: #c42929;
@@ -126,52 +111,4 @@ form{
   button:focus{
     outline: 2px solid black;
   }
-}
-
-footer{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  background-color: #080f16;
-  padding: 4rem 0;
-}
-footer article{
-  display: flex;
-  padding-bottom: 1rem;
-  gap: 2rem;
-
-  img{
-    width: 2rem;
-    cursor: pointer;
-  }
-}
-footer div{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  width: 90%;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #ffffff;
-
-  a{
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    color: #ffffff;
-    text-decoration: none;
-  }
-}
-footer a, span{
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  font-weight: 100;
-  color: #ffffff;
-}
-footer a{
-  padding-top: 1rem;
-  font-weight: 600;
-  text-decoration: none;
 }

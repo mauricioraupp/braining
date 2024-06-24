@@ -1,61 +1,58 @@
 const connection = require('../config/db');
 const dotenv = require('dotenv').config();
-
-let account = null;
+const bcrypt = require('bcrypt');
 
 async function loginTask(request, response) {
-  
-  const params = [
-    request.body.email,
-  ];
-  console.log(params)
-  
-  const query = "SELECT name, date, email, password FROM user_account WHERE email = ?;";
+  const params = [request.body.email];
+  console.log(params);
 
-  connection.query(query, params, (err, results) => {
+  const query = "SELECT name, DATE_FORMAT(date, '%Y-%m-%d') as date, email, password FROM user_account WHERE email = ?;";
+
+  connection.query(query, params, async (err, results) => {
     if (err) {
-      response
-        .status(500)
-        .json({
-          success: false,
-          message: 'Erro no servidor',
-          data: err
-        });
-      return;
+      return response.status(500).json({
+        success: false,
+        message: 'Erro no servidor',
+        data: err
+      });
     }
 
     if (results.length > 0) {
-      account = results[0];
-      let resultPassword = account.password;
-      let formPassword = request.body.password;
+      const account = results[0];
+      const resultPassword = account.password;
+      const formPassword = request.body.password;
 
-      if (resultPassword === formPassword) {
-        response
-          .status(200)
-          .json({
+      try {
+        const match = await bcrypt.compare(formPassword, resultPassword);
+        if (match) {
+          delete account.password;
+          return response.status(200).json({
             success: true,
             message: 'Login feito com sucesso',
             data: account
           });
-      } else {
-        response
-          .status(400)
-          .json({
+        } else {
+          return response.status(400).json({
             success: false,
             message: 'Senha inválida'
           });
-      }      
-    } else {
-      response
-        .status(400)
-        .json({
+        }
+      } catch (error) {
+        return response.status(500).json({
           success: false,
-          message: 'Email inválido'
+          message: 'Erro ao comparar senhas',
+          data: error
         });
+      }
+    } else {
+      return response.status(400).json({
+        success: false,
+        message: 'Email inválido'
+      });
     }
   });
 }
 
 module.exports = {
   loginTask
-}
+};
