@@ -1,8 +1,7 @@
-const storedAccount = localStorage.getItem('@account_logged');
+const storedAccount2 = localStorage.getItem('@account_logged');
 if (storedAccount) {
-  const account = JSON.parse(storedAccount);
+  const account = JSON.parse(storedAccount2);
   document.querySelector("#user-name").textContent = account.name
-  document.querySelector("#user-id").textContent = `ID: ${account.id}`
 }
 
 let prevScrollpos = window.pageYOffset;
