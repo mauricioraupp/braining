@@ -1,7 +1,12 @@
 const storedAccount2 = localStorage.getItem('@account_logged');
-if (storedAccount) {
+if (storedAccount2) {
   const account = JSON.parse(storedAccount2);
+  const navItem = document.querySelectorAll("#nav-item")
   document.querySelector("#user-name").textContent = account.name
+  navItem.forEach(item => {
+    item.textContent = "Conta"
+    item.href = "../pages/user_account.html"
+  })
 }
 
 let prevScrollpos = window.pageYOffset;
@@ -45,8 +50,3 @@ navObjects.closeMenu.addEventListener('click', function() {
   navObjects.ulMenu.style.transition = '0s';
   navObjects.ulMenu.style.width = '';
 })
-
-// if(storedAccount){
-//   document.querySelector(".login-text").textContent = "Perfil"
-//   document.querySelector(".login-href").setAttribute("href, pages/user_account.html")
-// }

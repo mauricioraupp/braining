@@ -109,10 +109,10 @@ nav ul {
   color: white;
   font-weight: 600;
 
-  li{
+  a{
     cursor: pointer;
   }
-  li:hover{
+  a:hover{
     text-decoration: underline;
     color: rgb(235, 235, 235);
   }
@@ -178,7 +178,7 @@ nav ul {
     font-size: 0.9rem;
     width: 90%;
   }
-  nav ul li{
+  nav ul a{
     cursor: pointer;
     display: flex;
   }

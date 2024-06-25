@@ -16,7 +16,6 @@
 
 body{
   background: linear-gradient(160deg, rgba(36, 201, 133, 1) 0%, rgba(24, 211, 137, 1) 27%, rgba(33, 186, 126, 1) 57%, rgba(31, 182, 123, 1) 100%);
-  height: 100vh
 }
 
 a{
@@ -31,8 +30,8 @@ a{
   grid-template-columns: 10% 25% 30% 25% 10%;
   grid-template-rows: 50% 50%;
   place-items: center;
-  height:100%;
-  padding-top: 10vw;
+  height:100vh;
+  margin: 5vw 0;
 
   #art-1{
     grid-column: 2/3;

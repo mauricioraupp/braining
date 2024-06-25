@@ -33,6 +33,10 @@ footer div{
     color: #ffffff;
     text-decoration: none;
   }
+  a:hover{
+    color: #e7e7e7;
+    text-decoration: underline;
+  }
 }
 footer a, span{
   font-family: 'Inter', sans-serif;
