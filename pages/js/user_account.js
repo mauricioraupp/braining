@@ -1,13 +1,11 @@
 const buttonNav = document.querySelector('nav ul div button');
+const storedAccount = localStorage.getItem('@account_logged');
 
 buttonNav.addEventListener('click', function() {
   window.location.href = '../pages/minigames.html';
 });
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
-  const storedAccount = localStorage.getItem('@account_logged');
   
   if (storedAccount) {
     const account = JSON.parse(storedAccount);
@@ -18,3 +16,21 @@ document.addEventListener('DOMContentLoaded', () => {
     console.error('Nenhuma conta está logada.');
   }
 });
+
+const logoutButton = document.querySelector("#button-sair")
+
+logoutButton.addEventListener('click', function(){
+  if (confirm("Tem certeza que deseja sair da conta?") == true){
+    try {
+      if (storedAccount){
+        localStorage.removeItem('@account_logged')
+        alert("Conta desconectada")
+        window.location.href = '.././index.html'
+      } else {
+        throw new Error()
+      }
+    } catch(err) {
+      alert("Nenhuma conta logada")
+    }
+  }
+})

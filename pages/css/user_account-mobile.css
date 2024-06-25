@@ -2,7 +2,7 @@
   main{
     flex-direction: column;
   }
-  form{
+  .center-content{
     width: 80%;
   }
 }
@@ -18,7 +18,7 @@
       font-size: 0.9rem;
     }
   }
-  form{
+  .center-content{
     width: 100%;
   
     fieldset{

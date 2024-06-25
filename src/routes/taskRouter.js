@@ -3,8 +3,8 @@ const router = Router();
 
 const { storeTask } = require('../controller/taskController');
 const { loginTask } = require('../controller/loginController');
-const { minigame1Task } = require('../controller/minigame1Select');
-const { minigame1Update } = require('../controller/minigame1Update');
+const { minigame1Task } = require('../controller/minigamesSelect');
+const { minigame1Update } = require('../controller/minigamesUpdate');
 
 router.post('/store/task', storeTask);
 router.post('/store/logintask', loginTask);
