@@ -4,7 +4,6 @@ const bcrypt = require('bcrypt');
 
 async function loginTask(request, response) {
   const params = [request.body.email];
-  console.log(params);
 
   const query = "SELECT name, DATE_FORMAT(date, '%Y-%m-%d') as date, email, password FROM user_account WHERE email = ?;";
 
