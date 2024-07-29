@@ -131,6 +131,7 @@ function resetBoard() {
 async function scoreAppear(){
   backScreen.style.opacity = "1";
   backScreen.style.zIndex = "1";
+  backScreen.style.display = "flex"
   await requisition()
 };
 
