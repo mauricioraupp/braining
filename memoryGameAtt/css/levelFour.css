@@ -3,11 +3,13 @@
 .memory-game{
   width: 70%;
   height: 80%;
+
+  grid-template-columns: 20% 20% 20% 20% 20%;
 }
 
 .front-face, .back-face{
-  width: 170px;
-  height: 220px;
+  width: clamp(70px, 10vw, 170px);
+  height: clamp(90px, 13vw, 220px);
 }
 
 #done-screen article{
@@ -15,21 +17,11 @@
   padding: 30px;
 }
 
-@media screen and (max-width: 1280px) {
-  .front-face, .back-face{
-      width: 120px;
-      height: 140px;
-      padding: 25px;
-    }
-}
 @media screen and (max-width: 768px) {
+  .memory-game{
+    grid-template-columns: 33% 33% 33%;
+  }
   .front-face, .back-face{
-      width: 70px;
-      height: 90px;
       padding: 10px;
-    }
-  .card{
-      width: 30%;
-      margin: .2%;
     }
 }

@@ -4,12 +4,7 @@
   width: 60%;
   height: 70%;
 
-  grid-template-columns: 20% 20% 20% 20%;
-  place-items: center;
-}
-
-.card{
-  margin: .2%;
+  grid-template-columns: 25% 25% 25% 25%;
 }
 
 .front-face, .back-face{

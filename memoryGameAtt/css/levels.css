@@ -50,6 +50,7 @@ body{
 
 .memory-game{
   display: grid;
+  place-items: center;
   justify-content: space-evenly;
   margin: auto;
   box-sizing: content-box;
