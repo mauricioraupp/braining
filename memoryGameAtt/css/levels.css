@@ -35,7 +35,7 @@ body{
     padding-top: 30px;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-    font-size: clamp(0.9rem, 2.5vw, 1.4rem);
+    font-size: clamp(0.9rem, 2.5vw, 1.3rem);
     color: #192F44;
   }
 }
@@ -162,13 +162,15 @@ body{
   background-color: rgb(208, 208, 208);
 }
 
-svg{
+.bi-gear-fill{
   position: absolute;
   top: 7%;
   right: 5%;
   margin: auto;
   cursor: pointer;
-  filter: drop-shadow(0 0 10px black) ;
+  filter: drop-shadow(0 0 10px black);
+  height: clamp(20px, 5vw,40px);
+  width: clamp(20px, 5vw,40px);
 }
 
 @media screen and (max-width: 1280px) {
@@ -193,5 +195,16 @@ svg{
       top: -20%;
       height: 35vh;
       width: 35vh;
+    }
+
+    .bi-gear-fill{
+      right: 0px;
+      background-color: #192F44;
+      box-sizing: content-box;
+      padding: clamp(10px, 4vw,20px);
+      border-top-left-radius: clamp(15px, 5vw,30px);
+      border-bottom-left-radius: clamp(15px, 5vw,30px);
+      padding-right: clamp(20px, 4vw,40px);
+      filter: drop-shadow(0 0 0px black) ;
     }
 }

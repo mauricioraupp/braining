@@ -7,6 +7,10 @@
   grid-template-columns: 20% 20% 20% 20% 20%;
 }
 
+legend{
+  padding-top: 15px !important;
+}
+
 .front-face, .back-face{
   width: clamp(70px, 10vw, 170px);
   height: clamp(90px, 13vw, 220px);
