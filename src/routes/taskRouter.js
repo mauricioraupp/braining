@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const router = Router();
 
-const { storeTask } = require('../controller/taskController');
+const { storeTask } = require('../controller/signupController');
 const { loginTask } = require('../controller/loginController');
 const { minigame1Task } = require('../controller/minigamesSelect');
 const { minigame1Update } = require('../controller/minigamesUpdate');
