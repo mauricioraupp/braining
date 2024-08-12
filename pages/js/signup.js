@@ -43,7 +43,7 @@ button.onclick = async function(event) {
   };
 
   try {
-    const response = await fetch('http://localhost:3003/api/store/task', {
+    const response = await fetch('http://localhost:3003/api/store/signuptask', {
       method: "POST",
       headers: { "Content-type": "application/json;charset=UTF-8" },
       body: JSON.stringify(data)

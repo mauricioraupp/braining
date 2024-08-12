@@ -34,3 +34,56 @@ logoutButton.addEventListener('click', function(){
     }
   }
 })
+
+const inputName = document.getElementById("input-name");
+const inputDate = document.getElementById("input-date");
+const inputEmail = document.getElementById("input-email");
+const inputPassword = document.getElementById("input-password");
+
+const buttonName = document.getElementById("name-change");
+const buttonDate = document.getElementById("date-change");
+const buttonEmail = document.getElementById("email-change");
+const buttonPassword = document.getElementById("password-change");
+
+
+
+button.onclick = async function(event) {
+  event.preventDefault();
+  validatePassword();
+
+  if (password.value !== confirmPassword.value) {
+    alert("As senhas não coincidem!");
+    return;
+  }
+
+  let name = document.getElementById("input-name").value;
+  let date = document.getElementById("input-date").value;
+  let email = document.getElementById("input-email").value;
+  let passwordValue = document.getElementById("input-password").value;
+
+  let data = {
+    name,
+    date,
+    email,
+    password: passwordValue
+  };
+
+  try {
+    const response = await fetch('http://localhost:3003/api/store/signuptask', {
+      method: "POST",
+      headers: { "Content-type": "application/json;charset=UTF-8" },
+      body: JSON.stringify(data)
+    });
+
+    let content = await response.json();
+
+    if (content.success) {
+      alert(content.message);
+      window.location.href = './login.html'
+    } else {
+      alert(content.message);
+    }
+  } catch (error) {
+    alert('Falha ao conectar com o servidor.');
+  }
+};
