@@ -33,57 +33,77 @@ logoutButton.addEventListener('click', function(){
       alert("Nenhuma conta logada")
     }
   }
-})
+});
 
-const inputName = document.getElementById("input-name");
-const inputDate = document.getElementById("input-date");
-const inputEmail = document.getElementById("input-email");
-const inputPassword = document.getElementById("input-password");
+
+
+
+
+
+
+
+const container = document.querySelector(".container");
+const svg = document.querySelector(".lucide-x");
+
+svg.addEventListener('click', function(){
+  container.style.display = 'none';
+})
 
 const buttonName = document.getElementById("name-change");
 const buttonDate = document.getElementById("date-change");
 const buttonEmail = document.getElementById("email-change");
 const buttonPassword = document.getElementById("password-change");
 
-
-
-button.onclick = async function(event) {
+buttonName.onclick = async function(event) {
   event.preventDefault();
-  validatePassword();
 
-  if (password.value !== confirmPassword.value) {
-    alert("As senhas não coincidem!");
-    return;
-  }
+  if (!storedAccount) {
+    alert("Nenhuma conta conectada");
+  } else {
+    const account = JSON.parse(storedAccount);
+    let email = account.email;
+    let data = { email };
 
-  let name = document.getElementById("input-name").value;
-  let date = document.getElementById("input-date").value;
-  let email = document.getElementById("input-email").value;
-  let passwordValue = document.getElementById("input-password").value;
+    try {
+      const response = await fetch('http://localhost:3003/api/store/usertask', {
+        method: "POST",
+        headers: { "Content-type": "application/json;charset=UTF-8" },
+        body: JSON.stringify(data)
+      });
 
-  let data = {
-    name,
-    date,
-    email,
-    password: passwordValue
-  };
+      let content = await response.json();
 
-  try {
-    const response = await fetch('http://localhost:3003/api/store/signuptask', {
-      method: "POST",
-      headers: { "Content-type": "application/json;charset=UTF-8" },
-      body: JSON.stringify(data)
-    });
+      if (content.success) {
+        container.style.display = 'flex';
 
-    let content = await response.json();
+        buttonPassword.onclick = async function(event){
+          event.preventDefault
+          
+          try {
+            const response = await fetch('http://localhost:3003/api/store/usertask', {
+              method: "POST",
+              headers: { "Content-type": "application/json;charset=UTF-8" },
+              body: JSON.stringify(data)
+            });
 
-    if (content.success) {
-      alert(content.message);
-      window.location.href = './login.html'
-    } else {
-      alert(content.message);
+          let content = await response.json();
+
+          if (content.success) {
+            alert(content.message);
+            window.location.href = './login.html'
+          } else {
+            alert(content.message);
+          }
+        } catch (error) {
+          alert('Falha ao conectar com o servidor.');
+        }
+
+        }
+      } else {
+        alert(content.message);
+      }
+    } catch (error) {
+      alert('Falha ao conectar com o servidor.');
     }
-  } catch (error) {
-    alert('Falha ao conectar com o servidor.');
   }
-};
+}
