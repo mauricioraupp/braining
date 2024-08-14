@@ -1,11 +1,11 @@
 const connection = require('../config/db');
 const dotenv = require('dotenv').config();
 
-async function userTask(request, response) {
+async function userRequest(request, response) {
   try {
 
     const params = Array(
-      request.body.email,
+      request.query.email,
     );
 
     const query = 'SELECT password FROM user_account WHERE email = ? ';
@@ -39,53 +39,46 @@ async function userTask(request, response) {
   }
 }
 
-// async function userTask(request                                                                                                                                                  , response) {
-//   try {
+async function userUpdate(request, response) {
 
-//     const params = Array(
-//       request.body.name,
-//     );
+  try {
+    const params = Array(
+      request.query.name,
+      request.query.email
+    );
 
-//     const query = 'INSERT INTO user_account(name, date, email, password) VALUES(?, ?, ?, ?)';
+    const query = 'UPDATE user_account SET name = ? WHERE email = ?';
 
-//     connection.query(query, params, (err, results) => {
-//       if (results) {
-//         response
-//           .status(201)
-//           .json({
-//             success: true,
-//             message: 'Conta criada com sucesso!',
-//             data: results
-//           });
-//       } else {
-//         response
-//           .status(400)
-//           .json({
-//             success: false,
-//             message: 'Dados inválidos',
-//             data: err
-//           });
-//       }
-//     });
-
-//     const query2 = 'INSERT INTO user_minigame1(user_email, level) VALUES(?, 1)';
-
-//     connection.query(query2, params2, (err, results2) => {
-//       if (err) {
-//         console.error('Erro ao inserir níveis iniciais', err);
-//       }
-//     });
-
-//   } catch (error) {
-//     response.status(500).json({
-//       success: false,
-//       message: 'Erro no servidor',
-//       data: error
-//     });
-//   }
-// }
+    connection.query(query, params, (err, results) => {
+      if (results) {
+        response
+          .status(201)
+          .json({
+            success: true,
+            message: 'Nome alterado com sucesso',
+            data: results
+          });
+      } else {
+        response
+          .status(400)
+          .json({
+            success: false,
+            message: 'Não foi possível alterar o nome',
+            data: err
+          });
+      }
+    })
+  } catch (error) {
+    response.status(500).json({
+      success: false,
+      message: 'Erro no servidor',
+      data: error
+    });
+  }
+}
 
 module.exports = {
-  userTask
+  userRequest,
+  userUpdate
 };
  

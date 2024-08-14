@@ -3,7 +3,7 @@ const dotenv = require('dotenv').config();
 const bcrypt = require('bcrypt');
 
 async function loginTask(request, response) {
-  const params = [request.body.email];
+  const params = [request.query.email];
 
   const query = "SELECT name, DATE_FORMAT(date, '%Y-%m-%d') as date, email, password FROM user_account WHERE email = ?;";
 
@@ -19,7 +19,7 @@ async function loginTask(request, response) {
     if (results.length > 0) {
       const account = results[0];
       const resultPassword = account.password;
-      const formPassword = request.body.password;
+      const formPassword = request.query.password;
 
       try {
         const match = await bcrypt.compare(formPassword, resultPassword);

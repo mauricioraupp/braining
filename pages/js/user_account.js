@@ -56,54 +56,46 @@ const buttonPassword = document.getElementById("password-change");
 
 buttonName.onclick = async function(event) {
   event.preventDefault();
+  container.style.display = 'flex';
 
-  if (!storedAccount) {
-    alert("Nenhuma conta conectada");
-  } else {
-    const account = JSON.parse(storedAccount);
-    let email = account.email;
-    let data = { email };
-
+  document.querySelector("#button-avancar").addEventListener('click', async function(){
     try {
-      const response = await fetch('http://localhost:3003/api/store/usertask', {
-        method: "POST",
+      const account = JSON.parse(storedAccount);
+      let email = account.email;
+
+      const response = await fetch(`http://localhost:3003/api/store/userrequest?email=${email}`, {
+        method: "GET",
         headers: { "Content-type": "application/json;charset=UTF-8" },
-        body: JSON.stringify(data)
       });
 
       let content = await response.json();
+      console.log(content.data[0])
 
       if (content.success) {
-        container.style.display = 'flex';
+        if (document.querySelector("#senha").value == content.data[0]){
 
-        buttonPassword.onclick = async function(event){
-          event.preventDefault
+          let name = document.querySelector("#input-name").value
           
-          try {
-            const response = await fetch('http://localhost:3003/api/store/usertask', {
-              method: "POST",
-              headers: { "Content-type": "application/json;charset=UTF-8" },
-              body: JSON.stringify(data)
-            });
+          const response = await fetch(`http://localhost:3003/api/store/userupdate?name=${name}&email=${email}`, {
+            method: "PUT",
+            headers: { "Content-type": "application/json;charset=UTF-8" },
+          });
 
           let content = await response.json();
 
-          if (content.success) {
+          if(content.success){
+            let account = content.data;
             alert(content.message);
-            window.location.href = './login.html'
+            localStorage.setItem('@account_logged', JSON.stringify(account));
           } else {
-            alert(content.message);
+            alert(content.message)
           }
-        } catch (error) {
-          alert('Falha ao conectar com o servidor.');
-        }
-
-        }
+        } 
       } else {
         alert(content.message);
       }
     } catch (error) {
       alert('Falha ao conectar com o servidor.');
     }
-  }
+  })
 }
