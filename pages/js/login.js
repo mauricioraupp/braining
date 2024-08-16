@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let email = document.querySelector("#email-input").value;
     let password = document.querySelector("#password-input").value;
 
-    const response = await fetch(`http://localhost:3003/api/store/loginTask?email=${email}&password=${password}`, {
+    const response = await fetch(`http://localhost:3003/api/store/login?email=${email}&password=${password}`, {
       method: "GET",
       headers: { "Content-type": "application/json;charset=UTF-8" },
     });

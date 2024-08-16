@@ -2,7 +2,7 @@ const connection = require('../config/db');
 const dotenv = require('dotenv').config();
 const bcrypt = require('bcrypt');
 
-async function loginTask(request, response) {
+async function loginRequest(request, response) {
   const params = [request.query.email];
 
   const query = "SELECT name, DATE_FORMAT(date, '%Y-%m-%d') as date, email, password FROM user_account WHERE email = ?;";
@@ -53,5 +53,5 @@ async function loginTask(request, response) {
 }
 
 module.exports = {
-  loginTask
+  loginRequest
 };

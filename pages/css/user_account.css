@@ -36,7 +36,13 @@ body{
   top: 2%;
   right: 2%;
   filter: drop-shadow(0 0 0.5rem rgb(0, 0, 0));
+  cursor: pointer;
 }
+
+.remove-scrolling { 
+  height: 100%; 
+  overflow: hidden; 
+} 
 
 .wrapper{
   background: linear-gradient(160deg, rgba(36, 201, 133, 1) 0%, rgba(24, 211, 137, 1) 27%, rgba(33, 186, 126, 1) 57%, rgba(31, 182, 123, 1) 100%);
@@ -49,7 +55,7 @@ body{
   border-radius: 15px;
   padding: 5vh 0.5vw;
   padding-bottom: 15%;
-  box-shadow: 0px 0px 30px 5px rgb(50, 50, 50);
+  box-shadow: 0px 0px 30px 5px rgb(0, 0, 0);
 }
 #rocket{
  width: 170px;

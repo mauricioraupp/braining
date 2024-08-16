@@ -17,12 +17,10 @@ memoryGame.addEventListener('click', async function() {
   } else {
     const account = JSON.parse(storedAccount);
     let userEmail = account.email;
-    let data = { userEmail };
 
-    const response = await fetch('http://localhost:3003/api/store/minigame1task', {
-      method: "POST",
+    const response = await fetch(`http://localhost:3003/api/store/minigame1/request?userEmail=${userEmail}`, {
+      method: "GET",
       headers: { "Content-type": "application/json;charset=UTF-8" },
-      body: JSON.stringify(data)
     });
 
     let content = await response.json();

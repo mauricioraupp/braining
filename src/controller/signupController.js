@@ -2,7 +2,7 @@ const connection = require('../config/db');
 const dotenv = require('dotenv').config();
 const bcrypt = require('bcrypt');
 
-async function signupTask(request, response) {
+async function signupCreate(request, response) {
   try {
     const hashedPassword = await bcrypt.hash(request.body.password, 10);
     
@@ -57,5 +57,5 @@ async function signupTask(request, response) {
 }
 
 module.exports = {
-  signupTask
+  signupCreate
 };

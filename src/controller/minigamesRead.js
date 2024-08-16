@@ -1,10 +1,10 @@
 const connection = require('../config/db');
 const dotenv = require('dotenv').config();
 
-async function minigame1Task(request, response) {
+async function minigame1Request(request, response) {
 
   const params = Array(
-    request.body.userEmail
+    request.query.userEmail
   );
   
   const query = "SELECT level FROM user_minigame1 WHERE user_email = ?;";
@@ -31,5 +31,5 @@ async function minigame1Task(request, response) {
 }
 
 module.exports = {
-  minigame1Task
+  minigame1Request
 }
