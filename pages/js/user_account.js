@@ -45,15 +45,14 @@ svg.addEventListener('click', function(){
   container.style.display = 'none';
 });
 
-
+const storedAccount = localStorage.getItem('@account_logged');
+const account = JSON.parse(storedAccount);
 
 const buttonName = document.getElementById("name-change");
 
 buttonName.onclick = function(event) {
   event.preventDefault();
-  const storedAccount = localStorage.getItem('@account_logged');
-  const accountParse = JSON.parse(storedAccount);
-  if (document.querySelector("#input-name").value == accountParse.name){
+  if (document.querySelector("#input-name").value == account.name){
     alert("Nenhuma alteração identificada")
   } else {
     container.style.display = 'flex';
@@ -62,12 +61,10 @@ buttonName.onclick = function(event) {
     
     buttonAvancar.onclick = async function() {
       try {
-        const storedAccount = localStorage.getItem('@account_logged');
-        const account = JSON.parse(storedAccount);
         let email = account.email;
         let password = document.getElementById("senha").value;
   
-        const response = await fetch(`http://localhost:3003/api/store/userrequest?email=${email}&password=${password}`, {
+        const response = await fetch(`http://localhost:3003/api/user/request?email=${email}&password=${password}`, {
           method: "GET",
           headers: { "Content-type": "application/json;charset=UTF-8" },
         });
@@ -77,7 +74,7 @@ buttonName.onclick = function(event) {
         if (content.success) {
           let name = document.querySelector("#input-name").value;
   
-          const updateResponse = await fetch(`http://localhost:3003/api/store/userupdate?name=${name}&email=${email}`, {
+          const updateResponse = await fetch(`http://localhost:3003/api/user/nameupdate?name=${name}&email=${email}`, {
             method: "PUT",
             headers: { "Content-type": "application/json;charset=UTF-8" },
           });
@@ -88,6 +85,158 @@ buttonName.onclick = function(event) {
             alert(updateContent.message);
             account.name = name;
             localStorage.setItem('@account_logged', JSON.stringify(account));
+            container.style.display = 'none';
+          } else {
+            alert(updateContent.message);
+          }
+        } else {
+          alert(content.message);
+        }
+      } catch (error) {
+        alert('Falha ao conectar com o servidor.');
+      }
+    }
+  }
+}
+
+const buttonDate = document.getElementById("date-change");
+
+buttonDate.onclick = function(event) {
+  event.preventDefault();
+  if (document.querySelector("#input-date").value == accountParse.date){
+    alert("Nenhuma alteração identificada")
+  } else {
+    container.style.display = 'flex';
+  
+    const buttonAvancar = document.querySelector("#button-avancar");
+    
+    buttonAvancar.onclick = async function() {
+      try {
+        let email = account.email;
+        let password = document.getElementById("senha").value;
+  
+        const response = await fetch(`http://localhost:3003/api/user/request?email=${email}&password=${password}`, {
+          method: "GET",
+          headers: { "Content-type": "application/json;charset=UTF-8" },
+        });
+  
+        let content = await response.json();
+  
+        if (content.success) {
+          let date = document.querySelector("#input-date").value;
+  
+          const updateResponse = await fetch(`http://localhost:3003/api/user/dateupdate?date=${date}&email=${email}`, {
+            method: "PUT",
+            headers: { "Content-type": "application/json;charset=UTF-8" },
+          });
+  
+          let updateContent = await updateResponse.json();
+  
+          if(updateContent.success){
+            alert(updateContent.message);
+            account.date = date;
+            localStorage.setItem('@account_logged', JSON.stringify(account));
+            container.style.display = 'none';
+          } else {
+            alert(updateContent.message);
+          }
+        } else {
+          alert(content.message);
+        }
+      } catch (error) {
+        alert('Falha ao conectar com o servidor.');
+      }
+    }
+  }
+}
+
+const buttonEmail = document.getElementById("email-change");
+
+buttonEmail.onclick = function(event) {
+  event.preventDefault();
+  if (document.querySelector("#input-email").value == accountParse.email){
+    alert("Nenhuma alteração identificada")
+  } else {
+    container.style.display = 'flex';
+  
+    const buttonAvancar = document.querySelector("#button-avancar");
+    
+    buttonAvancar.onclick = async function() {
+      try {
+        let email = account.email;
+        let password = document.getElementById("senha").value;
+  
+        const response = await fetch(`http://localhost:3003/api/user/request?email=${email}&password=${password}`, {
+          method: "GET",
+          headers: { "Content-type": "application/json;charset=UTF-8" },
+        });
+  
+        let content = await response.json();
+  
+        if (content.success) {
+          let newEmail = document.querySelector("#input-email").value;
+  
+          const updateResponse = await fetch(`http://localhost:3003/api/user/emailupdate?newEmail=${newEmail}&secondEmail=${newEmail}&email=${email}`, {
+            method: "PUT",
+            headers: { "Content-type": "application/json;charset=UTF-8" },
+          });
+  
+          let updateContent = await updateResponse.json();
+  
+          if(updateContent.success){
+            alert(updateContent.message);
+            account.email = newEmail;
+            localStorage.setItem('@account_logged', JSON.stringify(account));
+            container.style.display = 'none';
+          } else {
+            alert(updateContent.message);
+          }
+        } else {
+          alert(content.message);
+        }
+      } catch (error) {
+        alert('Falha ao conectar com o servidor.');
+      }
+    }
+  }
+}
+
+const buttonPassword = document.getElementById("password-change");
+
+buttonPassword.onclick = function(event) {
+  event.preventDefault();
+  if (document.querySelector("#input-password").value == ""){
+    alert("Campo não preenchido")
+  } else {
+    container.style.display = 'flex';
+  
+    const buttonAvancar = document.querySelector("#button-avancar");
+    
+    buttonAvancar.onclick = async function() {
+      try {
+        let email = account.email;
+        let password = document.getElementById("senha").value;
+  
+        const response = await fetch(`http://localhost:3003/api/user/request?email=${email}&password=${password}`, {
+          method: "GET",
+          headers: { "Content-type": "application/json;charset=UTF-8" },
+        });
+  
+        let content = await response.json();
+  
+        if (content.success) {
+          let newPassword = document.querySelector("#input-password").value;
+  
+          const updateResponse = await fetch(`http://localhost:3003/api/user/passwordupdate?newPassword=${newPassword}&email=${email}`, {
+            method: "PUT",
+            headers: { "Content-type": "application/json;charset=UTF-8" },
+          });
+  
+          let updateContent = await updateResponse.json();
+  
+          if(updateContent.success){
+            alert(updateContent.message);
+            container.style.display = 'none';
           } else {
             alert(updateContent.message);
           }
