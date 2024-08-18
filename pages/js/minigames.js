@@ -18,7 +18,7 @@ memoryGame.addEventListener('click', async function() {
     const account = JSON.parse(storedAccount);
     let userEmail = account.email;
 
-    const response = await fetch(`http://localhost:3003/api/store/minigame1/request?userEmail=${userEmail}`, {
+    const response = await fetch(`http://localhost:3003/api/games/minigame1/request?userEmail=${userEmail}`, {
       method: "GET",
       headers: { "Content-type": "application/json;charset=UTF-8" },
     });

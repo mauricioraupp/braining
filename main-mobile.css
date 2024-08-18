@@ -167,4 +167,8 @@
       font-size: 0.9rem;
     }
   }
+
+  .landing-images{
+    width: 300px;
+  }
 }
