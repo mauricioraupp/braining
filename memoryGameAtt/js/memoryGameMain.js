@@ -144,12 +144,9 @@ let userEmail = account.email;
 
 
 async function requisition() {
-  let data = { unlockedLevel, userEmail };
-
-  const response = await fetch('http://localhost:3003/api/games/minigame1/update', {
-    method: "POST",
+  const response = await fetch(`http://localhost:3003/api/games/minigame1/update?unlockedLevel=${unlockedLevel}&userEmail=${userEmail}`, {
+    method: "PUT",
     headers: { "Content-type": "application/json;charset=UTF-8" },
-    body: JSON.stringify(data)
   });
 
   let content = await response.json();

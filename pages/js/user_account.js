@@ -94,6 +94,7 @@ buttonName.onclick = function(event) {
             account.name = name;
             localStorage.setItem('@account_logged', JSON.stringify(account));
             container.style.display = 'none';
+            document.getElementById("senha").value = ""
             enableScroll()
           } else {
             alert(updateContent.message);
@@ -147,6 +148,7 @@ buttonDate.onclick = function(event) {
             account.date = date;
             localStorage.setItem('@account_logged', JSON.stringify(account));
             container.style.display = 'none';
+            document.getElementById("senha").value = ""
             enableScroll()
           } else {
             alert(updateContent.message);
@@ -200,6 +202,7 @@ buttonEmail.onclick = function(event) {
             account.email = newEmail;
             localStorage.setItem('@account_logged', JSON.stringify(account));
             container.style.display = 'none';
+            document.getElementById("senha").value = ""
             enableScroll()
           } else {
             alert(updateContent.message);
@@ -251,6 +254,7 @@ buttonPassword.onclick = function(event) {
           if(updateContent.success){
             alert(updateContent.message);
             container.style.display = 'none';
+            document.getElementById("senha").value = ""
             enableScroll()
           } else {
             alert(updateContent.message);

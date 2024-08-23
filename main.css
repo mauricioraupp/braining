@@ -82,12 +82,12 @@
   cursor: pointer;
 }
 .first-button{
-  color: #192F44;
+  color: #0b161f;
   background-color: white;
 }
 .first-button:hover{
   background-color: rgb(225, 225, 225);
-  color: #0f1c28;
+  color: #060b10;
 }
 .first-button:focus{
   outline: 2px solid black;
