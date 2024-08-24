@@ -4,8 +4,8 @@ const dotenv = require('dotenv').config();
 async function minigame1Update(request, response) {
 
   const params = Array(
-    request.body.unlockedLevel,
-    request.body.userEmail
+    request.query.unlockedLevel,
+    request.query.userEmail
   );
   
   const query = "UPDATE user_minigame1 SET level = ? WHERE user_email = ?;";
