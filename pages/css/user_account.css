@@ -152,7 +152,11 @@ main{
     max-width: 400px;
     border-radius: 50%;
   }
-  p{
+  input[type="file"] {
+    display: none;
+  }
+  label {
+    width: auto;
     color: white;
     font-family: 'Inter', sans-serif;
     font-size: 1.1rem;
