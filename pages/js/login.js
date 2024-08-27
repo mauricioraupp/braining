@@ -1,5 +1,3 @@
-import { setAccount } from './account.js';
-
 document.addEventListener('DOMContentLoaded', () => {
   const button = document.querySelector("#button-avancar");
 
@@ -18,8 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (content.success) {
       let account = content.data;
-      account.date = account.date.split('T')[0]; 
-      setAccount(account);
+      account.date = account.date.split('T')[0];
       localStorage.setItem('@account_logged', JSON.stringify(account));
       alert(content.message);
       window.location.href = './user_account.html';

@@ -4,8 +4,6 @@ buttonNav.addEventListener('click', function() {
   window.location.href = '../pages/minigames.html';
 });
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const storedAccount = localStorage.getItem('@account_logged');
   
@@ -18,8 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     console.error('Nenhuma conta está logada.');
   }
 });
-
-
 
 const logoutButton = document.querySelector("#button-sair");
 
@@ -35,8 +31,6 @@ logoutButton.addEventListener('click', function(){
     }
   }
 });
-
-
 
 const container = document.querySelector(".container");
 const svg = document.querySelector(".lucide-x");

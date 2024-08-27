@@ -3,41 +3,37 @@
 
 @media screen and (max-width: 768px){
   .container{
-      background: linear-gradient(160deg, rgba(36, 201, 133, 1) 0%, rgba(24, 211, 137, 1) 27%, rgba(33, 186, 126, 1) 57%, rgba(31, 182, 123, 1) 100%);
-      gap: 3.5vh;
-      width: 90vw;
-      border-radius: 15px;
-      padding: 3vh 1.5vw;
+    background: linear-gradient(160deg, rgba(36, 201, 133, 1) 0%, rgba(24, 211, 137, 1) 27%, rgba(33, 186, 126, 1) 57%, rgba(31, 182, 123, 1) 100%);
+    gap: 3.5vh;
+    width: 90vw;
+    border-radius: 15px;
+    padding: 3vh 1.5vw;
   }
-
-
 
   #rocket{
     width: 120px;
+  }
+  .center-content{
+    label{
+      font-size: 1rem;
     }
-    .center-content{
-      label{
-          font-size: 1rem;
-      }
-      input{
-          font-size: 0.8rem;
-      }
-      button{
-          font-size: 0.9rem;
-      }
+    input{
+      font-size: 0.8rem;
     }
-    /*---------------------------------------------------------------------------*/
+    button{
+      font-size: 0.9rem;
+    }
+  }
 
-
-    .bottom-content{
-      h3{
-        font-size: 0.7rem;
-      }
-      a{
-        font-size: 0.7rem;
-      }
-      p{
-        font-size: 0.7rem;
-      }
+  .bottom-content{
+    h3{
+      font-size: 0.7rem;
     }
+    a{
+      font-size: 0.7rem;
+    }
+    p{
+      font-size: 0.7rem;
+    }
+  }
 }
