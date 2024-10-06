@@ -6,11 +6,13 @@ const { userDateUpdate } = require('../controller/userController');
 const { userEmailUpdate } = require('../controller/userController');
 const { userPasswordUpdate } = require('../controller/userController');
 const { minigame1Update } = require('../controller/minigamesUpdate');
+const { minigame2Update } = require('../controller/minigamesUpdate');
 
 updateRouter.put('/user/nameupdate', userNameUpdate);
 updateRouter.put('/user/dateupdate', userDateUpdate);
 updateRouter.put('/user/emailupdate', userEmailUpdate);
 updateRouter.put('/user/passwordupdate', userPasswordUpdate);
 updateRouter.put('/games/minigame1/update', minigame1Update);
+updateRouter.put('/games/minigame2/update', minigame2Update);
 
 module.exports = updateRouter;

@@ -1,0 +1,14 @@
+.drag{
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  width: clamp(140px, 22vw, 220px);
+  height: clamp(140px, 22vw, 220px);
+}
+
+.board{
+  grid-template-columns: repeat(4, 1fr);
+}
+.dropBox{
+  width: clamp(70px, 16vw, 150px);
+  height: clamp(70px, 16vw, 150px);
+}

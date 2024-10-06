@@ -16,7 +16,37 @@ async function minigame1Update(request, response) {
         .status(201)
         .json({
           success: true,
-          message: `Nível ${request.body.unlockedLevel} desbloqueado`,
+          message: `Nível ${request.query.unlockedLevel} desbloqueado`,
+          data: results
+        })    
+    } else {
+      response
+      .status(400)
+      .json({
+        success: false,
+        message: 'Nenhum nível desbloquado',
+        data: err
+      })
+    }
+  })
+}
+
+async function minigame2Update(request, response) {
+
+  const params = Array(
+    request.query.unlockedLevel,
+    request.query.userEmail
+  );
+  
+  const query = "UPDATE user_minigame2 SET level = ? WHERE user_email = ?;";
+
+  connection.query(query, params, (err, results) => {
+    if(results) {      
+      response
+        .status(201)
+        .json({
+          success: true,
+          message: `Nível ${request.query.unlockedLevel} desbloqueado`,
           data: results
         })    
     } else {
@@ -32,5 +62,6 @@ async function minigame1Update(request, response) {
 }
 
 module.exports = {
-  minigame1Update
+  minigame1Update,
+  minigame2Update
 }

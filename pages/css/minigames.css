@@ -95,7 +95,7 @@ a{
 
 /*-------------------------------- POP UP ------------------------------------*/
 
-.memory-game-popup{
+.games-popup{
   top: 0;
   position: absolute;
   height: 100%;
@@ -109,7 +109,7 @@ a{
   opacity: 0;
   z-index: -1;
 }
-.memory-game-popup section{
+.games-popup section{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -153,7 +153,7 @@ a{
   }
 }
 
-.memory-game-popup section div{
+.games-popup section div{
   display: flex;
   gap: 20px;
 

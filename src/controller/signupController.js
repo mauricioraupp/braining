@@ -47,6 +47,14 @@ async function signupCreate(request, response) {
       }
     });
 
+    const query3 = 'INSERT INTO user_minigame2(user_email, level) VALUES(?, 1)';
+
+    connection.query(query3, params2, (err, results3) => {
+      if (err) {
+        console.error('Erro ao inserir níveis iniciais', err);
+      }
+    });
+
   } catch (error) {
     response.status(500).json({
       success: false,

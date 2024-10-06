@@ -59,7 +59,7 @@
 
 /*----------------------------- MEMORY GAME POPUP ----------------------------*/
 
-  .memory-game-popup section{
+  .games-popup section{
     height: 38rem;
     width: 15rem;
   
@@ -74,7 +74,7 @@
     }
   }
   
-  .memory-game-popup section div{
+  .games-popup section div{
     flex-direction: column;
     gap: 15px;
   

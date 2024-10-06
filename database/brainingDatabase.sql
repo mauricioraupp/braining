@@ -10,12 +10,15 @@ CREATE TABLE user_account(
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE user_settings(
-	dark_mode BOOLEAN,
-    volume INT
+CREATE TABLE user_minigame1 (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_email VARCHAR(255) NOT NULL UNIQUE,
+    level INT NOT NULL DEFAULT 1,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	FOREIGN KEY (user_email) REFERENCES user_account(email)
 );
 
-CREATE TABLE user_minigame1 (
+CREATE TABLE user_minigame2 (
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     user_email VARCHAR(255) NOT NULL UNIQUE,
     level INT NOT NULL DEFAULT 1,

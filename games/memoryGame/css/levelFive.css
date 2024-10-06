@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.memory-game{
+  width: 70%;
+  height: 80%;
+
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+legend{
+  padding-top: 15px !important;
+}
+
+.front-face, .back-face{
+  width: clamp(60px, 10vw, 140px);
+  height: clamp(80px, 13vw, 180px);
+}
+
+#done-screen article{
+  gap: 30px;
+  padding: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .front-face, .back-face{
+      padding: 5px;
+    }
+  .card{
+      width: 20%;
+    }
+}
