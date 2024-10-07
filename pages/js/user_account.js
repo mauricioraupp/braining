@@ -17,6 +17,48 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+
+
+
+
+document.getElementById('upload-image').addEventListener('click', async (event) => {
+  event.preventDefault();
+  
+  const inputFile = document.getElementById('input-file');
+  const formData = new FormData();
+
+  if (inputFile.files.length > 0) {
+    formData.append('profilePic', inputFile.files[0]);
+    formData.append('email', account.email);
+    
+    try {
+      const response = await fetch(`http://localhost:3003/api/user/uploadimage`, {
+        method: 'PUT',
+        body: formData
+      });
+      
+      const result = await response.json();
+
+      if (result.success) {
+        alert('Imagem de perfil atualizada com sucesso!');
+        account.profilePic = result.filePath; 
+        localStorage.setItem('@account_logged', JSON.stringify(account));
+      } else {
+        alert('Erro ao atualizar a imagem: ' + result.message);
+      }
+    } catch (error) {
+      alert('Falha ao conectar com o servidor.');
+    }
+  } else {
+    alert('Por favor, selecione uma imagem.');
+  }
+});
+
+
+
+
+
+
 const logoutButton = document.querySelector("#button-sair");
 
 logoutButton.addEventListener('click', function(){
