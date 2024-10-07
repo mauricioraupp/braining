@@ -19,43 +19,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+const uploadButton = document.querySelector("#upload-image");
+const changePic = document.querySelector("#change-pic")
 
+changePic.addEventListener('click', function(){
+  disableScroll()
+  container1.style.display = 'flex';
+})
 
-document.getElementById('upload-image').addEventListener('click', async (event) => {
+uploadButton.addEventListener('click', async function(event){
   event.preventDefault();
-  
-  const inputFile = document.getElementById('input-file');
-  const formData = new FormData();
 
-  if (inputFile.files.length > 0) {
-    formData.append('profilePic', inputFile.files[0]);
-    formData.append('email', account.email);
-    
-    try {
-      const response = await fetch(`http://localhost:3003/api/user/uploadimage`, {
-        method: 'PUT',
-        body: formData
-      });
-      
-      const result = await response.json();
+  const form = document.querySelector("#form-pic");
+  let email = account.email;  // Certifique-se de que a variável `account.email` está definida corretamente
+  let dadosForm = new FormData(form);
 
-      if (result.success) {
-        alert('Imagem de perfil atualizada com sucesso!');
-        account.profilePic = result.filePath; 
-        localStorage.setItem('@account_logged', JSON.stringify(account));
-      } else {
-        alert('Erro ao atualizar a imagem: ' + result.message);
-      }
-    } catch (error) {
-      alert('Falha ao conectar com o servidor.');
-    }
+  // Adicionando o email ao FormData
+  dadosForm.append('email', email);
+
+  console.log(email, dadosForm);  // Para verificar se o email está sendo adicionado corretamente
+
+  const response = await fetch('http://localhost:3003/api/user/uploadpic', {
+    method: "POST",
+    body: dadosForm,  // Agora o `dadosForm` contém tanto o arquivo quanto o email
+  });
+
+  let content = await response.json();
+
+  if (content.success) {
+    alert(content.message);
   } else {
-    alert('Por favor, selecione uma imagem.');
+    alert(content.message);
   }
 });
-
-
-
 
 
 
@@ -74,13 +70,17 @@ logoutButton.addEventListener('click', function(){
   }
 });
 
-const container = document.querySelector(".container");
-const svg = document.querySelector(".lucide-x");
+const container1 = document.querySelector("#section1");
+const container2 = document.querySelector("#section2");
+const svg = document.querySelectorAll(".lucide-x");
 
-svg.addEventListener('click', function(){
-  container.style.display = 'none';
-  enableScroll()
-});
+svg.forEach((click) => {
+  click.addEventListener('click', function(){
+    container1.style.display = 'none';
+    container2.style.display = 'none';
+    enableScroll()
+  })
+})
 
 const storedAccount = localStorage.getItem('@account_logged');
 const account = JSON.parse(storedAccount);
@@ -99,7 +99,7 @@ buttonName.onclick = function(event) {
     alert("Nenhuma alteração identificada")
   } else {
     disableScroll()
-    container.style.display = 'flex';
+    container2.style.display = 'flex';
   
     const buttonAvancar = document.querySelector("#button-avancar");
     
@@ -129,7 +129,7 @@ buttonName.onclick = function(event) {
             alert(updateContent.message);
             account.name = name;
             localStorage.setItem('@account_logged', JSON.stringify(account));
-            container.style.display = 'none';
+            container2.style.display = 'none';
             document.getElementById("senha").value = ""
             enableScroll()
           } else {
@@ -153,7 +153,7 @@ buttonDate.onclick = function(event) {
     alert("Nenhuma alteração identificada")
   } else {
     disableScroll()
-    container.style.display = 'flex';
+    container2.style.display = 'flex';
   
     const buttonAvancar = document.querySelector("#button-avancar");
     
@@ -183,7 +183,7 @@ buttonDate.onclick = function(event) {
             alert(updateContent.message);
             account.date = date;
             localStorage.setItem('@account_logged', JSON.stringify(account));
-            container.style.display = 'none';
+            container2.style.display = 'none';
             document.getElementById("senha").value = ""
             enableScroll()
           } else {
@@ -207,7 +207,7 @@ buttonEmail.onclick = function(event) {
     alert("Nenhuma alteração identificada")
   } else {
     disableScroll()
-    container.style.display = 'flex';
+    container2.style.display = 'flex';
   
     const buttonAvancar = document.querySelector("#button-avancar");
     
@@ -237,7 +237,7 @@ buttonEmail.onclick = function(event) {
             alert(updateContent.message);
             account.email = newEmail;
             localStorage.setItem('@account_logged', JSON.stringify(account));
-            container.style.display = 'none';
+            container2.style.display = 'none';
             document.getElementById("senha").value = ""
             enableScroll()
           } else {
@@ -261,7 +261,7 @@ buttonPassword.onclick = function(event) {
     alert("Campo não preenchido")
   } else {
     disableScroll()
-    container.style.display = 'flex';
+    container2.style.display = 'flex';
   
     const buttonAvancar = document.querySelector("#button-avancar");
     
@@ -289,7 +289,7 @@ buttonPassword.onclick = function(event) {
   
           if(updateContent.success){
             alert(updateContent.message);
-            container.style.display = 'none';
+            container2.style.display = 'none';
             document.getElementById("senha").value = ""
             enableScroll()
           } else {

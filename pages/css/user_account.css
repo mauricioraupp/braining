@@ -18,7 +18,8 @@ body{
 }
 
 .container{
-  position: absolute;
+  position: fixed;
+  top: 0;
   height: 100vh;
   width: 100%;
   display: none;
@@ -127,6 +128,20 @@ body{
   }
 }
 
+#section1{
+  display: none;
+  .wrapper{
+    article{
+      input{
+        background-color: transparent;
+        border: none;
+        color: rgb(245, 245, 245);
+        font-weight: 600;
+      }
+    }
+  }
+}
+
 .first-part{
   background: linear-gradient(160deg, rgba(36, 201, 133, 1) 0%, rgba(24, 211, 137, 1) 27%, rgba(33, 186, 126, 1) 57%, rgba(31, 182, 123, 1) 100%);
   display: flex;
@@ -163,6 +178,33 @@ main{
     font-weight: 500;
     text-decoration: underline;
     cursor: pointer;
+  }
+}
+
+#form-container{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: .5s;
+  z-index: 2;
+
+  #form-pic{
+    background: linear-gradient(160deg, rgba(36, 201, 133, 1) 0%, rgba(24, 211, 137, 1) 27%, rgba(33, 186, 126, 1) 57%, rgba(31, 182, 123, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3.5vh;
+    width: 630px;
+    border-radius: 15px;
+    padding: 5vh 0.5vw;
+    padding-bottom: 15%;
+    box-shadow: 0px 0px 30px 5px rgb(0, 0, 0);
   }
 }
 

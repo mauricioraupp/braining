@@ -1,69 +1,66 @@
 const connection = require('../config/db');
 const dotenv = require('dotenv').config();
 const bcrypt = require('bcrypt');
-const multer = require('multer');
 const path = require('path');
+const fs = require('fs');
 
 
 
+const uploadPath = path.join(__dirname, '..', 'uploads')
 
+if(!fs.existsSync(uploadPath)) {
+  fs.mkdirSync(uploadPath);
+};
 
-
-
-
-
-// Configuração do Multer para upload de imagem
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, 'uploads/');  // Definir o caminho onde a imagem será salva
-  },
-  filename: (req, file, cb) => {
-    cb(null, `${Date.now()}_${file.originalname}`);  // Nome único para a imagem
+async function uploadPic(request, response) {
+  if(!request.files) {
+    console.log(request.files)
+    return response.status(400).json({
+      success: false,
+      message: "Nenhuma imagem enviada."
+    });
   }
-});
-const upload = multer({ storage: storage });
 
-async function userImageUpdate(request, response) {
-  upload.single('profilePic')(request, response, (err) => {
-    if (err) {
-      return response.status(500).json({
+  const pfp = request.files.inputfile
+  const pfpName = Date.now() + path.extname(pfp.name)
+  console.log('Upload path:', path.join(uploadPath, pfpName));
+
+  pfp.mv(path.join(uploadPath, pfpName), (error) => {
+    if(error){
+      return response.status(400).json({
         success: false,
-        message: 'Erro ao fazer upload da imagem',
-        data: err
-      });
+        message: "Erro ao enviar arquivo."
+      })
     }
+  })
 
-    const imageUrl = path.join('uploads', request.file.filename);
-    const email = request.body.email;
+  const params = Array(
+    pfpName,
+    request.body.email
+  );
 
-    const query = 'UPDATE user_account SET profile_image = ? WHERE email = ?';
+  const query = 'UPDATE user_account SET profile_pic = ? WHERE email = ?';
 
-    const params = [imageUrl, email];
-
-    connection.query(query, params, (err, results) => {
-      if (err) {
-        return response.status(500).json({
+  connection.query(query, params, (err, results) => {
+    if (results) {
+      response
+        .status(201)
+        .json({
+          success: true,
+          message: 'Imagem alterada com sucesso',
+          data: results
+        });
+    } else {
+      response
+        .status(400)
+        .json({
           success: false,
-          message: 'Erro no servidor ao atualizar a imagem de perfil',
+          message: 'Erro ao alterar imagem',
           data: err
         });
-      }
-
-      response.status(200).json({
-        success: true,
-        message: 'Imagem de perfil atualizada com sucesso',
-        data: { imageUrl }
-      });
-    });
-  });
+    }
+  })
 }
-
-
-
-
-
-
-
 
 async function userRequest(request, response) {
 
@@ -291,5 +288,5 @@ module.exports = {
   userDateUpdate,
   userEmailUpdate,
   userPasswordUpdate,
-  userImageUpdate
+  uploadPic
 };

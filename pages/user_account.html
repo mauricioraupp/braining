@@ -73,9 +73,22 @@
 
       <div class="left-column">
         <img src="../assets/perfil.png">
-        <label for="input-file" id="upload-image">Alterar imagem</label>
-        <input id="input-file" type="file" accept="image/*"/>
+        <label for="input-file" id="change-pic">Alterar imagem</label>
       </div>
+
+      <section class="container" id="section1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" 
+        fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+        class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        <form id="form-pic" class="wrapper" enctype="multipart/form-data">
+          <img id="rocket" src="../assets/whiterockettext.png">
+          <article class="center-content2">
+            <h1>Escolha um arquivo</h1>
+            <h2>Escolha um arquivo de até 5mb para ser sua nova foto de perfil.</h2>
+          <input id="inputfile" name="inputfile" type="file" accept="image/*"/>
+          <button id="upload-image">Enviar</button>
+        </form>
+      </section>
 
       <div class="center-content">
         <form class="inf-1">
