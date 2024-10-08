@@ -11,46 +11,7 @@
 </head>
 <body>
 
-  <nav>
-    <ul class="desktop-nav">
-      <div>
-        <a href="../index.html"><img src="../assets/whiterockettext.png" alt="Logo do site"></a>
-        <a href="../index.html">Home</a>
-        <a href="#">Sobre</a>
-        <a href="#">Contato</a>
-      </div>
-      <div>
-        <a id="nav-item" href="./login.html">Login</a>
-        <button>Minijogos</button>
-      </div>
-    </ul>
-
-    <ul class="mobile-nav hide">
-      <img id="open-menu" src="../assets/align-justify.svg">
-      <div>
-        <a href="#">Sobre</a>
-        <a id="nav-item" href="./login.html">Login</a>
-      </div>
-    </ul>
-  </nav>
-
-  <div class="mobile-menu hide">
-    <ul>
-      <article class="user">
-        <img id="user-img">
-        <div class="user-wrapper">
-          <p id="user-name">Nenhuma conta conectada</p>
-        </div>
-        <a class="hide" id="nav-item" href="./login.html">Login</a>
-      </article>
-      <a id="nav-item" href="./login.html">Login</a>
-      <a href="../index.html">Home</a>
-      <a href="./minigames.html">Minijogos</a>
-      <a href="#">Sobre</a>
-      <a href="#">Contato</a>
-    </ul>
-    <img id="close-menu" src="../assets/x.svg">
-  </div>
+  <div id="nav-root"></div>
 
   <section class="minigames-container">
 
@@ -88,7 +49,7 @@
 
   <div class="games-popup">
     <section>
-      <h1>Jogo da memória</h1>
+      <h1 id="game-name">Jogo da memória</h1>
       <h2>Selecione o nível que deseja jogar</h2>
       <div>
         <a class="level-1 disabled">1<img class="padlock-img1 padlock" src="../assets/padlock-icon.svg"></a>
@@ -101,25 +62,10 @@
     </section>
   </div>
 
-  <footer>
-    <article>
-      <a href="#"><img src="../assets/instagram.svg" alt="Logo do instagram"></a>
-      <a href="#"><img src="../assets/github.svg" alt="Logo do github"></a>
-      <a href="#"><img src="../assets/linkedin.svg" alt="Logo do linkedin"></a>
-      <a href="#"><img src="../assets/mail.svg" alt="Logo do email"></a>
-    </article>
-    <div>
-      <a href="#">Sobre</a>
-      <a href="#">Contato</a>
-      <a href="#">FAQs</a>
-      <a href="#">Carreira</a>
-      <a href="#">Blog</a>
-    </div>
-    <a href="#">Termos de Serviço | Políticas de Privacidade</a>
-    <span>© 2024 Todos os direitos reservados</span>
-  </footer>
+  <div id="footer-root"></div>
 
 </body>
 <script src="./js/minigames.js"></script>
 <script src="js/nav.js"></script>
+<script src="js/footer.js"></script>
 </html>
