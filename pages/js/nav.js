@@ -1,3 +1,16 @@
+let loginHref;
+let minigamesHref;
+
+(function checkDocument() {
+  if (document.title === "Braining - Página inicial") {
+    loginHref = "pages/login.html"
+    minigamesHref = "pages/minigames.html"
+  } else {
+    loginHref = "./login.html"
+    minigamesHref = "./minigames.html"
+  }
+})();
+
 document.querySelector("#nav-root").innerHTML = `
 <nav>
 <ul class="desktop-nav">
@@ -8,7 +21,7 @@ document.querySelector("#nav-root").innerHTML = `
     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mauricio.p.raupp@gmail.com&su=Assunto%20do%20email&body=Escreva%20sua%20mensagem%20aqui">Contato</a>
   </div>
   <div>
-    <a id="nav-item" href="./login.html">Login</a>
+    <a id="nav-item" href="${loginHref}">Login</a>
     <button>Minijogos</button>
   </div>
 </ul>
@@ -17,7 +30,7 @@ document.querySelector("#nav-root").innerHTML = `
   <img id="open-menu" src="../assets/align-justify.svg">
   <div>
     <a href="#">Sobre</a>
-    <a id="nav-item" href="./login.html">Login</a>
+    <a id="nav-item" href="${loginHref}">Login</a>
   </div>
 </ul>
 </nav>
@@ -29,11 +42,11 @@ document.querySelector("#nav-root").innerHTML = `
     <div class="user-wrapper">
       <p id="user-name">Nenhuma conta conectada</p>
     </div>
-    <a class="hide" id="nav-item" href="./login.html">Login</a>
+    <a class="hide" id="nav-item" href="${loginHref}">Login</a>
   </article>
-  <a id="nav-item" href="./login.html">Login</a>
+  <a id="nav-item" href="${loginHref}">Login</a>
   <a href="../index.html">Home</a>
-  <a href="./minigames.html">Minijogos</a>
+  <a href="${minigamesHref}">Minijogos</a>
   <a href="#">Sobre</a>
   <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mauricio.p.raupp@gmail.com&su=Assunto%20do%20email&body=Escreva%20sua%20mensagem%20aqui">Contato</a>
 </ul>
@@ -52,6 +65,11 @@ if (storedAccount2) {
     item.href = "../pages/user_account.html"
   })
 }
+
+const buttonNav = document.querySelector('nav ul div button');
+buttonNav.addEventListener('click', function() {
+  window.location.href = minigamesHref;
+});
 
 let prevScrollpos = window.pageYOffset;
 

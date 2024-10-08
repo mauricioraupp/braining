@@ -1,9 +1,3 @@
-const buttonNav = document.querySelector('nav ul div button');
-
-buttonNav.addEventListener('click', function() {
-  window.location.href = '../pages/minigames.html';
-});
-
 document.addEventListener('DOMContentLoaded', () => {
   const storedAccount = localStorage.getItem('@account_logged');
   
