@@ -22,8 +22,9 @@
     #user-img{
       width: 70px;
       height: 70px;
+      border-radius: 999px;
       object-fit: cover;
-      border-radius: 50%;
+      background-color: white;
     }
     .user-wrapper{
       display: flex;

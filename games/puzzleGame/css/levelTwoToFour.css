@@ -9,6 +9,6 @@
   grid-template-columns: repeat(3, 1fr);
 }
 .dropBox{
-  width: clamp(90px, 16vw, 180px);
-  height: clamp(90px, 16vw, 180px);
+  width: clamp(90px, 10vw, 180px);
+  height: clamp(90px, 10vw, 180px);
 }

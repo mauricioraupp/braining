@@ -162,10 +162,14 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 6px;
   width: 50%;
   img{
-    max-width: 400px;
-    border-radius: 50%;
+    width: clamp(200px, 30vw, 400px);
+    height: clamp(200px, 30vw, 400px);
+    border-radius: 999px;
+    object-fit: cover;
+    background-color: white;
   }
   input[type="file"] {
     display: none;

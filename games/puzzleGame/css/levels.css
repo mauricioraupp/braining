@@ -22,8 +22,8 @@ body{
 }
 legend{
   position: absolute;
-  top: 30px;
-  padding-top: 30px;
+  top: 20px;
+  padding-top: 20px;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: clamp(0.9rem, 2.5vw, 1.3rem);
@@ -62,7 +62,7 @@ main{
 
 .reset{
   position: absolute;
-  bottom: 50px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   padding: 15px 25px;
@@ -122,8 +122,8 @@ main{
 #done-screen img{
   position: absolute;
   top: -30%;
-  height: clamp(330px, 30vw, 450px);
-  width: clamp(330px, 30vw, 450px);
+  height: clamp(250px, 23vw, 450px);
+  width: clamp(250px, 23vw, 450px);
 }
 
 #done-screen article{

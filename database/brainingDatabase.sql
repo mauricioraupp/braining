@@ -7,7 +7,7 @@ CREATE TABLE user_account(
     date DATE,
     email VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
-    profile_pic VARCHAR(255),
+    profile_pic VARCHAR(255) default "default.png",
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 

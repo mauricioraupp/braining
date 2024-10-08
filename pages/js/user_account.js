@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   if (storedAccount) {
     const account = JSON.parse(storedAccount);
+    document.querySelector("#profile-pic").setAttribute("src", `../src/uploads/${account.profile_pic}`)
     document.querySelector("#input-name").value = account.name;
     document.querySelector("#input-email").value = account.email;
     document.querySelector("#input-date").value = account.date;
@@ -17,10 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-
-
 const uploadButton = document.querySelector("#upload-image");
-const changePic = document.querySelector("#change-pic")
+const changePic = document.querySelector("#change-pic");
 
 changePic.addEventListener('click', function(){
   disableScroll()
@@ -28,32 +27,32 @@ changePic.addEventListener('click', function(){
 })
 
 uploadButton.addEventListener('click', async function(event){
-  event.preventDefault();
+  event.preventDefault()
 
   const form = document.querySelector("#form-pic");
-  let email = account.email;  // Certifique-se de que a variável `account.email` está definida corretamente
+  let email = account.email;
   let dadosForm = new FormData(form);
 
-  // Adicionando o email ao FormData
   dadosForm.append('email', email);
-
-  console.log(email, dadosForm);  // Para verificar se o email está sendo adicionado corretamente
 
   const response = await fetch('http://localhost:3003/api/user/uploadpic', {
     method: "POST",
-    body: dadosForm,  // Agora o `dadosForm` contém tanto o arquivo quanto o email
+    body: dadosForm,
   });
 
   let content = await response.json();
 
   if (content.success) {
     alert(content.message);
+    console.log(content.data)
+    account.profile_pic = content.data;
+    localStorage.setItem('@account_logged', JSON.stringify(account));
+    container1.style.display = 'none';
+    enableScroll()
   } else {
     alert(content.message);
   }
 });
-
-
 
 const logoutButton = document.querySelector("#button-sair");
 

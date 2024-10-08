@@ -4,8 +4,6 @@ const bcrypt = require('bcrypt');
 const path = require('path');
 const fs = require('fs');
 
-
-
 const uploadPath = path.join(__dirname, '..', 'uploads')
 
 if(!fs.existsSync(uploadPath)) {
@@ -23,7 +21,6 @@ async function uploadPic(request, response) {
 
   const pfp = request.files.inputfile
   const pfpName = Date.now() + path.extname(pfp.name)
-  console.log('Upload path:', path.join(uploadPath, pfpName));
 
   pfp.mv(path.join(uploadPath, pfpName), (error) => {
     if(error){
@@ -48,7 +45,7 @@ async function uploadPic(request, response) {
         .json({
           success: true,
           message: 'Imagem alterada com sucesso',
-          data: results
+          data: params[0]
         });
     } else {
       response

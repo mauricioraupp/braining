@@ -3,6 +3,7 @@ if (storedAccount2) {
   const account = JSON.parse(storedAccount2);
   const navItem = document.querySelectorAll("#nav-item")
   document.querySelector("#user-name").textContent = account.name
+  document.querySelector("#user-img").setAttribute("src", `../src/uploads/${account.profile_pic}`)
   navItem.forEach(item => {
     item.textContent = "Conta"
     item.href = "../pages/user_account.html"

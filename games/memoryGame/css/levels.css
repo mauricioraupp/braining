@@ -132,8 +132,8 @@ body{
 #done-screen img{
   position: absolute;
   top: -30%;
-  height: 50vh;
-  width: 50vh;
+  height: clamp(250px, 23vw, 450px);
+  width: clamp(250px, 23vw, 450px);
 }
 
 #done-screen article{
@@ -193,15 +193,13 @@ body{
     }
     #done-screen img{
       top: -20%;
-      height: 35vh;
-      width: 35vh;
     }
 
     .bi-gear-fill{
       right: 0px;
       background-color: #192F44;
       box-sizing: content-box;
-      padding: clamp(10px, 4vw,20px);
+      padding: clamp(10px, 4vw, 20px);
       border-top-left-radius: clamp(15px, 5vw,30px);
       border-bottom-left-radius: clamp(15px, 5vw,30px);
       padding-right: clamp(20px, 4vw,40px);
