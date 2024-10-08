@@ -302,3 +302,73 @@ main{
     outline: 2px solid black;
   }
 }
+
+@media screen and (max-width: 1280px) {
+  main{
+    flex-direction: column;
+  }
+  .center-content{
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper{
+    width: 90vw;
+    padding-bottom: 40%;
+  }
+  #rocket{
+    width: 120px;
+  }
+  .center-content2{
+    h1{
+      font-size: 1.4rem;
+    }
+    h2{
+      font-size: 0.75rem;
+      width: 90%;
+    }
+    h3{
+      font-size: 1rem;
+    }
+    .inf-1{
+      margin-top: 1vh;
+    }
+    input{
+      padding: 0.8vh 2vw;
+      font-size: 0.9rem;
+    }
+    button{
+      padding: 1vh;
+      font-size: 0.9rem;
+      margin-top: 1vh;
+    }
+  }
+
+  .first-part{
+    padding-bottom: 0 !important;
+  }
+  .left-column{
+    img{
+      width: 300px;
+    }
+    p{
+      font-size: 0.9rem;
+    }
+  }
+  .center-content{
+    width: 100%;
+  
+    fieldset{
+      width: 80%;
+    }
+    label{
+        font-size: 1rem;
+    }
+    input{
+        font-size: 0.8rem;
+    }
+     button{
+      font-size: 0.9rem;
+    }
+  }
+}

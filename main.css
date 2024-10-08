@@ -175,8 +175,6 @@ strong{
   margin-top: 3vh;
 }
 
-
-
 .sixth-button-container{
   display: flex;
   justify-content: center;
@@ -203,5 +201,88 @@ strong{
   }
   button:focus{
     outline: 2px solid black;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .first-article {
+    width: 100%;
+    article{
+      width: 70%;
+    }
+  }
+  .center-text{
+    font-size: 3.5rem !important;
+    line-height: 4rem !important;
+  }
+  .center-text-second{
+    font-size: 1.2rem !important;
+    font-weight: 300 !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .first-part{
+    padding-bottom: 35vh;
+  }
+  .first-article{
+    width: 100%;
+    top: 50%;
+  }
+  .center-text{
+    font-size: 2.25rem !important;
+    line-height: 3rem !important; 
+  }
+  .top-text{
+    font-size: 0.9rem !important;
+  }
+  .first-article article {
+    width: 80%;
+  }
+  
+  .center-text-second{
+    font-size: 0.9rem !important;
+    font-weight: 300 !important;
+  }
+  .first-button, .second-button{
+    font-size: 0.9rem !important;
+    height: 40px !important;
+  }
+  
+
+  
+  .landing-containers article div {
+    p{
+      font-size: 0.8rem;
+    }
+    h1{
+      font-size: 2.1rem;
+    }
+  }
+
+  .landing-containers article{
+    width: 80%;
+  }
+  .landing-images{
+    width: 350px;
+  }
+  #subtitle-one{
+    font-size: 1.1rem;
+  }
+
+  .sixth-button-container button{
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .sixth-button-container{
+    button{
+      font-size: 0.9rem;
+    }
+  }
+
+  .landing-images{
+    width: 300px;
   }
 }

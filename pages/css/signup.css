@@ -4,7 +4,6 @@
 *, :root{
     margin: 0px;
     padding: 0px;
-  
     box-sizing: border-box;
   
     font-synthesis: none;
@@ -12,7 +11,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
-    /*border: 1px solid red;*/
 }
 body{
     display: flex;
@@ -26,9 +24,6 @@ body{
     height: 100vh;
     width: 100vw;
 }
-
-
-/*---------------------------------------------------------------------------*/
 
 fieldset{
   border:none;
@@ -46,68 +41,63 @@ fieldset{
     box-shadow: 0px 0px 30px 5px rgb(50, 50, 50);
 }
 
-
-
 #rocket{
     width: 160px;
 }
 .center-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
  
-    gap: 1.5vh;
-    width: 75%;
-    label{
-        color: white;
-        font-family: 'Inter', sans-serif;
-        font-size: 1.2rem;
-        font-weight: 500;
-        margin-left: 0.3vw;
-        margin-bottom: 0.2vh;
-    }
-    input{
-        background-color: white;
-        color: #474747;
-        border: 1px solid #999999;
-        border-radius: 4px;
-        padding: 0.8vh 0.8vw;
+  gap: 1.5vh;
+  width: 75%;
+  label{
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-left: 0.3vw;
+    margin-bottom: 0.2vh;
+  }
+  input{
+    background-color: white;
+    color: #474747;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    padding: 0.8vh 0.8vw;
  
-        font-family: 'Manrope', sans-serif;
-        font-size: 1rem;
-        font-weight: 400;
-        outline: none;
-        width: 100%;
-    }
-    input:focus{
-      outline: 1px solid black;
-    }
-    /*input:invalid{
-      outline: 1px solid red;
-    }*/
-     button{
-         background-color: white;
-         color: #20B87D;
-         border: none;
-         border-radius: 50px;
-         padding: 1.3vh;
-         width: 100%;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    outline: none;
+    width: 100%;
+  }
+  input:focus{
+    outline: 1px solid black;
+  }
+  button{
+    background-color: white;
+    color: #20B87D;
+    border: none;
+    border-radius: 50px;
+    padding: 1.3vh;
+    width: 100%;
  
-         font-family: 'Manrope', sans-serif;
-         font-size: 1.1rem;
-         font-weight: 800;
-         margin-top: 2.2vh;
-         cursor: pointer;
-     }
-     button:hover{
-      background-color: rgb(230, 230, 230);
-      color: rgb(17, 169, 110);
-    }
-    button:focus{
-      outline: 2px solid black;
-    }
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-top: 2.2vh;
+    cursor: pointer;
+  }
+  button:hover{
+    background-color: rgb(230, 230, 230);
+    color: rgb(17, 169, 110);
+  }
+  button:focus{
+    outline: 2px solid black;
+  }
 }
 .inf-1, .inf-2, .inf-3, .inf-4, .inf-5{
   display: flex;
@@ -115,46 +105,80 @@ fieldset{
   width: 100%;
 }
 
-   /*---------------------------------------------------------------------------*/
+.bottom-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h3{
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: 1vh;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  a:hover{
+    color: rgb(230, 230, 230);
+  }
+  a:focus{
+    outline: 2px solid black;
+    border-radius: 2px;
+  }
+  p{
+    text-decoration: none;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 5vh;
+    cursor: pointer;
+  }
+  p:hover{
+    color: rgb(230, 230, 230);
+  }
+}
 
+@media screen and (max-width: 768px){
+  .container{
+    background: linear-gradient(160deg, rgba(36, 201, 133, 1) 0%, rgba(24, 211, 137, 1) 27%, rgba(33, 186, 126, 1) 57%, rgba(31, 182, 123, 1) 100%);
+    gap: 3.5vh;
+    width: 90vw;
+    border-radius: 15px;
+    padding: 3vh 1.5vw;
+  }
 
-   .bottom-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    h3{
-      color: white;
-      font-family: 'Inter', sans-serif;
+  #rocket{
+    width: 120px;
+  }
+  .center-content{
+    label{
       font-size: 1rem;
-      font-weight: 300;
-      margin-top: 1vh;
     }
-    a{
-      text-decoration: none;
-      color: white;
-      font-family: 'Inter', sans-serif;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
+    input{
+      font-size: 0.8rem;
     }
-    a:hover{
-      color: rgb(230, 230, 230);
-    }
-    a:focus{
-      outline: 2px solid black;
-      border-radius: 2px;
-    }
-    p{
-      text-decoration: none;
-      color: white;
-      font-family: 'Inter', sans-serif;
-      font-size: 1rem;
-      font-weight: 600;
-      margin-top: 5vh;
-      cursor: pointer;
-    }
-    p:hover{
-      color: rgb(230, 230, 230);
+    button{
+      font-size: 0.9rem;
     }
   }
+
+  .bottom-content{
+    h3{
+      font-size: 0.7rem;
+    }
+    a{
+      font-size: 0.7rem;
+    }
+    p{
+      font-size: 0.7rem;
+    }
+  }
+}

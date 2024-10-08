@@ -3,7 +3,6 @@
 *, :root{
   margin: 0px;
   padding: 0px;
-
   box-sizing: border-box;
 
   font-synthesis: none;
@@ -11,7 +10,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  /*border: 1px solid red;*/
 }
 
 body{
@@ -22,8 +20,6 @@ a{
   text-decoration: none;
   color: white;
 }
-
-/*------------------------------- SECTION ------------------------------------*/
 
 .minigames-container{
   display: grid;
@@ -92,8 +88,6 @@ a{
 
   cursor: pointer;
 }
-
-/*-------------------------------- POP UP ------------------------------------*/
 
 .games-popup{
   top: 0;
@@ -196,4 +190,97 @@ a{
 .disabled:hover{
   background-color: rgb(194, 194, 194) !important;
   color: #192F44 !important;
+}
+
+@media screen and (max-width: 1280px) {
+  .minigames-container article div{
+    width: 8rem;
+    height: 8rem;
+  }
+  
+  .minigames-container article p{
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .minigames-container{
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33.333% 33.333% 33.333%;
+
+    #art-1{
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+    #art-2{
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+    #art-3{
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+    #art-4{
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+    #art-5{
+      grid-column: 1/2;
+      grid-row: 3/4;
+    }
+    #art-6{
+      grid-column: 2/3;
+      grid-row: 3/4;
+    }
+  }
+
+  .minigames-container article{
+    gap: 2vh;
+
+    div{
+      width: 7rem;
+      height: 7rem;
+    }
+
+    p{
+      font-size: 1rem;
+    }
+  }
+
+  .games-popup section{
+    height: 38rem;
+    width: 15rem;
+  
+    h1{
+      font-size: 1.6rem;
+    }
+    h2{
+      font-size: 0.8rem;
+    }
+    button{
+      font-size: 0.8rem;
+    }
+  }
+  
+  .games-popup section div{
+    flex-direction: column;
+    gap: 15px;
+  
+    a{
+      width: 4rem;
+      height: 4rem;
+      font-size: 2rem;
+    }
+  }
+
+  .padlock{
+    position: absolute;
+    bottom: -12px;
+    display: block;
+    
+    background-image: url(../../assets/padlock-icon.svg);
+    background-size: cover;
+    width: 24px;
+  }
 }
