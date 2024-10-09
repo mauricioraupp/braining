@@ -20,12 +20,9 @@
   min-height: 100vh;
 }
 
-/*----------------------------/ FIRST PART /---------------------------------*/
-
 .first-article{
   display: flex;
   justify-content: center;
-  /*margin-left: 10vw;*/
   position: relative;
   z-index: 0;
   top: 30%;
@@ -104,7 +101,6 @@
   outline: 2px solid rgb(255, 255, 255);
 }
 
-/*----------------------------/ SECOND PART /---------------------------------*/
 
 strong{
   font-weight: 900;

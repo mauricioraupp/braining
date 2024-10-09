@@ -40,11 +40,6 @@ body{
   cursor: pointer;
 }
 
-.remove-scrolling { 
-  height: 100%; 
-  overflow: hidden; 
-} 
-
 .wrapper{
   background: linear-gradient(160deg, rgba(36, 201, 133, 1) 0%, rgba(24, 211, 137, 1) 27%, rgba(33, 186, 126, 1) 57%, rgba(31, 182, 123, 1) 100%);
   display: flex;
@@ -57,6 +52,25 @@ body{
   padding: 5vh 0.5vw;
   padding-bottom: 15%;
   box-shadow: 0px 0px 30px 5px rgb(0, 0, 0);
+
+  button{
+    background-color: white;
+    color: #20B87D;
+    border: none;
+    border-radius: 50px;
+    padding: 1.3vh;
+    width: 70%;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 2.2vh;
+    cursor: pointer;
+  }
+  button:hover{
+    background-color: rgb(224, 224, 224);
+    color: #1b9063;
+  }
 }
 #rocket{
  width: 170px;
@@ -95,49 +109,18 @@ body{
   .inf-1{
     margin-top: 2vh;
   }
-  input{
-    background-color: white;
-    color: #474747;
-    border: 1px solid #999999;
-    border-radius: 4px;
-    padding: 0.8vh 0.8vw;
-    width: 100%;
-
-    font-family: 'Inter', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 400;
-    outline: none;
-  }
-  button{
-    background-color: white;
-    color: #20B87D;
-    border: none;
-    border-radius: 50px;
-    padding: 1.3vh;
-    width: 100%;
-
-    font-family: 'Inter', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-top: 2.2vh;
-    cursor: pointer;
-  }
-  button:hover{
-    background-color: rgb(224, 224, 224);
-    color: #1b9063;
-  }
 }
 
 #section1{
   display: none;
   .wrapper{
-    article{
-      input{
-        background-color: transparent;
-        border: none;
-        color: rgb(245, 245, 245);
-        font-weight: 600;
-      }
+    input{
+      background-color: transparent;
+      border: none;
+      color: rgb(245, 245, 245);
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
     }
   }
 }
@@ -172,9 +155,7 @@ main{
     object-fit: cover;
     background-color: #1b9063;
   }
-  input[type="file"] {
-    display: none;
-  }
+
   label {
     width: auto;
     color: white;
@@ -342,6 +323,15 @@ main{
       padding: 1vh;
       font-size: 0.9rem;
       margin-top: 1vh;
+    }
+  }
+
+  #section1{
+    .wrapper{
+      input{
+        font-size: 0.9rem;
+        width: 100%;
+      }
     }
   }
 

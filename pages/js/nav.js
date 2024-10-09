@@ -94,12 +94,20 @@ const navObjects = {
 
 const mediaQuery = window.matchMedia("(max-width: 768px)");
 
+function disableScroll() { 
+  document.body.classList.add("remove-scrolling"); 
+}
+function enableScroll() { 
+  document.body.classList.remove("remove-scrolling"); 
+}
+
 if (mediaQuery.matches) {
   navObjects.desktopNav.classList.toggle("hide");
   navObjects.mobileNav.classList.toggle("hide");
 }
 
 navObjects.openMenu.addEventListener('click', function() {
+  disableScroll();
   navObjects.mobileMenu.classList.remove("hide")
   navObjects.ulMenu.style.transition = '1s';
   setTimeout(() => {
@@ -108,6 +116,7 @@ navObjects.openMenu.addEventListener('click', function() {
 })
 
 navObjects.closeMenu.addEventListener('click', function() {
+  enableScroll();
   navObjects.mobileMenu.classList.add("hide")
   navObjects.ulMenu.style.transition = '0s';
   navObjects.ulMenu.style.width = '';

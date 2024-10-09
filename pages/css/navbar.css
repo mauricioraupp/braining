@@ -83,6 +83,10 @@
 .hide{
   display: none !important;
 }
+.remove-scrolling { 
+  height: 100%; 
+  overflow: hidden; 
+} 
 
 /*----------------------------/ HEADER /---------------------------------*/
 

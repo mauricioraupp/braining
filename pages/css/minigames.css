@@ -191,10 +191,6 @@ a{
   background-color: rgb(194, 194, 194) !important;
   color: #192F44 !important;
 }
-.remove-scrolling { 
-  height: 100%; 
-  overflow: hidden; 
-} 
 
 @media screen and (max-width: 1280px) {
   .minigames-container article div{

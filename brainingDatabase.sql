@@ -27,5 +27,12 @@ CREATE TABLE user_minigame2 (
 	FOREIGN KEY (user_email) REFERENCES user_account(email)
 );
 
+INSERT INTO user_account (name, date, email, password)
+VALUES("admin", "1111-11-11", "admin@admin.org", "$2b$10$h45efwjjpJ0e6Xlfn5C2J..8J/wLpwuDP.BRRYtnaJSUWSusLjafi");
+INSERT INTO user_minigame1 (user_email, level)
+VALUES("admin@admin.org", 1);
+INSERT INTO user_minigame2 (user_email, level)
+VALUES("admin@admin.org", 1);
+
 select * from user_account;
 select * from user_minigame1;

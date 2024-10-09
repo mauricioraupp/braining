@@ -12,13 +12,6 @@ for (let i = 1; i <= 5; i++) {
   levelImages[`level${i}Img`] = document.querySelector(`.padlock-img${i}`);
 }
 
-function disableScroll() { 
-  document.body.classList.add("remove-scrolling"); 
-}
-function enableScroll() { 
-  document.body.classList.remove("remove-scrolling"); 
-}
-
 memoryGame.addEventListener('click', async function() {
   if (!storedAccount) {
     alert("Nenhuma conta conectada");
