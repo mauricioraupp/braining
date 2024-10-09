@@ -345,13 +345,7 @@ main{
     }
   }
 
-  .first-part{
-    padding-bottom: 0 !important;
-  }
   .left-column{
-    img{
-      width: 300px;
-    }
     p{
       font-size: 0.9rem;
     }

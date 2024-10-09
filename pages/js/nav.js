@@ -12,46 +12,46 @@ let minigamesHref;
 })();
 
 document.querySelector("#nav-root").innerHTML = `
-<nav>
-<ul class="desktop-nav">
-  <div>
-    <a href="../index.html"><img src="../assets/whiterockettext.png" alt="Logo do site"></a>
-    <a href="../index.html">Home</a>
-    <a href="#">Sobre</a>
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mauricio.p.raupp@gmail.com&su=Assunto%20do%20email&body=Escreva%20sua%20mensagem%20aqui">Contato</a>
-  </div>
-  <div>
-    <a id="nav-item" href="${loginHref}">Login</a>
-    <button>Minijogos</button>
-  </div>
-</ul>
+  <nav>
+    <ul class="desktop-nav">
+      <div>
+        <a href="../index.html"><img src="../assets/whiterockettext.png" alt="Logo do site"></a>
+        <a href="../index.html">Home</a>
+        <a href="#">Sobre</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mauricio.p.raupp@gmail.com&su=Assunto%20do%20email&body=Escreva%20sua%20mensagem%20aqui">Contato</a>
+      </div>
+      <div>
+        <a id="nav-item" href="${loginHref}">Login</a>
+        <button>Minijogos</button>
+      </div>
+    </ul>
 
-<ul class="mobile-nav hide">
-  <img id="open-menu" src="../assets/align-justify.svg">
-  <div>
-    <a href="#">Sobre</a>
-    <a id="nav-item" href="${loginHref}">Login</a>
-  </div>
-</ul>
-</nav>
+    <ul class="mobile-nav hide">
+      <img id="open-menu" src="../assets/align-justify.svg">
+      <div>
+        <a href="#">Sobre</a>
+        <a id="nav-item" href="${loginHref}">Login</a>
+      </div>
+    </ul>
+  </nav>
 
-<div class="mobile-menu hide">
-<ul>
-  <article class="user">
-    <img id="user-img">
-    <div class="user-wrapper">
-      <p id="user-name">Nenhuma conta conectada</p>
-    </div>
-    <a class="hide" id="nav-item" href="${loginHref}">Login</a>
-  </article>
-  <a id="nav-item" href="${loginHref}">Login</a>
-  <a href="../index.html">Home</a>
-  <a href="${minigamesHref}">Minijogos</a>
-  <a href="#">Sobre</a>
-  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mauricio.p.raupp@gmail.com&su=Assunto%20do%20email&body=Escreva%20sua%20mensagem%20aqui">Contato</a>
-</ul>
-<img id="close-menu" src="../assets/x.svg">
-</div>
+  <div class="mobile-menu hide">
+    <ul>
+      <article class="user">
+        <img id="user-img">
+        <div class="user-wrapper">
+          <p id="user-name">Nenhuma conta conectada</p>
+        </div>
+        <a class="hide" id="nav-item" href="${loginHref}">Login</a>
+      </article>
+      <a id="nav-item" href="${loginHref}">Login</a>
+      <a href="../index.html">Home</a>
+      <a href="${minigamesHref}">Minijogos</a>
+      <a href="#">Sobre</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mauricio.p.raupp@gmail.com&su=Assunto%20do%20email&body=Escreva%20sua%20mensagem%20aqui">Contato</a>
+    </ul>
+    <img id="close-menu" src="../assets/x.svg">
+  </div>
 `
 
 const storedAccount2 = localStorage.getItem('@account_logged');
