@@ -1,0 +1,26 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(229, 229, 229);
+}
+main{
+  background-color: white;
+  width: 40%;
+  margin: auto;
+  padding: 92px;
+}
+
+h1{
+  text-align: center;
+  border-bottom: 2px solid black;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+p, h2{
+  padding-top: 16px;
+}

@@ -78,6 +78,9 @@ a{
     width: 90%;
   }
 }
+.minigames-container article div:hover{
+  filter: brightness(0.88);
+}
 
 .minigames-container article p{
   font-family: 'Inter', sans-serif;
@@ -87,6 +90,9 @@ a{
   text-align: center;
 
   cursor: pointer;
+}
+.minigames-container article p:hover{
+  text-decoration: underline;
 }
 
 .games-popup{

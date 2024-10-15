@@ -37,6 +37,6 @@ document.querySelector("#footer-root").innerHTML = `
       <a href="#">Blog</a>
     </div>
     <a href="#">Termos de Serviço | Políticas de Privacidade</a>
-    <span>© 2024 Todos os direitos reservados</span>
+    <span>Copyright © 2024 Braining - Todos os direitos reservados.</span>
   </footer>
 `
