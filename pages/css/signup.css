@@ -132,7 +132,7 @@ fieldset{
     outline: 2px solid black;
     border-radius: 2px;
   }
-  p{
+  #terms{
     text-decoration: none;
     color: white;
     font-family: 'Inter', sans-serif;
@@ -141,7 +141,7 @@ fieldset{
     margin-top: 5vh;
     cursor: pointer;
   }
-  p:hover{
+  #terms:hover{
     color: rgb(230, 230, 230);
   }
 }
@@ -177,7 +177,7 @@ fieldset{
     a{
       font-size: 0.7rem;
     }
-    p{
+    #terms{
       font-size: 0.7rem;
     }
   }

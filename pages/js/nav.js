@@ -18,7 +18,8 @@ document.querySelector("#nav-root").innerHTML = `
         <a href="../index.html"><img src="../assets/whiterockettext.png" alt="Logo do site"></a>
         <a href="../index.html">Home</a>
         <a href="#">Sobre</a>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mauricio.p.raupp@gmail.com&su=Assunto%20do%20email&body=Escreva%20sua%20mensagem%20aqui">Contato</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mauricio.p.raupp@gmail.com&su=Assunto%20do%20email&body=Escreva%20sua%20mensagem%20aqui" 
+        target="blank" rel="noopener noreferrer">Contato</a>
       </div>
       <div>
         <a id="nav-item" href="${loginHref}">Login</a>
@@ -48,7 +49,8 @@ document.querySelector("#nav-root").innerHTML = `
       <a href="../index.html">Home</a>
       <a href="${minigamesHref}">Minijogos</a>
       <a href="#">Sobre</a>
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mauricio.p.raupp@gmail.com&su=Assunto%20do%20email&body=Escreva%20sua%20mensagem%20aqui">Contato</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mauricio.p.raupp@gmail.com&su=Assunto%20do%20email&body=Escreva%20sua%20mensagem%20aqui" 
+      target="blank" rel="noopener noreferrer">Contato</a>
     </ul>
     <img id="close-menu" src="../assets/x.svg">
   </div>

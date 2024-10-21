@@ -151,7 +151,7 @@ main{
     width: clamp(200px, 30vw, 400px);
     height: clamp(200px, 30vw, 400px);
     border: 2px solid #ffffff;
-    border-radius: 999px;
+    border-radius: 50%;
     object-fit: cover;
     background-color: #1b9063;
   }

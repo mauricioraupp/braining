@@ -9,11 +9,13 @@ let emailSvg;
     githubSvg = "assets/github.svg"
     linkedinSvg = "assets/linkedin.svg"
     emailSvg = "assets/mail.svg"
+    copyright = "pages/copyright.html"
   } else {
     instagramSvg = "../assets/instagram.svg"
     githubSvg = "../assets/github.svg"
     linkedinSvg = "../assets/linkedin.svg"
     emailSvg = "../assets/mail.svg"
+    copyright = "./copyright.html"
   }
 })();
 
@@ -31,12 +33,13 @@ document.querySelector("#footer-root").innerHTML = `
     </article>
     <div>
       <a href="#">Sobre</a>
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mauricio.p.raupp@gmail.com&su=Assunto%20do%20email&body=Escreva%20sua%20mensagem%20aqui">Contato</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mauricio.p.raupp@gmail.com&su=Assunto%20do%20email&body=Escreva%20sua%20mensagem%20aqui" 
+      target="blank" rel="noopener noreferrer">Contato</a>
       <a href="#">FAQs</a>
       <a href="#">Carreira</a>
       <a href="#">Blog</a>
     </div>
-    <a href="#">Termos de Serviço | Políticas de Privacidade</a>
+    <a href="${copyright}" target="blank" rel="noopener noreferrer">Termos de Serviço | Políticas de Privacidade</a>
     <span>Copyright © 2024 Braining - Todos os direitos reservados.</span>
   </footer>
 `

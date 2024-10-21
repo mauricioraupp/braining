@@ -20,9 +20,10 @@
     width: 100%;
 
     #user-img{
-      width: 70px;
+      width: 100%;
+      max-width: 70px;
       height: 70px;
-      border-radius: 999px;
+      border-radius: 50%;
       object-fit: cover;
       background-color: white;
     }
