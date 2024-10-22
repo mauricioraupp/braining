@@ -8,6 +8,21 @@ const { userPasswordUpdate } = require('../controller/userController');
 const { minigame1Update } = require('../controller/minigamesUpdate');
 const { minigame2Update } = require('../controller/minigamesUpdate');
 
+/**
+ * @swagger
+ * /user/nameupdate:
+ *  put:
+ *    summary: Altera o nome do usuário
+ *    responses:
+ *      200:
+ *        description: Nome do usuário
+ *        content:
+ *          application/json:
+ *            schema:
+ *              type: array
+ *              items:
+ *                type:object
+ */
 updateRouter.put('/user/nameupdate', userNameUpdate);
 updateRouter.put('/user/dateupdate', userDateUpdate);
 updateRouter.put('/user/emailupdate', userEmailUpdate);
