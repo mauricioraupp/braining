@@ -11,7 +11,7 @@ main{
   background-color: white;
   width: 40%;
   margin: auto;
-  padding: 92px;
+  padding: 80px;
 }
 
 h1{
@@ -19,8 +19,45 @@ h1{
   border-bottom: 2px solid black;
   padding-bottom: 8px;
   margin-bottom: 8px;
+  font-size: clamp(1.4rem, 5vw, 2rem);
+}
+h2{
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
+}
+p{
+  font-size: clamp(0.8rem, 3vw, 1rem);
 }
 
 p, h2{
   padding-top: 16px;
+}
+
+@media screen and (max-width: 1280px) {
+  main{
+    width: 60%;
+    padding: 60px;
+  }
+  
+  h1{
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+  }
+  
+  p, h2{
+    padding-top: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main{
+    width: 80%;
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main{
+    width: 100%;
+    padding: 40px;
+  }
 }
