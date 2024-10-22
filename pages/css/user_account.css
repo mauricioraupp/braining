@@ -59,7 +59,7 @@ body{
     border: none;
     border-radius: 50px;
     padding: 1.3vh;
-    width: 70%;
+    width: 100%;
 
     font-family: 'Inter', sans-serif;
     font-size: 1.1rem;
@@ -108,6 +108,19 @@ body{
   }
   .inf-1{
     margin-top: 2vh;
+    input{
+      background-color: white;
+      color: #4c4c4c;
+      border: 1px solid #999999;
+      border-radius: 4px;
+      padding: 0.8vh 0.8vw;
+
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      outline: none;
+      width: 100%;
+    }
   }
 }
 
