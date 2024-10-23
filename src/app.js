@@ -10,7 +10,7 @@ const swaggerOptions = {
   swaggerDefinition: {
     openapi: "3.0.0",
     info: {
-      title: "API do Braining",
+      title: "API Braining",
       version: "1.0.0",
       description: "API CRUD para gerenciar rotas de dados do usuário e desbloquio de níveis",
     },
