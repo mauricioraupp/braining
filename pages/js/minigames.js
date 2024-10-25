@@ -113,5 +113,10 @@ puzzleGame.addEventListener('click', async function() {
 closePopup.addEventListener('click', function() {
   gamesPopup.style.opacity = '0';
   gamesPopup.style.zIndex = '-1';
-  enableScroll()
+  for (let i = 1; i <= 5; i++) {
+    levels[`level${i}`].removeAttribute('href');
+    levels[`level${i}`].classList.add("disabled");
+    levelImages[`level${i}Img`].classList.add("padlock");
+  }
+  enableScroll();
 });
