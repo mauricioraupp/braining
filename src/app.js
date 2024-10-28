@@ -12,7 +12,7 @@ const swaggerOptions = {
     info: {
       title: "API Braining",
       version: "1.0.0",
-      description: "API CRUD para gerenciar rotas de dados do usuário e desbloquio de níveis",
+      description: "API CRUD para gerenciar rotas de dados do usuário e desbloqueio de níveis",
     },
     servers: [{ url: "http://localhost:3003" }],
   },
