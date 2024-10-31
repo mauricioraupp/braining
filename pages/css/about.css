@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*, :root{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body{
+  min-height: 100vh;
+}
+
+main{
+  display: flex;
+  gap: 64px;
+  padding: 132px 84px;
+
+  img{
+    height: clamp(200px, 20vw, 300px);
+    width: clamp(200px, 20vw, 300px);
+  }
+  article{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    h1{
+      font-family: 'Montserrat', Helvetica;
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      font-weight: 700;
+      color: rgb(59, 59, 59);
+    }
+    h2{
+      font-family: 'Montserrat', Helvetica;
+      font-size: clamp(1rem, 1.6vw, 1.3rem);
+      font-weight: 600;
+      color: #17D389;
+    }
+    p{
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(0.8rem, 1.2vw, 1rem);
+      font-weight: 400;
+      color: rgb(49, 49, 49);
+      line-height: 1.5rem;
+    }
+  }
+}
