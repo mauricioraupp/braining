@@ -162,6 +162,57 @@ body{
   background-color: rgb(208, 208, 208);
 }
 
+#popup{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+
+  transition: .5s;
+  opacity: 0;
+  z-index: -1;
+}
+
+#popup article{
+  position: relative;
+  display: flex;
+  gap: 1.2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 30vw;
+  border-radius: 10px;
+  background-color: #17D389;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 20px 10px;
+}
+#popup article svg{
+  height: clamp(50px, 10vw, 100px);
+  width: clamp(50px, 10vw, 100px);
+}
+
+#popup article button{
+  background-color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  width: 70%;
+
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #192F44;
+
+  cursor: pointer;
+}
+#popup article button:hover{
+  background-color: rgb(208, 208, 208);
+}
+
 .bi-gear-fill{
   position: absolute;
   top: 7%;
@@ -188,13 +239,17 @@ body{
     }
 
     #done-screen{
-      height: 60vh;
-      width: 60vw;
+      height: 80vh;
+      width: 70vw;
     }
     #done-screen img{
       top: -20%;
     }
-
+    #popup article
+    {
+      height: 60vh;
+      width: 60vw;
+    }
     .bi-gear-fill{
       right: 0px;
       background-color: #192F44;
@@ -203,6 +258,6 @@ body{
       border-top-left-radius: clamp(15px, 5vw,30px);
       border-bottom-left-radius: clamp(15px, 5vw,30px);
       padding-right: clamp(20px, 4vw,40px);
-      filter: drop-shadow(0 0 0px black) ;
+      filter: drop-shadow(0 0 0px black);
     }
 }

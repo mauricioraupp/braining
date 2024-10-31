@@ -129,6 +129,18 @@ async function requisition() {
     method: "PUT",
     headers: { "Content-type": "application/json;charset=UTF-8" },
   });
-
-  // let content = await response.json();
 }
+
+const popup = document.querySelector('#popup');
+
+document.querySelector('.bi-gear-fill').addEventListener('click', function(){
+  popup.style.display = 'flex';
+  popup.style.zIndex = '2';
+  popup.style.opacity = '1';
+})
+
+document.querySelector("#button-close").addEventListener('click', function(){
+  popup.style.display = 'none';
+  popup.style.zIndex = '-1';
+  popup.style.opacity = '0';
+})
