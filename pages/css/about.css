@@ -17,19 +17,26 @@ body{
   min-height: 100vh;
 }
 
+.img-wrapper{
+  min-height: clamp(200px, 35vw, 400px);
+  height: clamp(200px, 35vw, 400px);
+  min-width: clamp(150px, 30vw, 300px);
+  background-image: url(../assets/pfp.jpeg);
+  background-size: cover;
+  background-position: center center;
+  border-radius: 4px;
+}
+
 main{
   display: flex;
   gap: 64px;
   padding: 132px 84px;
-
-  img{
-    height: clamp(200px, 20vw, 300px);
-    width: clamp(200px, 20vw, 300px);
-  }
+  
   article{
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    justify-content: space-around;
+    gap: 8px;
 
     h1{
       font-family: 'Montserrat', Helvetica;
@@ -39,16 +46,52 @@ main{
     }
     h2{
       font-family: 'Montserrat', Helvetica;
-      font-size: clamp(1rem, 1.6vw, 1.3rem);
+      font-size: clamp(1.1rem, 1.7vw, 1.4rem);
       font-weight: 600;
       color: #17D389;
     }
     p{
       font-family: 'Inter', sans-serif;
       font-size: clamp(0.8rem, 1.2vw, 1rem);
-      font-weight: 400;
-      color: rgb(49, 49, 49);
+      font-weight: 500;
+      color: rgb(80, 80, 80);
       line-height: 1.5rem;
     }
+    div{
+      width: 100%;
+      display: flex;
+      gap: 20px;
+      
+      a{
+        display: flex;
+        img{
+          width: clamp(26px, 4vw, 32px);
+          height: clamp(26px, 3vw, 32px);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .img-wrapper{
+    height: clamp(200px, 50vw, 400px);
+  }
+  main{
+    flex-direction: column;
+    gap: 32px;
+    padding: 112px 0;
+    width: 60%;
+    margin: auto;
+    
+    article{
+      gap: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px){
+  main{
+    width: 80%;
   }
 }

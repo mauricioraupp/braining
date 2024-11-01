@@ -1,13 +1,16 @@
 let loginHref;
 let minigamesHref;
+let aboutHref;
 
 (function checkDocument() {
   if (document.title === "Braining - Página inicial") {
     loginHref = "pages/login.html"
     minigamesHref = "pages/minigames.html"
+    aboutHref = "pages/about.html"
   } else {
     loginHref = "./login.html"
     minigamesHref = "./minigames.html"
+    aboutHref = "./about.html"
   }
 })();
 
@@ -17,7 +20,7 @@ document.querySelector("#nav-root").innerHTML = `
       <div>
         <a href="../index.html"><img src="../assets/whiterockettext.png" alt="Logo do site"></a>
         <a href="../index.html">Home</a>
-        <a href="#">Sobre</a>
+        <a href="${aboutHref}">Sobre</a>
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mauricio.p.raupp@gmail.com&su=Assunto%20do%20email&body=Escreva%20sua%20mensagem%20aqui" 
         target="blank" rel="noopener noreferrer">Contato</a>
       </div>
@@ -30,7 +33,7 @@ document.querySelector("#nav-root").innerHTML = `
     <ul class="mobile-nav hide">
       <img id="open-menu" src="../assets/align-justify.svg">
       <div>
-        <a href="#">Sobre</a>
+        <a href="${aboutHref}">Sobre</a>
         <a id="nav-item" href="${loginHref}">Login</a>
       </div>
     </ul>
@@ -48,7 +51,7 @@ document.querySelector("#nav-root").innerHTML = `
       <a id="nav-item" href="${loginHref}">Login</a>
       <a href="../index.html">Home</a>
       <a href="${minigamesHref}">Minijogos</a>
-      <a href="#">Sobre</a>
+      <a href="${aboutHref}">Sobre</a>
       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mauricio.p.raupp@gmail.com&su=Assunto%20do%20email&body=Escreva%20sua%20mensagem%20aqui" 
       target="blank" rel="noopener noreferrer">Contato</a>
     </ul>
