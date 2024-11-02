@@ -4,8 +4,7 @@
   "description": "User account creating and editing, minigames with unlocking level system",
   "main": "src/server.js",
   "scripts": {
-    "start": "nodemon src/server.js",
-    "vercel-build": "echo hello"
+    "start": "nodemon src/server.js"
   },
   "keywords": [
     "Games",
