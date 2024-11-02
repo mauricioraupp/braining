@@ -18,9 +18,9 @@ body{
 }
 
 .img-wrapper{
-  min-height: clamp(200px, 35vw, 400px);
-  height: clamp(200px, 35vw, 400px);
-  min-width: clamp(150px, 30vw, 300px);
+  min-height: clamp(200px, 35vw, 500px);
+  height: clamp(200px, 35vw, 500px);
+  min-width: clamp(250px, 30vw, 400px);
   background-image: url(../assets/pfp.jpeg);
   background-size: cover;
   background-position: center center;
@@ -28,31 +28,36 @@ body{
 }
 
 main{
+  min-height: 100vh;
   display: flex;
+  align-items: center;
   gap: 64px;
   padding: 132px 84px;
+  max-width: 80%;
+  margin: auto;
   
   article{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: 8px;
+    height: auto;
+    gap: clamp(8px, 1vw, 32px);
 
     h1{
       font-family: 'Montserrat', Helvetica;
-      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      font-size: clamp(1.5rem, 3vw, 3rem);
       font-weight: 700;
       color: rgb(59, 59, 59);
     }
     h2{
       font-family: 'Montserrat', Helvetica;
-      font-size: clamp(1.1rem, 1.7vw, 1.4rem);
+      font-size: clamp(1.1rem, 1.7vw, 1.8rem);
       font-weight: 600;
       color: #17D389;
     }
     p{
       font-family: 'Inter', sans-serif;
-      font-size: clamp(0.8rem, 1.2vw, 1rem);
+      font-size: clamp(0.8rem, 1.2vw, 1.2rem);
       font-weight: 500;
       color: rgb(80, 80, 80);
       line-height: 1.5rem;
@@ -65,17 +70,23 @@ main{
       a{
         display: flex;
         img{
-          width: clamp(26px, 4vw, 32px);
-          height: clamp(26px, 3vw, 32px);
+          width: clamp(26px, 4vw, 38px);
+          height: clamp(26px, 3vw, 38px);
         }
       }
     }
   }
 }
 
+@media screen and (max-width: 1280px){
+  main{
+    max-width: 100%;
+  }
+}
+
 @media screen and (max-width: 768px){
   .img-wrapper{
-    height: clamp(200px, 50vw, 400px);
+    height: clamp(200px, 30vw, 400px);
   }
   main{
     flex-direction: column;
