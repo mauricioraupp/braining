@@ -176,7 +176,7 @@ strong{
   justify-content: center;
   margin-top: 3vh;
   
-  button{
+  a{
     display: flex;
     flex: 1;
     border: none;
@@ -189,13 +189,14 @@ strong{
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
     font-weight: 600;
+    text-decoration: none;
     cursor: pointer;
   }
-  button:hover{
+  a:hover{
     background-color: #0f1c28;
     color: #e7e7e7;
   }
-  button:focus{
+  a:focus{
     outline: 2px solid black;
   }
 }
