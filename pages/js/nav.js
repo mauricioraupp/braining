@@ -3,7 +3,7 @@ let minigamesHref;
 let aboutHref;
 
 (function checkDocument() {
-  if (document.title === "Braining - Página inicial") {
+  if (document.title === "Braining | Página inicial") {
     loginHref = "pages/login.html"
     minigamesHref = "pages/minigames.html"
     aboutHref = "pages/about.html"

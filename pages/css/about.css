@@ -65,13 +65,13 @@ main{
     div{
       width: 100%;
       display: flex;
-      gap: 20px;
+      gap: 32px;
       
       a{
         display: flex;
         img{
-          width: clamp(26px, 4vw, 38px);
-          height: clamp(26px, 3vw, 38px);
+          width: clamp(24px, 4vw, 36px);
+          height: clamp(24px, 3vw, 36px);
         }
       }
     }

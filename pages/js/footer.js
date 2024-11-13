@@ -6,7 +6,7 @@ let copyright;
 let about;
 
 (function checkDocument() {
-  if (document.title === "Braining - Página inicial") {
+  if (document.title === "Braining | Página inicial") {
     instagramSvg = "assets/instagram.svg"
     githubSvg = "assets/github.svg"
     linkedinSvg = "assets/linkedin.svg"
