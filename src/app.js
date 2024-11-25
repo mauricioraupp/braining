@@ -32,6 +32,8 @@ app.use(express.json());
 app.use(fileUpload());
 app.use('/public/uploads', express.static(path.join(__dirname, 'public/uploads')));
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+app.use(express.static(path.join(__dirname, '../')));
+app.get('/', (req, res) => {res.sendFile(path.join(__dirname, '../index.html'));});
 
 app.use('/api', createRouter);
 app.use('/api', readRouter);
