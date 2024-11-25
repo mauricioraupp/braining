@@ -38,7 +38,6 @@ uploadButton.addEventListener('click', async function(event){
 
   if (content.success) {
     alert(content.message);
-    console.log(content.data)
     account.profile_pic = content.data;
     localStorage.setItem('@account_logged', JSON.stringify(account));
     container1.style.display = 'none';
