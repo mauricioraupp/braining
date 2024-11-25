@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   if (storedAccount) {
     const account = JSON.parse(storedAccount);
-    document.querySelector("#profile-pic").setAttribute("src", `../src/uploads/${account.profile_pic}`)
+    document.querySelector("#profile-pic").setAttribute("src", `../src/public/uploads/${account.profile_pic}`)
     document.querySelector("#input-name").value = account.name;
     document.querySelector("#input-email").value = account.email;
     document.querySelector("#input-date").value = account.date;

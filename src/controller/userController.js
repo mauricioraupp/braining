@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 const path = require('path');
 const fs = require('fs');
 
-const uploadPath = path.join(__dirname, '..', 'uploads')
+const uploadPath = path.join(__dirname, '..', 'public/uploads')
 
 if(!fs.existsSync(uploadPath)) {
   fs.mkdirSync(uploadPath);

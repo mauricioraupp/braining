@@ -14,7 +14,7 @@ const swaggerOptions = {
       version: "1.0.0",
       description: "API CRUD para gerenciar rotas de dados do usuário e desbloqueio de níveis",
     },
-    servers: [{ url: "http://localhost:3003" }],
+    servers: [{ url: "/" }],
   },
   apis: [`${__dirname}/routes/*.js`],
 };
@@ -30,8 +30,8 @@ app.set('port', process.env.PORT || 3008);
 app.use(cors());
 app.use(express.json());
 app.use(fileUpload());
-app.use('uploads/', express.static(path.join(__dirname, 'uploads')))
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
+app.use('/public/uploads', express.static(path.join(__dirname, 'public/uploads')));
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 app.use('/api', createRouter);
 app.use('/api', readRouter);
