@@ -3,17 +3,11 @@
   "routes": [
     {
       "src": "^/pages/assets/(.*)$",
-      "dest": "/pages/assets/$1",
-      "headers": {
-        "cache-control": "public, max-age=31536000, immutable"
-      }
+      "dest": "/pages/assets/$1"
     },
     {
       "src": "^/assets/(.*)$",
-      "dest": "/assets/$1",
-      "headers": {
-        "cache-control": "public, max-age=31536000, immutable"
-      }
+      "dest": "/assets/$1"
     },
     {
       "src": "/(.*)",
