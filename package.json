@@ -4,7 +4,8 @@
   "description": "User account creating and editing, minigames with unlocking level system",
   "main": "src/server.js",
   "scripts": {
-    "start": "nodemon src/server.js"
+    "start": "nodemon src/server.js",
+    "build": "nodemon src/server.js"
   },
   "keywords": [
     "Games",
