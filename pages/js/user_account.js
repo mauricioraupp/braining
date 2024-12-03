@@ -1,3 +1,5 @@
+const API_URL = process.env.API_URL || 'http://localhost:3003';
+
 document.addEventListener('DOMContentLoaded', () => {
   const storedAccount = localStorage.getItem('@account_logged');
   
@@ -29,7 +31,7 @@ uploadButton.addEventListener('click', async function(event){
 
   dadosForm.append('email', email);
 
-  const response = await fetch('http://localhost:3003/api/user/uploadpic', {
+    const response = await fetch(`${API_URL}/api/user/uploadpic`, {
     method: "POST",
     body: dadosForm,
   });
@@ -100,7 +102,7 @@ buttonName.onclick = function(event) {
         let email = account.email;
         let password = document.getElementById("senha").value;
   
-        const response = await fetch(`http://localhost:3003/api/user/request?email=${email}&password=${password}`, {
+        const response = await fetch(`${API_URL}/api/user/request?email=${email}&password=${password}`, {
           method: "GET",
           headers: { "Content-type": "application/json;charset=UTF-8" },
         });
@@ -110,7 +112,7 @@ buttonName.onclick = function(event) {
         if (content.success) {
           let name = document.querySelector("#input-name").value;
   
-          const updateResponse = await fetch(`http://localhost:3003/api/user/nameupdate?name=${name}&email=${email}`, {
+          const updateResponse = await fetch(`${API_URL}/api/user/nameupdate?name=${name}&email=${email}`, {
             method: "PUT",
             headers: { "Content-type": "application/json;charset=UTF-8" },
           });
@@ -154,7 +156,7 @@ buttonDate.onclick = function(event) {
         let email = account.email;
         let password = document.getElementById("senha").value;
   
-        const response = await fetch(`http://localhost:3003/api/user/request?email=${email}&password=${password}`, {
+        const response = await fetch(`${API_URL}/api/user/request?email=${email}&password=${password}`, {
           method: "GET",
           headers: { "Content-type": "application/json;charset=UTF-8" },
         });
@@ -164,7 +166,7 @@ buttonDate.onclick = function(event) {
         if (content.success) {
           let date = document.querySelector("#input-date").value;
   
-          const updateResponse = await fetch(`http://localhost:3003/api/user/dateupdate?date=${date}&email=${email}`, {
+          const updateResponse = await fetch(`${API_URL}/api/user/dateupdate?date=${date}&email=${email}`, {
             method: "PUT",
             headers: { "Content-type": "application/json;charset=UTF-8" },
           });
@@ -208,7 +210,7 @@ buttonEmail.onclick = function(event) {
         let email = account.email;
         let password = document.getElementById("senha").value;
   
-        const response = await fetch(`http://localhost:3003/api/user/request?email=${email}&password=${password}`, {
+        const response = await fetch(`${API_URL}/api/user/request?email=${email}&password=${password}`, {
           method: "GET",
           headers: { "Content-type": "application/json;charset=UTF-8" },
         });
@@ -218,7 +220,7 @@ buttonEmail.onclick = function(event) {
         if (content.success) {
           let newEmail = document.querySelector("#input-email").value;
   
-          const updateResponse = await fetch(`http://localhost:3003/api/user/emailupdate?newEmail=${newEmail}&secondEmail=${newEmail}&email=${email}`, {
+          const updateResponse = await fetch(`${API_URL}/api/user/emailupdate?newEmail=${newEmail}&secondEmail=${newEmail}&email=${email}`, {
             method: "PUT",
             headers: { "Content-type": "application/json;charset=UTF-8" },
           });
@@ -262,7 +264,7 @@ buttonPassword.onclick = function(event) {
         let email = account.email;
         let password = document.getElementById("senha").value;
   
-        const response = await fetch(`http://localhost:3003/api/user/request?email=${email}&password=${password}`, {
+        const response = await fetch(`${API_URL}/api/user/request?email=${email}&password=${password}`, {
           method: "GET",
           headers: { "Content-type": "application/json;charset=UTF-8" },
         });
@@ -272,7 +274,7 @@ buttonPassword.onclick = function(event) {
         if (content.success) {
           let newPassword = document.querySelector("#input-password").value;
   
-          const updateResponse = await fetch(`http://localhost:3003/api/user/passwordupdate?newPassword=${newPassword}&email=${email}`, {
+          const updateResponse = await fetch(`${API_URL}/api/user/passwordupdate?newPassword=${newPassword}&email=${email}`, {
             method: "PUT",
             headers: { "Content-type": "application/json;charset=UTF-8" },
           });
