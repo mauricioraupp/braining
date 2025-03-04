@@ -44,10 +44,10 @@ app.get('/debug-files', (req, res) => {
 });
 
 app.use(express.static(path.join(__dirname, '../')));
-app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, '../pages')));
 app.use(express.static(path.join(__dirname, '../assets')));
-app.use('/css', express.static(path.join(__dirname, '../pages/css')));
+app.use(express.static(path.join(__dirname, '../games')));
+app.use(express.static(path.join(__dirname, '../src/public/uploads')));
 app.get('/', (req, res) => {res.sendFile(path.join(__dirname, '../index.html'));});
 
 app.use('/api', createRouter);

@@ -22,7 +22,7 @@
       "use": "@vercel/static"
     },
     {
-      "src": "games/memoryGame/js/memoryGame.js",
+      "src": "games/memoryGame/js/*",
       "use": "@vercel/static"
     },
     {
@@ -34,7 +34,7 @@
       "use": "@vercel/static"
     },
     {
-      "src": "games/puzzleGame/js/puzzleGame.js",
+      "src": "games/puzzleGame/js/*",
       "use": "@vercel/static"
     }
   ],

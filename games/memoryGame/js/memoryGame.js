@@ -1,3 +1,7 @@
+const API_URL = window.location.hostname.includes("braining.site")
+? "https://www.braining.site"
+: "http://localhost:3003";
+
 const cards = document.querySelectorAll(".card");
 const backScreen = document.querySelector("#back-screen");
 let documentTitle = document.title;
@@ -140,7 +144,7 @@ let userEmail = account.email;
 
 
 async function requisition() {
-  const response = await fetch(`http://localhost:3003/api/games/minigame1/update?unlockedLevel=${unlockedLevel}&userEmail=${userEmail}`, {
+  const response = await fetch(`${API_URL}/api/games/minigame1/update?unlockedLevel=${unlockedLevel}&userEmail=${userEmail}`, {
     method: "PUT",
     headers: { "Content-type": "application/json;charset=UTF-8" },
   });
