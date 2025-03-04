@@ -37,6 +37,7 @@ app.use(express.static(path.join(__dirname, '../')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, '../pages')));
 app.use(express.static(path.join(__dirname, '../assets')));
+app.use('/css', express.static(path.join(__dirname, '../pages/css')));
 app.get('/', (req, res) => {res.sendFile(path.join(__dirname, '../index.html'));});
 
 app.use('/api', createRouter);
