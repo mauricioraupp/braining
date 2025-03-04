@@ -5,9 +5,9 @@ let levelMaxPoints;
 let dragId;
 let dropId;
 
-document.querySelector("#button-back").addEventListener('click', function(){
+document.querySelectorAll('#button-back').forEach((button) => button.addEventListener('click', function(){
   window.location.href = '../../../pages/minigames.html';
-});
+}));
 
 (function checkDocument() {
   if (documentTitle === "Quebra-cabeça: Nível 1") {

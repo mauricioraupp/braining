@@ -1,4 +1,6 @@
-const API_URL = 'http://localhost:3003';
+const API_URL = window.location.hostname.includes("braining.site")
+? "https://www.braining.site"
+: "http://localhost:3003";
 
 document.addEventListener('DOMContentLoaded', () => {
   const storedAccount = localStorage.getItem('@account_logged');

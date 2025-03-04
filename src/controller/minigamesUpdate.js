@@ -8,7 +8,7 @@ async function minigame1Update(request, response) {
     request.query.userEmail
   );
   
-  const query = "UPDATE user_minigame1 SET level = ? WHERE user_email = ?;";
+  const query = 'UPDATE "UserMinigame1" SET level = $1 WHERE "userEmail" = $2;';
 
   connection.query(query, params, (err, results) => {
     if(results) {      
@@ -38,7 +38,7 @@ async function minigame2Update(request, response) {
     request.query.userEmail
   );
   
-  const query = "UPDATE user_minigame2 SET level = ? WHERE user_email = ?;";
+  const query = 'UPDATE "UserMinigame2" SET level = $1 WHERE "userEmail" = $2;';
 
   connection.query(query, params, (err, results) => {
     if(results) {      

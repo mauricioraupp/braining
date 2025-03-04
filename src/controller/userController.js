@@ -36,7 +36,7 @@ async function uploadPic(request, response) {
     request.body.email
   );
 
-  const query = 'UPDATE user_account SET profile_pic = ? WHERE email = ?';
+  const query = 'UPDATE "UserAccount" SET "profilePic" = $1 WHERE email = $2';
 
   connection.query(query, params, (err, results) => {
     if (results) {
@@ -65,7 +65,7 @@ async function userRequest(request, response) {
       request.query.email,
     );
 
-    const query = 'SELECT password FROM user_account WHERE email = ? ';
+    const query = 'SELECT password FROM "UserAccount" WHERE email = $1 ';
 
     connection.query(query, params, async (err, results) => {
       if (err) {
@@ -76,8 +76,8 @@ async function userRequest(request, response) {
         });
       }
   
-      if (results.length > 0) {
-        const account = results[0];
+      if (results.rows.length > 0) {
+        const account = results.rows[0];
         const resultPassword = account.password;
         const formPassword = request.query.password;
 
@@ -120,7 +120,7 @@ async function userNameUpdate(request, response) {
       request.query.email
     );
 
-    const query = 'UPDATE user_account SET name = ? WHERE email = ?';
+    const query = 'UPDATE "UserAccount" SET name = $1 WHERE email = $2';
 
     connection.query(query, params, (err, results) => {
       if (results) {
@@ -158,7 +158,7 @@ async function userDateUpdate(request, response) {
       request.query.email
     );
 
-    const query = 'UPDATE user_account SET date = ? WHERE email = ?';
+    const query = 'UPDATE "UserAccount" SET date = $1 WHERE email = $2';
 
     connection.query(query, params, (err, results) => {
       if (results) {
@@ -189,55 +189,50 @@ async function userDateUpdate(request, response) {
 }
 
 async function userEmailUpdate(request, response) {
+  const { email, newEmail } = request.query;
+
+  if (!email || !newEmail) {
+    return response.status(400).json({
+      success: false,
+      message: 'Parâmetros de e-mail não fornecidos'
+    });
+  }
 
   try {
-    const params = Array(
-      request.query.newEmail, 
-      request.query.secondEmail, 
-      request.query.email
-    );
+    const updateUserEmail = async (oldEmail, newEmail) => {
+      try {
+        await connection.query('BEGIN');
+        await connection.query('SET CONSTRAINTS ALL DEFERRED');
 
-    const disableForeignKeyChecks = 'SET FOREIGN_KEY_CHECKS = 0;';
-    const updateQuery = `
-      UPDATE user_account ua
-      INNER JOIN user_minigame1 um ON ua.email = um.user_email
-      SET ua.email = ?, um.user_email = ?
-      WHERE ua.email = ?;
-    `;
-    const enableForeignKeyChecks = 'SET FOREIGN_KEY_CHECKS = 1;';
+        const updateUserQuery = 'UPDATE "UserAccount" SET email = $1 WHERE email = $2';
+        await connection.query(updateUserQuery, [newEmail, oldEmail]);
 
-    connection.query(disableForeignKeyChecks, (err) => {
-      if (err) {
-        throw err;
+        const updateMinigameQuery = 'UPDATE "UserMinigame1" SET "userEmail" = $1 WHERE "userEmail" = $2';
+        await connection.query(updateMinigameQuery, [newEmail, oldEmail]);
+
+        await connection.query('COMMIT');
+      } catch (error) {
+        await connection.query('ROLLBACK');
+        throw new Error('Erro ao atualizar o e-mail: ' + error.message);
       }
+    };
 
-      connection.query(updateQuery, params, (err, results) => {
-        if (err) {
-          throw err;
-        }
+    await updateUserEmail(email, newEmail);
 
-        connection.query(enableForeignKeyChecks, (err) => {
-          if (err) {
-            throw err;
-          }
-
-          response.status(201).json({
-            success: true,
-            message: 'Email alterado com sucesso',
-            data: results
-          });
-        });
-      });
+    response.status(200).json({
+      success: true,
+      message: 'E-mail alterado com sucesso'
     });
-    
+
   } catch (error) {
     response.status(500).json({
       success: false,
       message: 'Erro no servidor',
-      data: error
+      data: error.message
     });
   }
 }
+
 
 async function userPasswordUpdate(request, response) {
 
@@ -249,7 +244,7 @@ async function userPasswordUpdate(request, response) {
       request.query.email
     );
 
-    const query = 'UPDATE user_account SET password = ? WHERE email = ?';
+    const query = 'UPDATE "UserAccount" SET password = $1 WHERE email = $2';
 
     connection.query(query, params, (err, results) => {
       if (results) {

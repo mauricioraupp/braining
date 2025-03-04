@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 async function loginRequest(request, response) {
   const params = [request.query.email];
 
-  const query = "SELECT name, DATE_FORMAT(date, '%Y-%m-%d') as date, email, password, profile_pic FROM user_account WHERE email = ?;";
+  const query = 'SELECT name, TO_CHAR(date, \'YYYY-MM-DD\') as date, email, password, "profilePic" FROM "UserAccount" WHERE email = $1;';
 
   connection.query(query, params, async (err, results) => {
     if (err) {
@@ -16,8 +16,8 @@ async function loginRequest(request, response) {
       });
     }
 
-    if (results.length > 0) {
-      const account = results[0];
+    if (results.rows.length > 0) {
+      const account = results.rows[0];
       const resultPassword = account.password;
       const formPassword = request.query.password;
 

@@ -1,4 +1,7 @@
-const API_URL = process.env.API_URL || 'http://localhost:3003';
+const API_URL = window.location.hostname.includes("braining.site")
+? "https://www.braining.site"
+: "http://localhost:3003";
+
 const memoryGame = document.querySelector('#art-1');
 const puzzleGame = document.querySelector('#art-2');
 const gamesPopup = document.querySelector('.games-popup');
@@ -22,7 +25,7 @@ memoryGame.addEventListener('click', async function() {
     const account = JSON.parse(storedAccount);
     let userEmail = account.email;
 
-    const response = await fetch(`http://localhost:3003/api/games/minigame1/request?userEmail=${userEmail}`, {
+    const response = await fetch(`${API_URL}/api/games/minigame1/request?userEmail=${userEmail}`, {
       method: "GET",
       headers: { "Content-type": "application/json;charset=UTF-8" },
     });
@@ -30,7 +33,7 @@ memoryGame.addEventListener('click', async function() {
     let content = await response.json();
 
     if (content.success) {
-      switch (content.data[0].level) {
+      switch (content.data.rows[0].level) {
         case 5:
           levels.level5.setAttribute('href', '../games/memoryGame/html/levelFive.html');
           levels.level5.classList.remove("disabled");
@@ -71,7 +74,7 @@ puzzleGame.addEventListener('click', async function() {
     const account = JSON.parse(storedAccount);
     let userEmail = account.email;
 
-    const response = await fetch(`http://localhost:3003/api/games/minigame2/request?userEmail=${userEmail}`, {
+    const response = await fetch(`${API_URL}/api/games/minigame2/request?userEmail=${userEmail}`, {
       method: "GET",
       headers: { "Content-type": "application/json;charset=UTF-8" },
     });
@@ -79,7 +82,7 @@ puzzleGame.addEventListener('click', async function() {
     let content = await response.json();
 
     if (content.success) {
-      switch (content.data[0].level) {
+      switch (content.data.rows[0].level) {
         case 5:
           levels.level5.setAttribute('href', '../games/puzzleGame/html/levelFive.html');
           levels.level5.classList.remove("disabled");

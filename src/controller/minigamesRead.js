@@ -7,7 +7,7 @@ async function minigame1Request(request, response) {
     request.query.userEmail
   );
   
-  const query = "SELECT level FROM user_minigame1 WHERE user_email = ?;";
+  const query = 'SELECT level FROM "UserMinigame1" WHERE "userEmail" = $1;';
 
   connection.query(query, params, (err, results) => {
     if(results) {      
@@ -36,7 +36,7 @@ async function minigame2Request(request, response) {
     request.query.userEmail
   );
   
-  const query = "SELECT level FROM user_minigame2 WHERE user_email = ?;";
+  const query = 'SELECT level FROM "UserMinigame2" WHERE "userEmail" = $1;';
 
   connection.query(query, params, (err, results) => {
     if(results) {      
