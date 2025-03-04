@@ -84,23 +84,23 @@ puzzleGame.addEventListener('click', async function() {
     if (content.success) {
       switch (content.data.rows[0].level) {
         case 5:
-          levels.level5.setAttribute('href', '../games/puzzleGame/html/levelFive.html');
+          levels.level5.setAttribute('href', '../../games/puzzleGame/html/levelFive.html');
           levels.level5.classList.remove("disabled");
           levelImages.level5Img.classList.remove("padlock");
         case 4:
-          levels.level4.setAttribute('href', '../games/puzzleGame/html/levelFour.html');
+          levels.level4.setAttribute('href', '../../games/puzzleGame/html/levelFour.html');
           levels.level4.classList.remove("disabled");
           levelImages.level4Img.classList.remove("padlock");
         case 3:
-          levels.level3.setAttribute('href', '../games/puzzleGame/html/levelThree.html');
+          levels.level3.setAttribute('href', '../../games/puzzleGame/html/levelThree.html');
           levels.level3.classList.remove("disabled");
           levelImages.level3Img.classList.remove("padlock");
         case 2:
-          levels.level2.setAttribute('href', '../games/puzzleGame/html/levelTwo.html');
+          levels.level2.setAttribute('href', '../../games/puzzleGame/html/levelTwo.html');
           levels.level2.classList.remove("disabled");
           levelImages.level2Img.classList.remove("padlock");
         case 1:
-          levels.level1.setAttribute('href', '../games/puzzleGame/html/levelOne.html');
+          levels.level1.setAttribute('href', '../../games/puzzleGame/html/levelOne.html');
           levels.level1.classList.remove("disabled");
           levelImages.level1Img.classList.remove("padlock");
           break;
