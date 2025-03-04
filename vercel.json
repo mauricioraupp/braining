@@ -12,9 +12,37 @@
     {
       "src": "pages/js/*",
       "use": "@vercel/static"
+    },
+    {
+      "src": "/games/memoryGame/html/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "/games/memoryGame/css/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "/games/memoryGame/js/memoryGame.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "/games/puzzleGame/html/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "/games/puzzleGame/css/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "/games/puzzleGame/js/puzzleGame.js",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
+    {
+      "src": "(.*)",
+      "dest": "src/server.js"
+    },
     {
       "src": "/pages/css/(.*)",
       "dest": "/pages/css/$1"
@@ -24,12 +52,28 @@
       "dest": "/pages/js/$1"
     },
     {
-      "src": "(.*)",
-      "dest": "src/server.js"
+      "src": "/games/memoryGame/html/(.*)",
+      "dest": "/games/memoryGame/html/$1"
+    },
+    {
+      "src": "/games/memoryGame/css/(.*)",
+      "dest": "/games/memoryGame/css/$1"
+    },
+    {
+      "src": "/games/memoryGame/js/(.*)",
+      "dest": "/games/memoryGame/js/$1"
     },
     {
       "src": "/games/puzzleGame/html/(.*)",
       "dest": "/games/puzzleGame/html/$1"
+    },
+    {
+      "src": "/games/puzzleGame/css/(.*)",
+      "dest": "/games/puzzleGame/css/$1"
+    },
+    {
+      "src": "/games/puzzleGame/js/(.*)",
+      "dest": "/games/puzzleGame/js/$1"
     }
   ]
 }
