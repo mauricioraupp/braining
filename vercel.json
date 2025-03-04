@@ -26,6 +26,10 @@
     {
       "src": "(.*)",
       "dest": "src/server.js"
+    },
+    {
+      "src": "/games/puzzleGame/html/(.*)",
+      "dest": "/games/puzzleGame/html/$1"
     }
   ]
 }
