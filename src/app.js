@@ -25,6 +25,7 @@ const readRouter = require('./routes/readRouter');
 const updateRouter = require('./routes/updateRouter');
 const app = express();
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
+const memoryGamePath = path.join(__dirname, '../games/memoryGame/html');
 
 app.set('port', process.env.PORT || 3003);
 app.use(cors());
@@ -32,6 +33,15 @@ app.use(express.json());
 app.use(fileUpload());
 app.use('/public/uploads', express.static(path.join(__dirname, 'public/uploads')));
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+
+app.get('/debug-files', (req, res) => {
+    fs.readdir(memoryGamePath, (err, files) => {
+        if (err) {
+            return res.status(500).json({ error: "Erro ao listar arquivos", details: err.message });
+        }
+        res.json({ arquivos: files });
+    });
+});
 
 app.use(express.static(path.join(__dirname, '../')));
 app.use(express.static(path.join(__dirname, 'public')));
