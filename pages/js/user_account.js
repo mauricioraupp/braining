@@ -1,4 +1,4 @@
-const API_URL = process.env.API_URL || 'http://localhost:3003';
+const API_URL = 'http://localhost:3003';
 
 document.addEventListener('DOMContentLoaded', () => {
   const storedAccount = localStorage.getItem('@account_logged');
