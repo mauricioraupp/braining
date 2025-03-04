@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model UserAccount {
+  id            Int            @id @default(autoincrement())
+  name          String?
+  date          DateTime?
+  email         String         @unique
+  password      String
+  profilePic    String         @default("default.png")
+  createdAt     DateTime       @default(now())
+  userMinigame1 UserMinigame1?
+  userMinigame2 UserMinigame2?
+}
+
+model UserMinigame1 {
+  id        Int         @id @default(autoincrement())
+  userEmail String      @unique
+  level     Int         @default(1)
+  updatedAt DateTime    @default(now())
+  user      UserAccount @relation(fields: [userEmail], references: [email], onDelete: Cascade)
+}
+
+model UserMinigame2 {
+  id        Int         @id @default(autoincrement())
+  userEmail String      @unique
+  level     Int         @default(1)
+  updatedAt DateTime    @default(now())
+  user      UserAccount @relation(fields: [userEmail], references: [email], onDelete: Cascade)
+}
