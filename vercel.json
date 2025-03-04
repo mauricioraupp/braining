@@ -6,6 +6,10 @@
       "use": "@vercel/node"
     },
     {
+      "src": "src/uploads/*",
+      "use": "@vercel/static"
+    },
+    {
       "src": "pages/css/*",
       "use": "@vercel/static"
     },
@@ -42,6 +46,10 @@
     {
       "src": "(.*)",
       "dest": "src/server.js"
+    },
+    {
+      "src": "/src/uploads/(.*)",
+      "dest": "/src/uploads/$1"
     },
     {
       "src": "/pages/css/(.*)",

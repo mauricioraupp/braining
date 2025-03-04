@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   if (storedAccount) {
     const account = JSON.parse(storedAccount);
-    document.querySelector("#profile-pic").setAttribute("src", `../src/public/uploads/${account.profile_pic}`)
+    document.querySelector("#profile-pic").setAttribute("src", `../src/uploads/${account.profilePic}`)
     document.querySelector("#input-name").value = account.name;
     document.querySelector("#input-email").value = account.email;
     document.querySelector("#input-date").value = account.date;
@@ -42,7 +42,7 @@ uploadButton.addEventListener('click', async function(event){
 
   if (content.success) {
     alert(content.message);
-    account.profile_pic = content.data;
+    account.profilePic = content.data;
     localStorage.setItem('@account_logged', JSON.stringify(account));
     container1.style.display = 'none';
     enableScroll()

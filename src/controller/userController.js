@@ -4,13 +4,14 @@ const bcrypt = require('bcrypt');
 const path = require('path');
 const fs = require('fs');
 
-const uploadPath = path.join(__dirname, '..', 'public/uploads')
+const uploadPath = path.join(__dirname, '..', '/uploads')
 
 if(!fs.existsSync(uploadPath)) {
   fs.mkdirSync(uploadPath);
 };
 
 async function uploadPic(request, response) {
+  console.log(uploadPath);
   if(!request.files) {
     console.log(request.files)
     return response.status(400).json({
@@ -26,7 +27,7 @@ async function uploadPic(request, response) {
     if(error){
       return response.status(400).json({
         success: false,
-        message: "Erro ao enviar arquivo."
+        message: "Funcionalidade desativada por tempo indeterminado"
       })
     }
   })

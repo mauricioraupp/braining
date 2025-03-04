@@ -4,7 +4,7 @@ const cors = require('cors');
 const path = require('path');
 const fs = require('fs');
 const swaggerUi = require("swagger-ui-express");
-const swaggerJsDoc = require("swagger-jsdoc")
+const swaggerJsDoc = require("swagger-jsdoc");
 
 const swaggerOptions = {
   swaggerDefinition: {
@@ -31,7 +31,7 @@ app.set('port', process.env.PORT || 3003);
 app.use(cors());
 app.use(express.json());
 app.use(fileUpload());
-app.use('/public/uploads', express.static(path.join(__dirname, 'public/uploads')));
+app.use('/uploads', express.static(path.join(__dirname, '../src/uploads')));
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 app.get('/debug-files', (req, res) => {
@@ -47,7 +47,7 @@ app.use(express.static(path.join(__dirname, '../')));
 app.use(express.static(path.join(__dirname, '../pages')));
 app.use(express.static(path.join(__dirname, '../assets')));
 app.use(express.static(path.join(__dirname, '../games')));
-app.use(express.static(path.join(__dirname, '../src/public/uploads')));
+app.use(express.static(path.join(__dirname, '../src/uploads')));
 app.get('/', (req, res) => {res.sendFile(path.join(__dirname, '../index.html'));});
 
 app.use('/api', createRouter);
